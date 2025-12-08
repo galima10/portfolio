@@ -1,0 +1,35 @@
+name: Deploy to external repo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Clone target repo
+        run: |
+          git clone https://github.com/galima10/portfolio-site.git target-repo
+          rm -rf target-repo/*
+          cp -r dist/* target-repo/
+
+      - name: Push changes
+        run: |
+          cd target-repo
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
