@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/portfolio-site/",
   plugins: [react()],
   build: {
     sourcemap: false,
@@ -17,7 +18,7 @@ export default defineConfig({
         comments: false,
       },
     },
-    outDir: path.resolve(__dirname, "dist"),
+    outDir: "dist",
     emptyOutDir: true,
   },
   resolve: {
