@@ -2,7 +2,7 @@ import styles from "./NavButton.module.scss";
 
 interface NavButtonProps {
   position: "navbar" | "footer";
-  text: string;
+  text?: string;
   link?: string;
   isActive?: boolean;
   className?: string;

@@ -1,0 +1,19 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.logo {
+  width: 5rem;
+  height: auto;
+  display: block;
+  padding: .25rem;
+  svg {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

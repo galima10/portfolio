@@ -4,6 +4,7 @@ import AppButton from "@components/atoms/AppButton";
 import NavButton from "@components/atoms/NavButton";
 import AppInput from "@components/atoms/AppInput";
 import AppSubmitButton from "@components/atoms/AppSubmitButton";
+import AppLogo from "@components/atoms/AppLogo";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AppButton type="secondary" text="Secondary Button" />
       <AppButton type="tertiary" text="Tertiary Button" />
       <NavButton position="navbar" text="Navbar Button" />
+      <AppLogo />
       <NavButton position="footer" text="Footer Button" />
       <AppInput label="Standard Input" placeholder="Enter text here" />
       <AppSubmitButton />
