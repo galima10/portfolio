@@ -27,7 +27,7 @@
     background: $accent-color;
     color: $primary-color;
     border-color: $accent-color;
-    &:active {
+    &:active, &:focus {
       background: $tertiary-color;
       border-color: $tertiary-color;
     }
@@ -41,7 +41,7 @@
     @extend %button-big;
     color: $accent-color;
     border-color: $accent-color;
-    &:active {
+    &:active, &:focus {
       color: $tertiary-color;
       border-color: $tertiary-color;
     }
@@ -55,7 +55,7 @@
     @extend %button-base;
     color: $accent-color;
     text-decoration: underline;
-    &:active {
+    &:active, &:focus {
       color: $tertiary-color;
     }
     @include responsive($bp-desktop) {
@@ -72,7 +72,7 @@
     @extend %button-big;
     border: $primary-color;
     color: $secondary-color;
-    &:active {
+    &:active, &:focus {
       color: $accent-color;
     }
     @include responsive($bp-desktop) {
@@ -83,7 +83,7 @@
   } @else if $position == "footer" {
     @extend %button-base;
     color: $primary-color;
-    &:active {
+    &:active, &:focus {
       color: $nuance-color;
     }
     @include responsive($bp-desktop) {

@@ -1,0 +1,27 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  color: $secondary-color;
+  span {
+    color: $accent-color;
+    font-weight: $bold;
+  }
+}
+
+.input {
+  background-color: $nuance-color;
+  padding: 0.5rem;
+  border-radius: 0 0 1rem 1rem;
+  &:focus {
+    outline: 0.1rem solid $accent-color;
+  }
+}

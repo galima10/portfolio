@@ -32,12 +32,18 @@ input,
 textarea,
 button,
 image,
-a {
+a,
+label {
   display: block;
   width: fit-content;
   height: fit-content;
+  &:focus {
+    outline: none;
+  }
 }
 
-textarea {
+textarea,
+input {
   resize: none;
+  border: none;
 }

@@ -2,6 +2,7 @@ import "./styles/main.scss";
 
 import AppButton from "@components/atoms/AppButton";
 import NavButton from "./components/atoms/NavButton";
+import AppInput from "./components/atoms/AppInput";
 
 function App() {
   return (
@@ -11,6 +12,12 @@ function App() {
       <AppButton type="tertiary" text="Tertiary Button" />
       <NavButton position="navbar" text="Navbar Button" />
       <NavButton position="footer" text="Footer Button" />
+      <AppInput label="Standard Input" placeholder="Enter text here" />
+      <AppInput
+        isTextarea
+        label="Textarea Input"
+        placeholder="Enter multiple lines of text here"
+      />
       <h1>Titre H1</h1>
       <h2>Titre H2</h2>
       <h3>Titre H3</h3>
