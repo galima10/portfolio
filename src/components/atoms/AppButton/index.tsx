@@ -1,9 +1,15 @@
 import styles from "./AppButton.module.scss";
 
-export default function AppButton() {
+interface AppButtonProps {
+  type: "primary" | "secondary" | "tertiary";
+  text: string;
+  link?: string;
+}
+
+export default function AppButton({ type, text, link = "#" }: AppButtonProps) {
   return (
-    <a href="/" className={styles.appButton}>
-      Bouton
+    <a href={link} className={styles[type]}>
+      {text}
     </a>
   );
 }

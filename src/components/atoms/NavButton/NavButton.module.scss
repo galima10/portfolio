@@ -3,14 +3,15 @@
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
 
-.primary {
-  @include button-style("primary");
+.footer {
+  @include nav-link-style("footer");
 }
 
-.secondary {
-  @include button-style("secondary");
+.navbar {
+  @include nav-link-style("header");
 }
 
-.tertiary {
-  @include button-style("tertiary");
+.active {
+  color: $accent-color;
+  text-decoration: underline;
 }
