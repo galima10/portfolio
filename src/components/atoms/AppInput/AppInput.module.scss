@@ -24,4 +24,9 @@
   &:focus {
     outline: 0.1rem solid $accent-color;
   }
+  &::placeholder {
+    opacity: 0.75;
+    font-style: italic;
+    font-size: .85rem;
+  }
 }

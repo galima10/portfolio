@@ -1,9 +1,16 @@
-// Couleurs
+// Couleurs principales
 $primary-color: #fffaee;
-$secondary-color: #4E4B6E;
+$secondary-color: #4e4b6e;
 $tertiary-color: #505959;
-$accent-color: #5C967D;
-$nuance-color: #E8DEDA;
+$accent-color: #5c967d;
+$nuance-color: #e8deda;
+
+// Couleurs secondaires
+$blue-color: #5c98ae;
+$red-color: #c76153;
+$green-color: #93b55b;
+$grey-color: #6a636d;
+$violet-color: #b770a5;
 
 // Dégradé
 $gradient: linear-gradient(-90deg, $accent-color 0%, $secondary-color 100%);

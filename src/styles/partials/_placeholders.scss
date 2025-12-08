@@ -1,7 +1,11 @@
+@use "@styles/partials/variables" as *;
 
 %button-base {
   cursor: pointer;
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  &:focus {
+    outline: 0.15rem solid $violet-color;
+  }
 }
 
 %button-big {

@@ -1,8 +1,9 @@
 import "./styles/main.scss";
 
 import AppButton from "@components/atoms/AppButton";
-import NavButton from "./components/atoms/NavButton";
-import AppInput from "./components/atoms/AppInput";
+import NavButton from "@components/atoms/NavButton";
+import AppInput from "@components/atoms/AppInput";
+import AppSubmitButton from "@components/atoms/AppSubmitButton";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <NavButton position="navbar" text="Navbar Button" />
       <NavButton position="footer" text="Footer Button" />
       <AppInput label="Standard Input" placeholder="Enter text here" />
+      <AppSubmitButton />
       <AppInput
         isTextarea
         label="Textarea Input"

@@ -1,0 +1,9 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.button {
+  @include button-style("primary");
+  font-weight: $bold;
+}
