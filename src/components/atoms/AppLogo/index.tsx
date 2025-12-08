@@ -1,8 +1,13 @@
 import styles from "./AppLogo.module.scss";
 
-export default function AppLogo({ className = "" }: { className?: string }) {
+interface AppLogoProps {
+  className?: string;
+  link?: string;
+}
+
+export default function AppLogo({ className = "", link = "#" }: AppLogoProps) {
   return (
-    <a href="#" className={`${styles.logo} ${className}`}>
+    <a href={link} className={`${styles.logo} ${className}`}>
       <svg
         width="50"
         height="50"
