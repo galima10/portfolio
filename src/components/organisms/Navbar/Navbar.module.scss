@@ -1,0 +1,26 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.navbar {
+  width: 100%;
+  height: 4.5rem;
+  background-color: $primary-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 $padding-global;
+  }
+}
+
+.svgIcon {
+  width: 2rem;
+  height: 2rem;
+}

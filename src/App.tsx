@@ -2,11 +2,11 @@ import "./styles/main.scss";
 
 import Navbar from "./components/organisms/Navbar";
 
-import AppButton from "@components/atoms/AppButton";
-import NavButton from "@components/atoms/NavButton";
-import AppInput from "@components/atoms/AppInput";
-import AppSubmitButton from "@components/atoms/AppSubmitButton";
-import AppLogo from "@components/atoms/AppLogo";
+import AppButton from "@components/atoms/appElements/AppButton";
+import NavButton from "@components/atoms/appElements/NavButton";
+import AppInput from "@components/atoms/appElements/AppInput";
+import AppSubmitButton from "@components/atoms/appElements/AppSubmitButton";
+import AppLogo from "@components/atoms/appElements/AppLogo";
 
 function App() {
   return (
