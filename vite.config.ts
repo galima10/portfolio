@@ -20,7 +20,7 @@ export default defineConfig({
     rollupOptions: {
       input: path.resolve(__dirname, "src/main.tsx"),
     },
-    outDir: path.resolve(__dirname, "/dist"),
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
   resolve: {
