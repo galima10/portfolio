@@ -7,13 +7,9 @@
   width: 5rem;
   height: auto;
   display: block;
-  padding: .25rem;
+  padding: 0.25rem;
   svg {
     width: 100%;
     height: auto;
-    transition: transform 0.5s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
-    }
   }
 }
