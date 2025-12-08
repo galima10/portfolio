@@ -23,13 +23,14 @@ jobs:
           rm -rf target-repo/*
           cp -r dist/* target-repo/
 
-      - name: Push changes
+      - name: Push changes to target repo
         run: |
           cd target-repo
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Deploy"
+          git commit -m "Deploy" || echo "No changes to commit"
           git push https://x-access-token:${PAT}@github.com/galima10/portfolio-site.git
         env:
-          PAT: ${{ secrets.GITHUB_TOKEN }}
+          PAT: ${{ secrets.PAT_TOKEN }}
+
