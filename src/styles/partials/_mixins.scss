@@ -23,7 +23,7 @@
 // Mixin pour appliquer du style dynamique aux boutons de la page
 @mixin button-style($type) {
   @if $type == "primary" {
-    @extend %button-cta;
+    @extend %button-big;
     background: $accent-color;
     color: $primary-color;
     border-color: $accent-color;
@@ -38,7 +38,7 @@
       }
     }
   } @else if $type == "secondary" {
-    @extend %button-cta;
+    @extend %button-big;
     color: $accent-color;
     border-color: $accent-color;
     &:active {
@@ -69,7 +69,7 @@
 // Mixin pour les liens de navigation
 @mixin nav-link-style($position) {
   @if $position == "header" {
-    @extend %button-cta;
+    @extend %button-big;
     border: $primary-color;
     color: $secondary-color;
     &:active {
