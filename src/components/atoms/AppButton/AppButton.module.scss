@@ -1,0 +1,10 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+
+
+.appButton {
+    background: $gradient;
+}

@@ -1,12 +1,11 @@
-import { useState } from "react";
 import "./styles/main.scss";
 
-function App() {
-  const [count, setCount] = useState(0);
+import AppButton from "@components/atoms/AppButton";
 
+function App() {
   return (
     <>
-
+      <AppButton />
     </>
   );
 }
