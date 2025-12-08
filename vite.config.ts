@@ -18,7 +18,7 @@ export default defineConfig({
       },
     },
     rollupOptions: {
-      input: path.resolve(__dirname, "src/index.html"),
+      input: path.resolve(__dirname, "index.html"),
     },
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
