@@ -1,0 +1,46 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+h1 {
+  font-family: $font-heading;
+  font-weight: $extra-bold;
+}
+
+h2 {
+  font-family: $font-heading;
+  font-weight: $bold;
+}
+
+h3 {
+  font-family: $font-heading;
+  font-weight: $bold;
+}
+
+h4 {
+  font-family: $font-heading;
+  font-weight: $semi-bold;
+}
+
+h5 {
+  font-family: $font-body;
+  font-weight: $bold;
+}
+
+h6 {
+  font-family: $font-body;
+  font-weight: $semi-bold;
+}
+
+p, a, li, span, input, textarea, button {
+  font-family: $font-body;
+}
+
+p {
+  font-weight: $regular;
+}
+
+a {
+  font-weight: $bold;
+}

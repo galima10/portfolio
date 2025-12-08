@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <AppButton />
+      <h1>Titre</h1>
     </>
   );
 }
