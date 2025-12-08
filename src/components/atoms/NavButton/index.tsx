@@ -2,7 +2,7 @@ import styles from "./NavButton.module.scss";
 
 interface NavButtonProps {
   position: "navbar" | "footer";
-  text?: string;
+  label?: string;
   link?: string;
   isActive?: boolean;
   className?: string;
@@ -10,7 +10,7 @@ interface NavButtonProps {
 
 export default function NavButton({
   position,
-  text,
+  label,
   link = "#",
   isActive = false,
   className = "",
@@ -22,7 +22,7 @@ export default function NavButton({
         isActive ? styles.active : ""
       } ${className}`}
     >
-      {text}
+      {label}
     </a>
   );
 }

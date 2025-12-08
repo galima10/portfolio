@@ -1,5 +1,7 @@
 import "./styles/main.scss";
 
+import Navbar from "./components/organisms/Navbar";
+
 import AppButton from "@components/atoms/AppButton";
 import NavButton from "@components/atoms/NavButton";
 import AppInput from "@components/atoms/AppInput";
@@ -9,12 +11,12 @@ import AppLogo from "@components/atoms/AppLogo";
 function App() {
   return (
     <>
-      <AppButton type="primary" text="Primary Button" />
-      <AppButton type="secondary" text="Secondary Button" />
-      <AppButton type="tertiary" text="Tertiary Button" />
-      <NavButton position="navbar" text="Navbar Button" />
+      <AppButton type="primary" label="Primary Button" />
+      <AppButton type="secondary" label="Secondary Button" />
+      <AppButton type="tertiary" label="Tertiary Button" />
+      <NavButton position="navbar" label="Navbar Button" />
       <AppLogo />
-      <NavButton position="footer" text="Footer Button" />
+      <NavButton position="footer" label="Footer Button" />
       <AppInput label="Standard Input" placeholder="Enter text here" />
       <AppSubmitButton />
       <AppInput
@@ -35,6 +37,15 @@ function App() {
       <p>
         <small>Small text example</small>
       </p>
+      <Navbar
+        links={[
+          { label: "Présentation", link: "/" },
+          { label: "Compétences", link: "/" },
+          { label: "Outils & Technos", link: "/" },
+          { label: "Mes projets", link: "/" },
+          { label: "Me contacter", link: "/", isCTA: true },
+        ]}
+      />
     </>
   );
 }
