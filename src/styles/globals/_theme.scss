@@ -3,37 +3,60 @@
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
 
+body {
+  font-family: $font-body;
+  background-color: $primary-color;
+  color: $tertiary-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1 {
+  @include fluid-type(6);
   font-family: $font-heading;
   font-weight: $extra-bold;
+  color: $secondary-color
 }
 
 h2 {
+  @include fluid-type(5);
   font-family: $font-heading;
   font-weight: $bold;
 }
 
 h3 {
+  @include fluid-type(4);
   font-family: $font-heading;
   font-weight: $bold;
 }
 
 h4 {
+  @include fluid-type(3);
   font-family: $font-heading;
   font-weight: $semi-bold;
 }
 
 h5 {
+  @include fluid-type(2);
   font-family: $font-body;
   font-weight: $bold;
 }
 
 h6 {
+  @include fluid-type(1);
   font-family: $font-body;
   font-weight: $semi-bold;
 }
 
-p, a, li, span, input, textarea, button {
+p,
+a,
+li,
+span,
+input,
+textarea,
+button {
+  @include fluid-type(0);
   font-family: $font-body;
 }
 
@@ -43,4 +66,14 @@ p {
 
 a {
   font-weight: $bold;
+  color: $primary-color;
+  &.menu-link {
+    color: $secondary-color;
+  }
+}
+
+small {
+  font-family: $font-body;
+  font-weight: $regular;
+  @include fluid-type(-1);
 }
