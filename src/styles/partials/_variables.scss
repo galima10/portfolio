@@ -24,3 +24,6 @@ $bp-desktop: 768px;
 // Ratios typographiques
 $desktop-font-ratio: 1.25;
 $mobile-font-ratio: 1.2;
+
+// Espacements
+$padding-global: spaceCalc(1.5rem, 8.5rem, 19rem);
