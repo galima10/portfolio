@@ -5,10 +5,24 @@ interface NavButtonProps {
   text: string;
   link?: string;
   isActive?: boolean;
+  className?: string;
 }
 
-export default function NavButton({ position, text, link = "#", isActive = false }: NavButtonProps) {
-    return (
-        <a href={link} className={styles[position] + " " + (isActive ? styles.active : "")}>{text}</a>
-    );
-};
+export default function NavButton({
+  position,
+  text,
+  link = "#",
+  isActive = false,
+  className = "",
+}: NavButtonProps) {
+  return (
+    <a
+      href={link}
+      className={`${styles[position]} ${
+        isActive ? styles.active : ""
+      } ${className}`}
+    >
+      {text}
+    </a>
+  );
+}

@@ -5,6 +5,7 @@ interface AppInputProps {
   isTextarea?: boolean;
   placeholder?: string;
   label: string;
+  className?: string;
 }
 
 export default function AppInput({
@@ -12,9 +13,10 @@ export default function AppInput({
   isTextarea = false,
   placeholder,
   label,
+  className = "",
 }: AppInputProps) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <label htmlFor="app-input" className={styles.label}>
         {label}
         <span>*</span>
