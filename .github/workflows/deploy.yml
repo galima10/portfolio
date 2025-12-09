@@ -20,8 +20,12 @@ jobs:
       - name: Clone target repo
         run: |
           git clone https://github.com/galima10/portfolio-site.git target-repo
-          # Supprime tout sauf CNAME
-          find target-repo -not -name 'CNAME' -not -name '.' -not -name '..' -exec rm -rf {} +
+          ## Supprime tout sauf CNAME
+          shopt -s extglob
+          cd target-repo
+          rm -rf !(CNAME)
+          cd ..
+          # Copie le build
           cp -r dist/* target-repo/
 
       - name: Push changes to target repo
