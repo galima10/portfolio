@@ -22,7 +22,7 @@ jobs:
           git clone https://github.com/galima10/portfolio-site.git target-repo
           rm -rf target-repo/*
           cp -r dist/* target-repo/
-          echo "www.magalimai.fr" > target-repo/CNAME   # ← ajout
+          echo "magalimai.fr" > target-repo/CNAME   # ← ajout
 
       - name: Push changes to target repo
         run: |
