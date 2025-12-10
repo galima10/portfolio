@@ -9,16 +9,26 @@ import Github from "@components/atoms/svgIcons/Github";
 import LinkedIn from "@components/atoms/svgIcons/LinkedIn";
 
 interface NavLinkProps {
-  label: string;
-  link: string;
-  isCTA?: boolean;
+  links: { label: string; link: string; isCTA?: boolean }[];
+  ref: React.Ref<HTMLUListElement> | null;
+  handleMenuToggle: () => void;
+  className?: string;
 }
 
-export default function NavLinks({ links }: { links: NavLinkProps[] }) {
+export default function NavLinks({
+  links,
+  ref,
+  handleMenuToggle,
+  className,
+}: NavLinkProps) {
   return (
-    <ul className={styles.navLinks}>
+    <ul className={`${styles.navLinks} ${className}`} ref={ref}>
       <li className={styles.closeMenu}>
-        <button className={styles.closeButton} aria-label="Close Menu">
+        <button
+          className={styles.closeButton}
+          aria-label="Close Menu"
+          onClick={handleMenuToggle}
+        >
           <span className={styles.closeLine}></span>
           <span className={styles.closeLine}></span>
         </button>
@@ -27,7 +37,7 @@ export default function NavLinks({ links }: { links: NavLinkProps[] }) {
         <AppLogo />
       </li>
       {links.map((link) => (
-        <li key={link.link} className={styles.navItem}>
+        <li key={link.link + link.label} className={styles.navItem}>
           {link.isCTA ? (
             <AppButton type="primary" link={link.link} label={link.label} />
           ) : (
