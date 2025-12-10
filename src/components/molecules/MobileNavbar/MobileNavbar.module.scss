@@ -1,0 +1,32 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.mobileNavbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.hamburgerButton {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.hamburgerLine {
+  background-color: $secondary-color;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 5rem;
+}

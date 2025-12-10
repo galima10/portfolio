@@ -1,5 +1,3 @@
-import styles from "./NavExternalButton.module.scss";
-
 interface NavExternalButtonProps {
   children: React.ReactNode;
   href: string;
