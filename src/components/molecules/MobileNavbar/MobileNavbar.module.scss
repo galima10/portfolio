@@ -12,9 +12,12 @@
   padding: 0 1.5rem;
   position: relative;
   @include responsive {
-    display: none;
+    visibility: hidden;
+    position: absolute;
   }
 }
+
+
 
 .hamburgerButton {
   display: flex;

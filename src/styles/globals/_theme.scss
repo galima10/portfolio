@@ -5,15 +5,18 @@
 
 * {
   font-family: $font-body;
-  background-color: $primary-color;
   color: $tertiary-color;
+}
+
+body {
+  background-color: $primary-color;
 }
 
 h1 {
   @include fluid-type(6);
   font-family: $font-heading;
   font-weight: $extra-bold;
-  color: $secondary-color
+  color: $secondary-color;
 }
 
 h2 {

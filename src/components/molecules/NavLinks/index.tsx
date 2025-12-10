@@ -33,8 +33,8 @@ export default function NavLinks({
           <span className={styles.closeLine}></span>
         </button>
       </li>
-      <li className={styles.logo}>
-        <AppLogo />
+      <li>
+        <AppLogo className={styles.logo} />
       </li>
       {links.map((link) => (
         <li key={link.link + link.label} className={styles.navItem}>
