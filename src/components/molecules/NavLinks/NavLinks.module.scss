@@ -1,0 +1,40 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.navLinks {
+  padding: 12rem 1.5rem;
+  position: absolute;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, auto);
+  gap: 0 2rem;
+}
+li:not(.githubIcon):not(.linkedinIcon) {
+  grid-column: 1 / span 2;
+  height: fit-content;
+}
+a {
+  margin: 0 auto;
+}
+
+.svgIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.githubIcon {
+  grid-column: 1;
+  grid-row: 7;
+  justify-self: end;
+}
+
+.linkedinIcon {
+  grid-column: 2;
+  grid-row: 7;
+  justify-self: start;
+}
