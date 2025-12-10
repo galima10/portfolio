@@ -66,6 +66,9 @@ p {
 
 a {
   font-weight: $bold;
+  &:focus {
+    outline: 0.15rem solid $violet-color;
+  }
 }
 
 small {
