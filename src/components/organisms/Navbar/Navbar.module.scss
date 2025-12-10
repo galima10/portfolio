@@ -32,4 +32,7 @@
   &.open {
     right: 0;
   }
+  @include responsive {
+    right: 0;
+  }
 }
