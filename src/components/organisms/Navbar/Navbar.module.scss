@@ -12,3 +12,12 @@
   left: 0;
 }
 
+.filterDark {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(80, 89, 89, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
