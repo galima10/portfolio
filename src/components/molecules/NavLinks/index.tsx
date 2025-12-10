@@ -17,6 +17,12 @@ interface NavLinkProps {
 export default function NavLinks({ links }: { links: NavLinkProps[] }) {
   return (
     <ul className={styles.navLinks}>
+      <li className={styles.closeMenu}>
+        <button className={styles.closeButton} aria-label="Close Menu">
+          <span className={styles.closeLine}></span>
+          <span className={styles.closeLine}></span>
+        </button>
+      </li>
       <li className={styles.logo}>
         <AppLogo />
       </li>

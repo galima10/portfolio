@@ -11,6 +11,7 @@ export default function Navbar({ links }: NavbarProps) {
   return (
     <nav className={styles.navbar}>
       <MobileNavbar />
+      
       <NavLinks links={links} />
     </nav>
   );
