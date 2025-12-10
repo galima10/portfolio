@@ -10,17 +10,29 @@
   position: fixed;
   top: 0;
   left: 0;
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 0 $padding-global;
+}
+
+.filterDark {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(80, 89, 89, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  &.active {
+    opacity: 1;
   }
 }
 
-.svgIcon {
-  width: 2rem;
-  height: 2rem;
+.navLinks {
+  right: -70%;
+  &.open {
+    right: 0;
+  }
+  @include responsive {
+    right: 0;
+  }
 }

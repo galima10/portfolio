@@ -28,8 +28,8 @@ export default function AppLogo({ className = "", link = "#" }: AppLogoProps) {
             y2="25"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#5C967D" />
-            <stop offset="1" stop-color="#5A587D" />
+            <stop stopColor="#5C967D" />
+            <stop offset="1" stopColor="#5A587D" />
           </linearGradient>
         </defs>
       </svg>

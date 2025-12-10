@@ -11,10 +11,15 @@ import AppLogo from "@components/atoms/appElements/AppLogo";
 function App() {
   return (
     <>
-      <hgroup className="wip">
-        <h1>WIP Construction en cours</h1>
-        <p>Portfolio en développement - Magali MAI</p>
-      </hgroup>
+      <Navbar
+        links={[
+          { label: "Présentation", link: "/" },
+          { label: "Compétences", link: "/" },
+          { label: "Outils & Technos", link: "/" },
+          { label: "Mes projets", link: "/" },
+          { label: "Me contacter", link: "/", isCTA: true },
+        ]}
+      />
     </>
   );
 }
