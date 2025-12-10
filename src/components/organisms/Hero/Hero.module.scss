@@ -4,9 +4,9 @@
 @use "@styles/partials/placeholders" as *;
 
 .hero {
-  padding: 5rem $padding-global 0;
+  padding: 6rem $padding-global 0;
   width: 100%;
-  height: calc(100vh - $navbar-height);
+  height: calc(100svh - $navbar-height);
   display: flex;
   flex-direction: column;
   align-items: center;
