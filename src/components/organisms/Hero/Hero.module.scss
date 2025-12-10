@@ -1,0 +1,38 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.hero {
+  padding: 6rem $padding-global 0;
+  width: 100%;
+  height: calc(100vh - $navbar-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20%;
+}
+
+.ctaPrimary {
+  align-self: flex-start;
+}
+
+.ctaSecondary {
+  align-self: flex-end;
+}
+
+.ctaLink {
+  padding: 0 spaceCalc(5rem, 5rem, 5rem);
+  text-align: center;
+  color: $secondary-color;
+  span {
+    display: block;
+    width: fit-content;
+    transform: rotate(90deg);
+    margin: 0 auto;
+    font-size: 2rem;
+    color: $secondary-color;
+  }
+}

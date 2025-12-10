@@ -1,6 +1,7 @@
 import "./styles/main.scss";
 
 import Navbar from "./components/organisms/Navbar";
+import Hero from "@components/organisms/Hero";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           { label: "Me contacter", link: "/", isCTA: true },
         ]}
       />
+      <Hero />
     </>
   );
 }

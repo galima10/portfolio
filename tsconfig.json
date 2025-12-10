@@ -13,15 +13,15 @@
     "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "@assets*": ["./assets/*"],
-      "@components*": ["./components/*"],
-      "@hooks*": ["./hooks/*"],
-      "@styles*": ["./styles/*"],
-      "@types*": ["./types/*"],
-      "@utils*": ["./utils/*"],
-      "@store*": ["./store/*"],
-      "@constants*": ["./constants/*"]
+      "@assets/*": ["./assets/*"],
+      "@components/*": ["./components/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@styles/*": ["./styles/*"],
+      "@types/*": ["./types/*"],
+      "@utils/*": ["./utils/*"],
+      "@store/*": ["./store/*"],
+      "@constants/*": ["./constants/*"]
     }
   },
-  "include": ["./src"],
+  "include": ["./src"]
 }
