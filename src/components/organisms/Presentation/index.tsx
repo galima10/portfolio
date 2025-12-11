@@ -6,7 +6,7 @@ import photo from "@images/photo_de_profil.webp";
 
 export default function Presentation() {
   return (
-    <SectionWrapper title="Qui suis-je ?" orientation="right">
+    <SectionWrapper title="Qui suis-je ?" orientation="right" className={styles.presentation}>
       <div className={styles.infos}>
         <img src={photo} alt="Photo de profil" />
         <p className={styles.name}>

@@ -6,15 +6,24 @@
 .presentation {
   padding: $section-padding;
   height: $section-height;
+  margin-top: calc(100svh / 4);
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  @include responsive {
+    flex-direction: row;
+  }
 }
 
 .infos {
   img {
-    width: 18rem;
-    height: 26rem;
     border-radius: 10rem;
+    width: 12rem;
+    height: 16rem;
+    @include responsive {
+      width: 18rem;
+      height: 26rem;
+    }
   }
 }

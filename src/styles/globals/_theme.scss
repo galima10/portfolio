@@ -26,6 +26,12 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 5%;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   @include responsive {
     color: $primary-color;
     background: $gradient;
