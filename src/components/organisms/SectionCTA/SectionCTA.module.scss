@@ -16,6 +16,7 @@
 }
 
 .text {
+  padding: 0 spaceCalc(0rem, 18rem, 18rem);
   strong {
     @include fluid-type(1);
     color: $secondary-color;
