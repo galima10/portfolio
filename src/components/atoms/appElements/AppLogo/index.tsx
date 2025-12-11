@@ -1,13 +1,17 @@
 import styles from "./AppLogo.module.scss";
 
+import { useAppNavigation } from "@hooks/globals/useAppNavigation";
+
 interface AppLogoProps {
   className?: string;
-  link?: string;
+  action?: () => void;
+  to?: string;
 }
 
-export default function AppLogo({ className = "", link = "#" }: AppLogoProps) {
+export default function AppLogo({ className = "", action, to }: AppLogoProps) {
+  const { handleClick } = useAppNavigation(action, to);
   return (
-    <a href={link} className={`${styles.logo} ${className}`}>
+    <button className={`${styles.logo} ${className}`} onClick={handleClick}>
       <svg
         width="50"
         height="50"
@@ -34,6 +38,6 @@ export default function AppLogo({ className = "", link = "#" }: AppLogoProps) {
           </linearGradient>
         </defs>
       </svg>
-    </a>
+    </button>
   );
 }

@@ -3,7 +3,7 @@ import styles from "./NavLinks.module.scss";
 import NavButton from "@components/atoms/appElements/NavButton";
 import AppButton from "@components/atoms/appElements/AppButton";
 import AppLogo from "@components/atoms/appElements/AppLogo";
-import NavExternalButton from "@components/atoms/appElements/NavExternalButton";
+import GenericButton from "@components/atoms/appElements/GenericButton";
 
 import Github from "@components/atoms/svgIcons/Github";
 import LinkedIn from "@components/atoms/svgIcons/LinkedIn";
@@ -39,21 +39,21 @@ export default function NavLinks({
       {links.map((link) => (
         <li key={link.link + link.label} className={styles.navItem}>
           {link.isCTA ? (
-            <AppButton type="primary" link={link.link} label={link.label} />
+            <AppButton type="primary" to={link.link} label={link.label} />
           ) : (
-            <NavButton position="navbar" link={link.link} label={link.label} />
+            <NavButton position="navbar" to={link.link} label={link.label} />
           )}
         </li>
       ))}
       <li className={styles.githubIcon}>
-        <NavExternalButton href="https://github.com/galima10/">
+        <GenericButton to="https://github.com/galima10/">
           <Github className={styles.svgIcon} />
-        </NavExternalButton>
+        </GenericButton>
       </li>
       <li className={styles.linkedinIcon}>
-        <NavExternalButton href="https://www.linkedin.com/in/mai-magali/">
+        <GenericButton to="https://www.linkedin.com/in/mai-magali/">
           <LinkedIn className={styles.svgIcon} />
-        </NavExternalButton>
+        </GenericButton>
       </li>
     </ul>
   );

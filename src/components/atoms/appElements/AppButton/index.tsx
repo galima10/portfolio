@@ -1,16 +1,27 @@
 import styles from "./AppButton.module.scss";
 
+import { useAppNavigation } from "@hooks/globals/useAppNavigation";
+
 interface AppButtonProps {
   type: "primary" | "secondary" | "tertiary";
   label: string;
-  link?: string;
   className?: string;
+  action?: () => void;
+  to?: string;
 }
 
-export default function AppButton({ type, label, link = "#", className = "" }: AppButtonProps) {
+export default function AppButton({
+  type,
+  label,
+  className = "",
+  action,
+  to,
+}: AppButtonProps) {
+  const { handleClick } = useAppNavigation(action, to);
+
   return (
-    <a href={link} className={`${styles[type]} ${className}`}>
+    <button className={`${styles[type]} ${className}`} onClick={handleClick}>
       {label}
-    </a>
+    </button>
   );
 }
