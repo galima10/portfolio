@@ -3,18 +3,24 @@
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
 
-.presentation {
+.wrapper {
   padding: $section-padding;
   height: $section-height;
   width: 100vw;
   display: flex;
   align-items: center;
+  h2 {
+    @include h2-position("right");
+  }
 }
 
-.infos {
-  img {
-    width: 18rem;
-    height: 26rem;
-    border-radius: 10rem;
+.left {
+  h2 {
+    @include h2-position("left");
+  }
+}
+.right {
+  h2 {
+    @include h2-position("right");
   }
 }

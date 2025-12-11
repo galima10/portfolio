@@ -23,6 +23,17 @@ h2 {
   @include fluid-type(5);
   font-family: $font-heading;
   font-weight: $bold;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  color: $primary-color;
+  background: $gradient;
+  width: $section-height;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 2.75rem 2.75rem;
 }
 
 h3 {
@@ -75,4 +86,8 @@ small {
   font-family: $font-body;
   font-weight: $regular;
   @include fluid-type(-1);
+}
+
+section {
+  position: relative;
 }

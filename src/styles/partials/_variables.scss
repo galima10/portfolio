@@ -34,8 +34,12 @@ $bp-desktop: 768px;
 $desktop-font-ratio: 1.25;
 $mobile-font-ratio: 1.2;
 
-// Espacements
-$padding-global: spaceCalc(1.5rem, 8.5rem, 19rem);
-
 // Largeurs et hauteurs
 $navbar-height: 4.5rem;
+$section-height: calc(100svh - $navbar-height);
+
+// Espacements
+$padding-global: spaceCalc(1.5rem, 8.5rem, 19rem);
+$h2-offset: calc($padding-global - 6rem);
+$section-padding: 0 $padding-global;
+

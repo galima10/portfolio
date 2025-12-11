@@ -1,14 +1,20 @@
 import styles from "./Presentation.module.scss";
 
+import SectionWrapper from "@components/wrappers/SectionWrapper";
+
 import photo from "@images/photo_de_profil.webp";
 
 export default function Presentation() {
   return (
-    <section className={styles.presentation}>
-      <h2>Qui suis-je ?</h2>
-      <div>
-        <img src="" alt="" />
+    <SectionWrapper title="Qui suis-je ?" orientation="right">
+      <div className={styles.infos}>
+        <img src={photo} alt="Photo de profil" />
+        <p className={styles.name}>
+          <strong>Magali MAI</strong>
+        </p>
+        <p className={styles.job}>Développeuse web</p>
       </div>
-    </section>
+      <div className={styles.description}></div>
+    </SectionWrapper>
   );
 }

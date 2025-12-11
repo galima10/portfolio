@@ -2,6 +2,7 @@ import "./styles/main.scss";
 
 import Navbar from "./components/organisms/Navbar";
 import Hero from "@components/organisms/Hero";
+import Presentation from "@components/organisms/Presentation";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         ]}
       />
       <Hero />
+      <Presentation />
     </>
   );
 }
