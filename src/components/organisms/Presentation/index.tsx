@@ -12,7 +12,7 @@ export default function Presentation() {
       className={styles.presentation}
     >
       <figure className={styles.infos}>
-        <img src={photo} alt="Photo de profil" />
+        <img src={photo} alt="Photo de profil" loading="lazy" />
         <figcaption>
           <p className={styles.name}>
             <strong>Magali MAI</strong>
