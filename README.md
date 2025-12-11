@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# Mon portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dans ce repo se trouve le code source de mon portfolio. <br>
+Pour le visiter : https://magalimai.fr <br>
+<br>
 
-Currently, two official plugins are available:
+## Un site codé, pensé mobile-first
+Pour mon portfolio, j’ai eu envie de créer quelque chose qui me ressemble vraiment : un site simple, clair, codé par mes soins, et déployé sur mon propre nom de domaine. <br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*Stack utilisée* : TypeScript • React • Vite • Sass <br>
+Un choix qui reflète mon envie de travailler avec des outils modernes, utilisés dans le milieu pro.
 
-## React Compiler
+## Arborescence
+- Une page principale fluide avec toutes les sections importantes.
+- Des pages projets séparées pour ne pas surcharger l’ensemble.
+J’ai privilégié une approche one-page car j’aime l’idée d’un parcours continu, où la personne qui me découvre avance naturellement dans mon univers.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Design
+J’aime imaginer mon portfolio comme un petit voyage.<br>
+Une timeline qui serpente du haut vers le bas, avec des arrêts, des étapes, des points marquants, comme ma ligne de vie. Un chemin qui représente mon évolution et ma façon d’avancer : doucement, mais sûrement, et toujours avec intention.
 
-## Expanding the ESLint configuration
+### Section Présentation - "Qui suis-je ?"
+Une série de slides qui se suivent, comme si on apprenait à me connaître pas à pas. On ne peut pas aller plus loin tant qu’on n’a pas lu la suite : c’est ma manière de dire de prendre le temps de me connaître avant d'aller plus loin.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Section Compétences - "Mon équipement"
+Mes compétences présentées comme des outils. Et pour chaque outil, leurs statistiques. <br>
+Parce que pour développer, il faut un équipement, mais aussi savoir s’en servir au bon moment.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Section Outils & Techonologies - "Mes territoires"
+Les technologies sont à mes yeux comme des zones à explorer où j'utilise mes outils pour avancer : 
+- les terres déjà explorer,
+- celles encore mystérieuses,
+- et les endroits où je commence à mettre les pieds.
+<br>
+Chaque technologie devient un petit point sur la carte : une ville, une région, une zone plus ou moins explorée. <br>
+Et mes couleurs racontent aussi quelque chose :
+- le bleu pour ce qui est visible et créatif,
+- le rouge pour la partie plus logique, telle la forge du web
+- le vert pour tout ce qui touche à la donnée comme la forêt de données,
+- le gris pour les outils qu'on utilise partout,
+- le violet pour le full-stack, mon terrain de jeu préféré.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Section Projets - "Mes quêtes"
+Chaque projet devient une île. <br>
+Avec une phrase d'accroche, un badge, et les icônes de la stack utilisée. Comme un carnet d'aventure.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Section Contact - "Le prochain cap"
+Une section simple, humaine, chaleureuse.<br>
+Parce que c’est ici que mon aventure peut rejoindre celle de quelqu’un d’autre.
