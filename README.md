@@ -96,23 +96,23 @@ Le projet est une application React construite avec le framework Sass et compil�
 └── vite.config.ts
 ```
 ### Dossiers importants
-- components/ : <br>
+- `components/` : <br>
   Ici, tous les composants sont stockés. Chaque composant a un fichier .tsx accompagné d'un fichier .scss module qui est scopé dans le composant. Seul de l'affichage est dans les fichiers des composants, il n'y a aucune logique métier. <br>
-  Les composants sont séparés en 3 sous-dossiers : atoms/, molecules/ et organisms/, en accord avec le système Atomic Design. <br>
-- hooks/ : <br>
-  Ici se trouve la logique métier utilisée dans les composants. Il y a 2 types de hook différents utilisés : les hooks par composant et les hooks utilisés par plusieurs composants. <br>
-- styles/ : <br>
-  Dans ce dossier se trouve le style global ainsi que celui du thème de l'application. Se trouvent également les variables .scss, mixins, functions et placeholders pour simplifier les calculs. <br>
+  Les composants sont séparés en 3 sous-dossiers : atoms/, molecules/ et organisms/, en accord avec le système Atomic Design.
+- `hooks/` : <br>
+  Ici se trouve la logique métier utilisée dans les composants. Il y a 2 types de hook différents utilisés : les hooks par composant et les hooks utilisés par plusieurs composants.
+- `styles/` : <br>
+  Dans ce dossier se trouve le style global ainsi que celui du thème de l'application. Se trouvent également les variables .scss, mixins, functions et placeholders pour simplifier les calculs.
 
 ### Fichiers importants
-- deploy.yml : <br>
-  Le workflow pour permettre à Github de build l'application avec Vite et de push l'application compilé sur un autre repo externe pour directement l'afficher sur le nom de domaine uniquement le HTML, CSS, JS. <br>
-- global.d.ts : <br>
-  Pour permettre à React de comprendre l'import de fichiers avec une extension autre que .tsx ou .ts. <br>
-- tsconfig.json : <br>
-  Permet de configurer TypeScript pour permettre l'autocomplétion en développement et reprérer les erreurs de typages. <br>
-- vite.config.ts : <br>
-  Permet de configurer Vite notamment dans la résolution de chemins avec alias, les caractéristiques du build de sortie de la mise en production mais aussi de l'environnement de développement. <br>
+- `deploy.yml` : <br>
+  Le workflow pour permettre à Github de build l'application avec Vite et de push l'application compilé sur un autre repo externe pour directement l'afficher sur le nom de domaine uniquement le HTML, CSS, JS.
+- `global.d.ts` : <br>
+  Pour permettre à React de comprendre l'import de fichiers avec une extension autre que .tsx ou .ts.
+- `tsconfig.json` : <br>
+  Permet de configurer TypeScript pour permettre l'autocomplétion en développement et reprérer les erreurs de typages.
+- `vite.config.ts` : <br>
+  Permet de configurer Vite notamment dans la résolution de chemins avec alias, les caractéristiques du build de sortie de la mise en production mais aussi de l'environnement de développement.
   
 
 
