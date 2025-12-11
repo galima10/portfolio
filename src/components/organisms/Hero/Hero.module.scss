@@ -4,7 +4,7 @@
 @use "@styles/partials/placeholders" as *;
 
 .hero {
-  padding: 6rem $padding-global 0;
+  padding: 2rem $padding-global 8rem;
   width: 100%;
   height: calc(100svh - $navbar-height);
   display: flex;
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 20%;
+  gap: 16%;
   h1 {
     width: 100%;
     text-align: center;
@@ -54,6 +54,8 @@
   color: $secondary-color;
   width: 15rem;
   margin: 0 auto;
+  position: absolute;
+  bottom: 0;
   span {
     display: block;
     width: fit-content;
@@ -63,6 +65,7 @@
     color: $secondary-color;
   }
   @include responsive {
+    position: relative;
     grid-column: 1 / span 6;
     grid-row: 3;
   }

@@ -25,15 +25,17 @@ h2 {
   font-weight: $bold;
   text-transform: uppercase;
   letter-spacing: 5%;
-  color: $primary-color;
-  background: $gradient;
-  width: $section-height;
-  position: absolute;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 0 2.75rem 2.75rem;
+  @include responsive {
+    color: $primary-color;
+    background: $gradient;
+    width: $section-height;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 2.75rem 2.75rem;
+  }
 }
 
 h3 {

@@ -95,16 +95,19 @@
 }
 
 @mixin h2-position($side) {
-  @extend %main-h2;
-  @if $side == "left" {
-    transform-origin: top left;
-    transform: rotate(-90deg) translate(-10rem, 0);
-    left: $h2-offset;
-    transform: rotate(-90deg) translate(-50%, 0);
-  } @else if $side == "right" {
-    transform-origin: top right;
-    transform: rotate(90deg) translate(10rem, 0);
-    right: $h2-offset;
-    transform: rotate(90deg) translate(50%, 0);
+  @include responsive {
+    height: 5rem;
+    top: 50%;
+    @if $side == "left" {
+      transform-origin: top left;
+      transform: rotate(-90deg) translate(-10rem, 0);
+      left: $h2-offset;
+      transform: rotate(-90deg) translate(-50%, 0);
+    } @else if $side == "right" {
+      transform-origin: top right;
+      transform: rotate(90deg) translate(10rem, 0);
+      right: $h2-offset;
+      transform: rotate(90deg) translate(50%, 0);
+    }
   }
 }
