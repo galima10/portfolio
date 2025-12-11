@@ -6,7 +6,7 @@ interface GithubProps {
 
 export default function Github({ className }: GithubProps) {
   return (
-    <div className={`${styles.svgIcon} ${className}`}>
+    <div className={`${styles.svgIcon} ${className}`} aria-label="Icône Github">
       <svg
         width="40"
         height="40"

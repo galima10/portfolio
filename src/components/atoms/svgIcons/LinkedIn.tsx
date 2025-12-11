@@ -6,7 +6,7 @@ interface LinkedInProps {
 
 export default function LinkedIn({ className }: LinkedInProps) {
   return (
-    <div className={`${styles.svgIcon} ${className}`}>
+    <div className={`${styles.svgIcon} ${className}`} aria-label="Icône LinkedIn">
       <svg
         width="40"
         height="40"
