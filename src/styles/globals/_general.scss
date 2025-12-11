@@ -28,13 +28,13 @@ body {
   align-items: center;
   justify-content: center;
   @include responsive {
+    padding: 0;
     background: none;
     -webkit-text-fill-color: $primary-color;
     color: $primary-color;
     background: $gradient;
     width: $section-height;
     position: absolute;
-
     border-radius: 0 0 2.75rem 2.75rem;
   }
 }
