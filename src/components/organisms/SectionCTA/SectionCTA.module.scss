@@ -1,0 +1,23 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.sectionCTA {
+  width: 100%;
+  height: $section-height;
+  padding: $section-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.text {
+  strong {
+    @include fluid-type(1);
+    color: $secondary-color;
+  }
+}
