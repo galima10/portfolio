@@ -15,7 +15,7 @@ export default function SectionWrapper({
 }: SectionWrapperProps) {
   return (
     <section className={styles.wrapper + " " + styles[orientation] + " " + className}>
-      <h2>{title}</h2>
+      <h2 className="main-h2">{title}</h2>
       {children}
     </section>
   );
