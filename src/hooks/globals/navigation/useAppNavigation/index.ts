@@ -13,7 +13,6 @@ export function useAppNavigation(action?: () => void, to?: string) {
 
     // 🔹 1. Gestion des ancres internes ("#section")
     if (to.startsWith("#")) {
-      console.log("Navigating to section on current page");
       const el = document.querySelector(to);
       if (el) {
         const navbarHeight = 4.5 * 16; // 4.5rem → 72px si 1rem = 16px
