@@ -12,7 +12,7 @@ function App() {
       <Navbar
         links={[
           { label: "Présentation", link: "/#presentation" },
-          { label: "Compétences", link: "" },
+          { label: "Compétences", link: "/#skills" },
           { label: "Outils & Technos", link: "" },
           { label: "Mes projets", link: "" },
           { label: "Me contacter", link: "", isCTA: true },
