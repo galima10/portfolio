@@ -13,6 +13,7 @@ export function useAppNavigation(action?: () => void, to?: string) {
 
     // 🔹 1. Gestion des ancres internes ("#section")
     if (to.startsWith("#")) {
+      console.log("Navigating to section on current page");
       const el = document.querySelector(to);
       if (el) {
         const navbarHeight = 4.5 * 16; // 4.5rem → 72px si 1rem = 16px
@@ -26,15 +27,20 @@ export function useAppNavigation(action?: () => void, to?: string) {
 
     // 🔹 2. Gestion des ancres de la main page quand on n'est pas sur la main page ("/#section")
     if (to.startsWith("/#")) {
-      const hash = to.slice(1); // "/#skills" -> "#skills"
+      const hash = to.slice(1); // "/#hero" -> "#hero"
 
       if (location.pathname !== "/") {
-        // Si on n'est PAS sur la home, navigue vers "/#section"
+        // On n'est pas sur la home
+        // 1️⃣ navigate vers "/#hero"
         navigate(to);
+
+        // 2️⃣ scroll instantanément en haut avant que Home fasse le smooth
+        window.scrollTo({ top: 0, behavior: "auto" });
+
         return;
       }
 
-      // Si on EST déjà sur "/", scroll directement
+      // Si on est déjà sur la home, scroll directement
       scrollToHash(hash);
       return;
     }

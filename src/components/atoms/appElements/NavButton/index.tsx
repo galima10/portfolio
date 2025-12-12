@@ -1,6 +1,6 @@
 import styles from "./NavButton.module.scss";
 
-import { useAppNavigation } from "@hooks/globals/useAppNavigation";
+import { useAppNavigation } from "@hooks/globals/navigation/useAppNavigation";
 
 interface NavButtonProps {
   position: "navbar" | "footer";

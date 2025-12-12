@@ -1,6 +1,6 @@
 import styles from "./AppLogo.module.scss";
 
-import { useAppNavigation } from "@hooks/globals/useAppNavigation";
+import { useAppNavigation } from "@hooks/globals/navigation/useAppNavigation";
 
 interface AppLogoProps {
   className?: string;

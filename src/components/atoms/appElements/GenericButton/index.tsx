@@ -1,4 +1,4 @@
-import { useAppNavigation } from "@hooks/globals/useAppNavigation";
+import { useAppNavigation } from "@hooks/globals/navigation/useAppNavigation";
 
 interface NavExternalButtonProps {
   children: React.ReactNode;

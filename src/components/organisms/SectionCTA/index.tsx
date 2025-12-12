@@ -16,6 +16,7 @@ export default function SectionCTA({ text }: SectionCTAProps) {
         className={styles.ctaPrimary}
         label="Envoyez moi un message !"
         type="primary"
+        to="/projects/1"
       />
     </div>
   );
