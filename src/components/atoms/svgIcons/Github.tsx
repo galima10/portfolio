@@ -1,10 +1,10 @@
 import styles from "./SVGIcons.module.scss";
 
-interface GithubProps {
-    className?: string;
+interface ClassNameType {
+  className?: string;
 }
 
-export default function Github({ className }: GithubProps) {
+export default function Github({ className }: ClassNameType) {
   return (
     <div className={`${styles.svgIcon} ${className}`} aria-label="Icône Github">
       <svg
