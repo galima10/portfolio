@@ -4,9 +4,10 @@ import AppButton from "@components/atoms/appElements/AppButton";
 
 interface SectionCTAProps {
   text: string;
+  to?: string;
 }
 
-export default function SectionCTA({ text }: SectionCTAProps) {
+export default function SectionCTA({ text, to }: SectionCTAProps) {
   return (
     <div className={styles.sectionCTA}>
       <p className={styles.text}>
@@ -16,7 +17,7 @@ export default function SectionCTA({ text }: SectionCTAProps) {
         className={styles.ctaPrimary}
         label="Envoyez moi un message !"
         type="primary"
-        to="/projects/1"
+        to={to}
       />
     </div>
   );

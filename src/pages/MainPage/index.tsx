@@ -14,6 +14,7 @@ export default function MainPage() {
       <Presentation />
       <SectionCTA text="Mon histoire commence ici, et peut-être que la suite s’écrit avec vous." />
       <Skills />
+      <SectionCTA text="Voici ce qui m’accompagne au quotidien, mais avec les bonnes personnes, tout prend un vrai sens." />
     </>
   );
 }
