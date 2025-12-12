@@ -1,14 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+
+import { scrollToHash } from "@utils/scrollToHash";
 
 export function useAppNavigation(action?: () => void, to?: string) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleClick = () => {
     if (action) action();
 
     if (!to) return;
 
-    // 🔹 1. Gestion des ancres internes (#section)
+    // 🔹 1. Gestion des ancres internes ("#section")
     if (to.startsWith("#")) {
       const el = document.querySelector(to);
       if (el) {
@@ -21,13 +24,28 @@ export function useAppNavigation(action?: () => void, to?: string) {
       return;
     }
 
-    // 🔹 2. Lien externe (http…)
+    // 🔹 2. Gestion des ancres de la main page quand on n'est pas sur la main page ("/#section")
+    if (to.startsWith("/#")) {
+      const hash = to.slice(1); // "/#skills" -> "#skills"
+
+      if (location.pathname !== "/") {
+        // Si on n'est PAS sur la home, navigue vers "/#section"
+        navigate(to);
+        return;
+      }
+
+      // Si on EST déjà sur "/", scroll directement
+      scrollToHash(hash);
+      return;
+    }
+
+    // 🔹 3. Lien externe (http…)
     if (to.startsWith("http")) {
       window.open(to, "_blank", "noopener,noreferrer");
       return;
     }
 
-    // 🔹 3. Navigation interne SPA
+    // 🔹 4. Navigation interne SPA vers une page interne ("/page")
     navigate(to);
     window.scrollTo({ top: 0 });
   };
