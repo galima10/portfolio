@@ -34,7 +34,7 @@ export default function NavLinks({
         </button>
       </li>
       <li>
-        <AppLogo className={styles.logo} to="#hero" />
+        <AppLogo className={styles.logo} to="/#hero" />
       </li>
       {links.map((link) => (
         <li key={link.link + link.label} className={styles.navItem}>
