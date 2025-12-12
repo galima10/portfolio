@@ -5,6 +5,9 @@
 
 .skills {
   @extend %section-base;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h3 {
     color: $secondary-color;
     text-align: center;
@@ -13,4 +16,30 @@
     left: 0;
     width: 100%;
   }
+}
+
+.toolsList {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-4rem);
+  width: 100%;
+}
+
+.toolItem {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-weight: $regular;
+  button {
+    padding-right: 1rem;
+  }
+  span {
+    color: $secondary-color;
+    padding-right: 8rem;
+  }
+}
+
+.tool {
+  width: 9.5rem;
+  height: 6rem;
 }

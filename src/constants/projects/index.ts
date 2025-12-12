@@ -1,4 +1,3 @@
-// filepath: src/constants/projects.ts
 export const projects = [
   {
     id: "1",
