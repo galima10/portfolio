@@ -3,6 +3,8 @@ import styles from "./Skills.module.scss";
 import SectionWrapper from "@components/wrappers/SectionWrapper";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
+import Handle from "@components/atoms/svgIcons/skills/Handle";
+
 import { skills } from "@constants/skills";
 
 export default function Skills() {
@@ -14,19 +16,25 @@ export default function Skills() {
       id="skills"
     >
       <h3>Choisissez un outil</h3>
-      <ul className={styles.toolsList}>
-        {skills.map((skill) => {
-          const SkillIcon = skill.component;
-          return (
-            <li key={skill.label + skill.id} className={styles.toolItem}>
-              <GenericButton>
-                <SkillIcon className={styles.tool} />
-              </GenericButton>
-              <span>{skill.label}</span>
-            </li>
-          );
-        })}
-      </ul>
+      <div className={styles.toolsContainer}>
+        <Handle className={styles.handle} />
+        <ul className={styles.toolsList}>
+          {skills.map((skill) => {
+            const SkillIcon = skill.component;
+            return (
+              <li key={skill.label + skill.id} className={styles.toolItem}>
+                <GenericButton>
+                  <div className={styles.toolIcon}>
+                    <SkillIcon className={styles.tool} />
+                  </div>
+                </GenericButton>
+                <span>{skill.label}</span>
+              </li>
+            );
+          })}
+        </ul>
+        <div className={styles.lid} aria-hidden="true"></div>
+      </div>
     </SectionWrapper>
   );
 }

@@ -9,6 +9,9 @@
     height: 100%;
     path {
       fill: $secondary-color;
+      &.grey {
+        fill: $nuance-color;
+      }
     }
   }
 }
