@@ -8,11 +8,11 @@ export default function MainPage() {
     <>
       <Navbar
         links={[
-          { label: "Présentation", link: "/" },
-          { label: "Compétences", link: "/" },
-          { label: "Outils & Technos", link: "/" },
-          { label: "Mes projets", link: "/" },
-          { label: "Me contacter", link: "/", isCTA: true },
+          { label: "Présentation", link: "#presentation" },
+          { label: "Compétences", link: "" },
+          { label: "Outils & Technos", link: "" },
+          { label: "Mes projets", link: "" },
+          { label: "Me contacter", link: "", isCTA: true },
         ]}
       />
       <Hero />

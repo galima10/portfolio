@@ -5,6 +5,7 @@ interface SectionWrapperProps {
   title: string;
   orientation: "left" | "right";
   className?: string;
+  id?: string;
 }
 
 export default function SectionWrapper({
@@ -12,9 +13,10 @@ export default function SectionWrapper({
   title,
   className = "",
   orientation,
+  id,
 }: SectionWrapperProps) {
   return (
-    <section className={styles.wrapper + " " + styles[orientation] + " " + className}>
+    <section id={id} className={styles.wrapper + " " + styles[orientation] + " " + className}>
       <h2 className="main-h2">{title}</h2>
       {children}
     </section>

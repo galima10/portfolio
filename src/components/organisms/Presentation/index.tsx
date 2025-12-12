@@ -10,6 +10,7 @@ export default function Presentation() {
       title="Qui suis-je ?"
       orientation="right"
       className={styles.presentation}
+      id="presentation"
     >
       <figure className={styles.infos}>
         <img src={photo} alt="Photo de profil" loading="lazy" />
