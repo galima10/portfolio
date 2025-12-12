@@ -16,11 +16,17 @@ export default function GenericButton({
   action,
   onMouseEnter,
   onMouseLeave,
-
 }: NavExternalButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
-    <button className={className ? className : ""} onClick={handleClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <button
+      className={className ? className : ""}
+      onClick={handleClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onFocus={onMouseEnter}
+      onBlur={onMouseLeave} 
+    >
       {children}
     </button>
   );

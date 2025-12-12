@@ -38,6 +38,7 @@ export default function ToolsBox({ className }: ToolsBoxProps) {
               <GenericButton
                 onMouseEnter={() => handleMouseEnter(skill.id)}
                 onMouseLeave={handleMouseLeave}
+                
                 action={() => handleClick(skill.id)}
               >
                 <div className={styles.toolIcon}>
