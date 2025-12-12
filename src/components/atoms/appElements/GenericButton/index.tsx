@@ -5,6 +5,8 @@ interface NavExternalButtonProps {
   className?: string;
   to?: string;
   action?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 export default function GenericButton({
@@ -12,10 +14,13 @@ export default function GenericButton({
   className,
   to,
   action,
+  onMouseEnter,
+  onMouseLeave,
+
 }: NavExternalButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
-    <button className={className ? className : ""} onClick={handleClick}>
+    <button className={className ? className : ""} onClick={handleClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       {children}
     </button>
   );

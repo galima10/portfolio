@@ -1,0 +1,139 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.lid {
+  display: none;
+  background-color: $nuance-color;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 1rem);
+  height: 45%;
+  border-radius: 2rem 2rem 0 0;
+  @include responsive {
+    display: block;
+  }
+}
+
+.handle {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 35%;
+  @include responsive {
+    display: block;
+  }
+}
+
+.toolsList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transform: translateX(-5rem);
+  @include responsive {
+    transform: none;
+    flex-direction: row;
+    width: fit-content;
+    padding-bottom: 5rem;
+  }
+}
+
+.toolItem {
+  display: flex;
+  align-items: center;
+  font-weight: $regular;
+  justify-content: space-between;
+  width: 18rem;
+  button {
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: margin 0.3s ease;
+  }
+  span {
+    color: $secondary-color;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  @include responsive {
+    flex-direction: column-reverse;
+    height: 100%;
+    width: 5rem;
+    height: 16rem;
+    span,
+    button {
+      padding-right: 0;
+    }
+    span {
+      text-align: center;
+      width: auto;
+    }
+    button {
+      width: 6rem;
+      height: 9.5rem;
+    }
+  }
+}
+
+.toolIcon {
+  width: 9.5rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include responsive {
+    width: 8rem;
+    height: 13rem;
+  }
+}
+
+.tool {
+  width: 9.5rem;
+  height: 6rem;
+  svg {
+    transition: margin 0.3s ease;
+  }
+  path {
+    transition: fill 0.3s ease;
+  }
+  @include responsive {
+    transform: rotate(-90deg);
+  }
+}
+
+.toolsContainer {
+  position: relative;
+  width: 100%;
+}
+
+.hovered,
+.selected {
+  span {
+    color: $accent-color;
+    font-weight: $bold;
+  }
+  path {
+    fill: $accent-color !important;
+  }
+}
+
+.selected {
+  button {
+    margin-left: 2rem;
+    @include responsive {
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
