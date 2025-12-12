@@ -12,3 +12,11 @@
   border-radius: 1rem;
 }
 
+%section-base {
+  padding: $section-padding;
+  height: $section-height;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

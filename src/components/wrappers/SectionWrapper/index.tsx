@@ -1,7 +1,7 @@
 import styles from "./SectionWrapper.module.scss";
 
 interface SectionWrapperProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   title: string;
   orientation: "left" | "right";
   className?: string;
