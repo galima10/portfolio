@@ -1,10 +1,3 @@
-import Hammer from "@components/atoms/svgIcons/skills/Hammer";
-import Brush from "@components/atoms/svgIcons/skills/Brush";
-import Wrench from "@components/atoms/svgIcons/skills/Wrench";
-import Glass from "@components/atoms/svgIcons/skills/Glass";
-import Talkie from "@components/atoms/svgIcons/skills/Talkie";
-import Lamp from "@components/atoms/svgIcons/skills/Lamp";
-
 import AppSVG from "@components/atoms/svgIcons/AppSVG";
 
 export const skills = [

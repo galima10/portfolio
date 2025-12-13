@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 
-const Github = React.lazy(() => import("../socialMedias/Github"));
+const Github = React.lazy(() => import("../tools/Github"));
 const LinkedIn = React.lazy(() => import("../socialMedias/LinkedIn"));
 
 const Brush = React.lazy(() => import("../skills/Brush"));
