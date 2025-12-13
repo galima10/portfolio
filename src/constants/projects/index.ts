@@ -1,42 +1,76 @@
-import AppSVG from "@components/atoms/svgIcons/AppSVG";
-
 export const projects = [
   {
     id: "Projet 1",
     name: "Meam¡",
-    componentMainPage: (props: React.SVGProps<SVGSVGElement>) => AppSVG({ ...props, name: "island1" }),
+    componentMainPage: "island1",
     hook: "Une aventure pas comme les autres, où je trace seule le chemin d’un projet qui m’appartient.",
     label: "Personnel — Dév. web — Appli. mobile",
     stack: [
       {
+        label: "TypeScript",
+        icon: "typescript",
+      },
+      {
         label: "React Native",
-        svg: (props: React.SVGProps<SVGSVGElement>) => AppSVG({ ...props, name: "languageMap" }),
+        icon: "react",
       },
       {
         label: "Expo",
-        svg: (props: React.SVGProps<SVGSVGElement>) => AppSVG({ ...props, name: "frameworksMap" }),
+        icon: "expo",
       },
       {
-        label: "TypeScript",
-        svg: (props: React.SVGProps<SVGSVGElement>) => AppSVG({ ...props, name: "toolsMap" }),
-      }
+        label: "Jest",
+        icon: "jest",
+      },
     ],
     description: "Description du projet Meam¡...",
   },
   {
     id: "Projet 2",
     name: "Téléconsultation",
-    componentMainPage: (props: React.SVGProps<SVGSVGElement>) => AppSVG({ ...props, name: "island2" }),
+    componentMainPage: "island2",
     hook: "Quand le code connecte patients et professionnels, chaque ligne rend les soins plus accessibles.",
     label: "Professionnel — Dév. web — Plateforme web",
+    stack: [
+      {
+        label: "TypeScript",
+        icon: "typescript",
+      },
+      {
+        label: "React",
+        icon: "react",
+      },
+      {
+        label: "Supabase",
+        icon: "supabase",
+      },
+      {
+        label: "Bootstrap",
+        icon: "bootstrap",
+      },
+    ],
     description: "Description du projet Téléconsultation...",
   },
   {
     id: "Projet 3",
     name: "Aremacs",
-    componentMainPage: (props: React.SVGProps<SVGSVGElement>) => AppSVG({ ...props, name: "island3" }),
+    componentMainPage: "island3",
     hook: "Derrière chaque clic se cache une question éthique, là où le code rencontre les valeurs humaines.",
     label: "Académique — Dév. web & UX/UI — Refonte d’interface",
+    stack: [
+      {
+        label: "HTML",
+        icon: "html",
+      },
+      {
+        label: "CSS",
+        icon: "css",
+      },
+      {
+        label: "JavaScript",
+        icon: "javascript",
+      },
+    ],
     description: "Description du projet Aremacs...",
   },
 ];

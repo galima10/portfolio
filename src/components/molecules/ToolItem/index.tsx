@@ -3,18 +3,19 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 
 import { useState } from "react";
 
+import AppSVG from "@components/atoms/svgIcons/AppSVG";
+
 interface ToolItemProps {
   skill: {
     id: string;
     label: string;
-    component: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    component: "hammer" | "brush" | "wrench" | "glass" | "talkie" | "lamp";
   };
   selectedItemId: boolean;
   handleClick: (id: string) => void;
 }
 
 export default function ToolItem({ skill, selectedItemId, handleClick }: ToolItemProps) {
-  const SkillIcon = skill.component;
   const [isFocused, setIsFocused] = useState(false);
   
   return (
@@ -32,7 +33,7 @@ export default function ToolItem({ skill, selectedItemId, handleClick }: ToolIte
         action={() => handleClick(skill.id)}
       >
         <div className={styles.toolIcon}>
-          <SkillIcon className={styles.tool} />
+          <AppSVG name={skill.component} className={styles.tool} />
         </div>
       </GenericButton>
       <span>{skill.label}</span>
