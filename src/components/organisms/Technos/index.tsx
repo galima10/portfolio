@@ -2,10 +2,7 @@ import styles from "./Technos.module.scss";
 
 import SectionWrapper from "@components/wrappers/SectionWrapper";
 
-import DiscussedMap from "@components/atoms/svgIcons/technos/SVG/DiscussedMap";
-import LanguageMap from "@components/atoms/svgIcons/technos/SVG/LanguageMap";
-import FrameworksMap from "@components/atoms/svgIcons/technos/SVG/FrameworksMap";
-import ToolsMap from "@components/atoms/svgIcons/technos/SVG/ToolsMap";
+import AppSVG from "@components/atoms/svgIcons/AppSVG";
 
 export default function Technos() {
   return (
@@ -14,10 +11,10 @@ export default function Technos() {
       orientation="right"
       className={styles.technos}
     >
-      <DiscussedMap />
-      {/* <LanguageMap /> */}
-      {/* <FrameworksMap /> */}
-      {/* <ToolsMap /> */}
+      <AppSVG name="languageMap" className={styles.languageMap} />
+      <AppSVG name="frameworksMap" className={styles.frameworksMap} />
+      <AppSVG name="toolsMap" className={styles.toolsMap} />
+      <AppSVG name="discussedMap" className={styles.discussedMap} />
     </SectionWrapper>
   );
 }
