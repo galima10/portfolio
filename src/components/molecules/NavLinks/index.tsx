@@ -5,8 +5,8 @@ import AppButton from "@components/atoms/appElements/AppButton";
 import AppLogo from "@components/atoms/appElements/AppLogo";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
-import Github from "@components/atoms/svgIcons/Github";
-import LinkedIn from "@components/atoms/svgIcons/LinkedIn";
+import Github from "@components/atoms/svgIcons/socialMedias/Github";
+import LinkedIn from "@components/atoms/svgIcons/socialMedias/LinkedIn";
 
 interface NavLinkProps {
   links: { label: string; link: string; isCTA?: boolean }[];

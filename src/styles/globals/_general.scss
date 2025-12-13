@@ -38,3 +38,31 @@ body {
     border-radius: 0 0 2.75rem 2.75rem;
   }
 }
+
+
+.svgIcon {
+  svg {
+    width: 100%;
+    height: 100%;
+    path {
+      fill: $secondary-color;
+    }
+    &.grey {
+      path {
+        fill: $nuance-color;
+      }
+    }
+    &.map {
+      path {
+        fill: $primary-color;
+        stroke: $nuance-color;
+      }
+    }
+    &.discussed {
+      path {
+        fill: $primary-color;
+        stroke-width: 3;
+      }
+    }
+  }
+}
