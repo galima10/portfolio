@@ -2,7 +2,7 @@ import styles from "./AppLogo.module.scss";
 
 import { useAppNavigation } from "@hooks/globals/navigation/useAppNavigation";
 
-import Logo from "@components/atoms/svgIcons/logo";
+import Logo from "@components/atoms/svgIcons/logo/Logo";
 
 interface AppLogoProps {
   className?: string;
