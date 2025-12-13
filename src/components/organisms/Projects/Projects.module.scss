@@ -7,7 +7,7 @@
   @extend %section-base;
   display: block;
   overflow: visible;
-  margin-bottom: calc(2 * $section-height);
+  margin-bottom: calc(2 * $section-height + 2 * $section-margin);
 }
 
 .projectsList {
@@ -15,7 +15,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: sectionMargin(2);
+  gap: $section-margin;
 }
 
 .projectItem {

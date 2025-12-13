@@ -45,4 +45,4 @@ $section-height: calc(100svh - $navbar-height);
 $padding-global: spaceCalc(1.5rem, 8.5rem, 19rem);
 $h2-offset: calc($padding-global - 6rem);
 $section-padding: 0 $padding-global;
-
+$section-margin: sectionMargin(2);

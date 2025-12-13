@@ -19,6 +19,7 @@ export default function MainPage() {
       <Technos />
       <SectionCTA text="Voici ce qui m’accompagne au quotidien, mais avec les bonnes personnes, tout prend un vrai sens." />
       <Projects />
+      <SectionCTA text="Chaque aventure m’a fait avancer. Et si la prochaine était la vôtre ?" />
     </>
   );
 }
