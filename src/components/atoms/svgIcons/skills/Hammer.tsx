@@ -1,4 +1,4 @@
-import styles from "./SVGSkillsIcons.module.scss";
+import styles from "./../SVGIcons.module.scss";
 
 interface ClassNameType {
   className?: string;
