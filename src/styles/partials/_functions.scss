@@ -7,3 +7,8 @@
 @function spaceCalc($min, $preferred, $max) {
   @return clamp($min, calc(100vw - calc(79rem - #{$preferred})), $max);
 }
+
+@function sectionMargin($multiplier: 1) {
+  $base-margin: 2;
+  @return calc(100svh / (2 * $multiplier));
+}

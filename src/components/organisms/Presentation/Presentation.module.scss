@@ -5,7 +5,7 @@
 
 .presentation {
   @extend %section-base;
-  margin-top: calc(100svh / 4);
+  margin-top: sectionMargin();
   align-items: center;
   @include responsive {
     flex-direction: row;
