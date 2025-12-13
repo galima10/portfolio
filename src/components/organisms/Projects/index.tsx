@@ -14,7 +14,7 @@ export default function Projects() {
       id="projects"
       className={styles.projectsSection}
     >
-      <ul>
+      <ul className={styles.projectsList}>
         <li>
           <ProjectItem
             project={{
