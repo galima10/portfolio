@@ -14,7 +14,7 @@ function App() {
           { label: "Présentation", link: "/#presentation" },
           { label: "Compétences", link: "/#skills" },
           { label: "Outils & Technos", link: "/#technos" },
-          { label: "Mes projets", link: "" },
+          { label: "Mes projets", link: "/#projects" },
           { label: "Me contacter", link: "", isCTA: true },
         ]}
       />
