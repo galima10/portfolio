@@ -5,8 +5,7 @@ import AppButton from "@components/atoms/appElements/AppButton";
 import AppLogo from "@components/atoms/appElements/AppLogo";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
-import Github from "@components/atoms/svgIcons/socialMedias/Github";
-import LinkedIn from "@components/atoms/svgIcons/socialMedias/LinkedIn";
+import AppSVG from "@components/atoms/svgIcons/AppSVG";
 
 interface NavLinkProps {
   links: { label: string; link: string; isCTA?: boolean }[];
@@ -47,12 +46,12 @@ export default function NavLinks({
       ))}
       <li className={styles.githubIcon}>
         <GenericButton to="https://github.com/galima10/">
-          <Github className={styles.svgIcon} />
+          <AppSVG name="github" className={styles.svgIcon} />
         </GenericButton>
       </li>
       <li className={styles.linkedinIcon}>
         <GenericButton to="https://www.linkedin.com/in/mai-magali/">
-          <LinkedIn className={styles.svgIcon} />
+          <AppSVG name="linkedin" className={styles.svgIcon} />
         </GenericButton>
       </li>
     </ul>
