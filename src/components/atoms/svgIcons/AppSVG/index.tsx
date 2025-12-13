@@ -1,20 +1,22 @@
-import Github from "../socialMedias/Github";
-import LinkedIn from "../socialMedias/LinkedIn";
+import React, { Suspense } from "react";
 
-import Brush from "../skills/Brush";
-import Handle from "../skills/Handle";
-import Talkie from "../skills/Talkie";
-import Hammer from "../skills/Hammer";
-import Wrench from "../skills/Wrench";
-import Glass from "../skills/Glass";
-import Lamp from "../skills/Lamp";
+const Github = React.lazy(() => import("../socialMedias/Github"));
+const LinkedIn = React.lazy(() => import("../socialMedias/LinkedIn"));
 
-import Logo from "../logo/Logo";
+const Brush = React.lazy(() => import("../skills/Brush"));
+const Handle = React.lazy(() => import("../skills/Handle"));
+const Talkie = React.lazy(() => import("../skills/Talkie"));
+const Hammer = React.lazy(() => import("../skills/Hammer"));
+const Wrench = React.lazy(() => import("../skills/Wrench"));
+const Glass = React.lazy(() => import("../skills/Glass"));
+const Lamp = React.lazy(() => import("../skills/Lamp"));
 
-import LanguageMap from "../technos/SVG/LanguageMap";
-import FrameworksMap from "../technos/SVG/FrameworksMap";
-import ToolsMap from "../technos/SVG/ToolsMap";
-import DiscussedMap from "../technos/SVG/DiscussedMap";
+const Logo = React.lazy(() => import("../logo/Logo"));
+
+const LanguageMap = React.lazy(() => import("../technos/SVG/LanguageMap"));
+const FrameworksMap = React.lazy(() => import("../technos/SVG/FrameworksMap"));
+const ToolsMap = React.lazy(() => import("../technos/SVG/ToolsMap"));
+const DiscussedMap = React.lazy(() => import("../technos/SVG/DiscussedMap"));
 
 interface AppSVGProps {
   className?: string;
@@ -43,5 +45,15 @@ const icons = {
 
 export default function AppSVG({ className, name }: AppSVGProps) {
   const Comp = icons[name];
-  return <Comp className={className} />;
+
+  if (!Comp) {
+    console.error(`Icon "${name}" not found in AppSVG.`);
+    return null;
+  }
+
+  return (
+    <Suspense fallback={<div>Chargement...</div>}>
+      <Comp className={className} />
+    </Suspense>
+  );
 }
