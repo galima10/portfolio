@@ -1,4 +1,10 @@
-export const skills = [
+export const skills: {
+  id: string;
+  label: string;
+  title: string;
+  list: string[];
+  component: "hammer" | "brush" | "wrench" | "glass" | "talkie" | "lamp";
+}[] = [
   {
     id: "1",
     label: "Dév. web",

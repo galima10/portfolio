@@ -1,8 +1,19 @@
-export const projects = [
+export const projects: {
+  id: string;
+  name: string;
+  island: "island1" | "island2" | "island3";
+  hook: string;
+  label: string;
+  stack: {
+    label: string;
+    icon: "typescript" | "react" | "expo" | "jest" | "supabase" | "bootstrap" | "html" | "css" | "javascript";
+  }[];
+  description: string;
+}[] = [
   {
     id: "Projet 1",
     name: "Meam¡",
-    componentMainPage: "island1",
+    island: "island1",
     hook: "Une aventure pas comme les autres, où je trace seule le chemin d’un projet qui m’appartient.",
     label: "Personnel — Dév. web — Appli. mobile",
     stack: [
@@ -28,7 +39,7 @@ export const projects = [
   {
     id: "Projet 2",
     name: "Téléconsultation",
-    componentMainPage: "island2",
+    island: "island2",
     hook: "Quand le code connecte patients et professionnels, chaque ligne rend les soins plus accessibles.",
     label: "Professionnel — Dév. web — Plateforme web",
     stack: [
@@ -54,7 +65,7 @@ export const projects = [
   {
     id: "Projet 3",
     name: "Aremacs",
-    componentMainPage: "island3",
+    island: "island3",
     hook: "Derrière chaque clic se cache une question éthique, là où le code rencontre les valeurs humaines.",
     label: "Académique — Dév. web & UX/UI — Refonte d’interface",
     stack: [

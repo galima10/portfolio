@@ -1,0 +1,44 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.projectBadge {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-weight: $regular;
+  figcaption {
+    width: 100%;
+  }
+  strong {
+    @include fluid-type(2);
+    color: $secondary-color;
+  }
+}
+
+.projectHeader {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.island {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.stackList {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.focused {
+  path {
+    fill: $light-color !important;
+  }
+}

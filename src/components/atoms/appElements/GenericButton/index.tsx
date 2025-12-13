@@ -7,6 +7,7 @@ interface NavExternalButtonProps {
   action?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  ariaLabel?: string;
 }
 
 export default function GenericButton({
@@ -16,6 +17,7 @@ export default function GenericButton({
   action,
   onMouseEnter,
   onMouseLeave,
+  ariaLabel
 }: NavExternalButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
@@ -26,6 +28,7 @@ export default function GenericButton({
       onMouseLeave={onMouseLeave}
       onFocus={onMouseEnter}
       onBlur={onMouseLeave}
+      aria-label={ariaLabel}
     >
       {children}
     </button>
