@@ -4,7 +4,6 @@
 @use "@styles/partials/placeholders" as *;
 
 .technoMaps {
-  z-index: -1;
   flex-shrink: 0;
   display: grid;
   grid-template-columns: 8.6% 29.3% 2.5% 5.7% 30.6% 5.7% 17.6%;

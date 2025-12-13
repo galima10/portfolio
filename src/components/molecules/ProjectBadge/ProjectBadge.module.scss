@@ -15,6 +15,10 @@
     @include fluid-type(2);
     color: $secondary-color;
   }
+  p {
+    position: absolute;
+    width: 100%;
+  }
 }
 
 .projectHeader {
@@ -28,7 +32,6 @@
 .island {
   width: 100%;
   position: absolute;
-  z-index: -1;
 }
 
 .stackList {

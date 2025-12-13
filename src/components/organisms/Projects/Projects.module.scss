@@ -21,5 +21,5 @@
 .projectItem {
   flex-shrink: 0;
   height: $section-height;
-  padding: 2rem 10rem;
+  padding: 2rem spaceCalc(0rem, 10rem, 19rem);
 }

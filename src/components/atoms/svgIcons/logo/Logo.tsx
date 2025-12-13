@@ -28,8 +28,8 @@ export default function Logo({ className }: ClassNameType) {
             y2="25"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#5c967d" />
-            <stop offset="1" stop-color="#5a587d" />
+            <stop stopColor="#5c967d" />
+            <stop offset="1" stopColor="#5a587d" />
           </linearGradient>
         </defs>
       </svg>
