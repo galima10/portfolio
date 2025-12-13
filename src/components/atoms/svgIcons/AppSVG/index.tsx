@@ -1,28 +1,29 @@
 import React, { Suspense } from "react";
 
-const Bootstrap = React.lazy(() => import("../tools/Bootstrap"));
-const CSS = React.lazy(() => import("../tools/CSS"));
-const Elementor = React.lazy(() => import("../tools/Elementor"));
-const Expo = React.lazy(() => import("../tools/Expo"));
-const Express = React.lazy(() => import("../tools/Express"));
-const Github = React.lazy(() => import("../tools/Github"));
-const HTML = React.lazy(() => import("../tools/HTML"));
-const JavaScript = React.lazy(() => import("../tools/JavaScript"));
-const Jest = React.lazy(() => import("../tools/Jest"));
-const Node = React.lazy(() => import("../tools/Node"));
-const PHP = React.lazy(() => import("../tools/PHP"));
-const Postman = React.lazy(() => import("../tools/Postman"));
-const ReactIcon = React.lazy(() => import("../tools/ReactIcon"));
-const Sass = React.lazy(() => import("../tools/Sass"));
-const SQLite = React.lazy(() => import("../tools/SQLite"));
-const Supabase = React.lazy(() => import("../tools/Supabase"));
-const Three = React.lazy(() => import("../tools/Three"));
-const TypeScript = React.lazy(() => import("../tools/TypeScript"));
-const Vite = React.lazy(() => import("../tools/Vite"));
-const WampServer = React.lazy(() => import("../tools/WampServer"));
-const Wordpress = React.lazy(() => import("../tools/Wordpress"));
+import Bootstrap from "../tools/Bootstrap";
+import CSS from "../tools/CSS";
+import Elementor from "../tools/Elementor";
+import Expo from "../tools/Expo";
+import Express from "../tools/Express";
+import Github from "../tools/Github";
+import HTML from "../tools/HTML";
+import JavaScript from "../tools/JavaScript";
+import Jest from "../tools/Jest";
+import Node from "../tools/Node";
+import PHP from "../tools/PHP";
+import Postman from "../tools/Postman";
+import ReactIcon from "../tools/ReactIcon";
+import Sass from "../tools/Sass";
+import SQLite from "../tools/SQLite";
+import Supabase from "../tools/Supabase";
+import Three from "../tools/Three";
+import TypeScript from "../tools/TypeScript";
+import Vite from "../tools/Vite";
+import WampServer from "../tools/WampServer";
+import Wordpress from "../tools/Wordpress";
 
-const LinkedIn = React.lazy(() => import("../socialMedias/LinkedIn"));
+import LinkedIn from "../socialMedias/LinkedIn";
+import Logo from "../logo/Logo";
 
 const Brush = React.lazy(() => import("../skills/Brush"));
 const Handle = React.lazy(() => import("../skills/Handle"));
@@ -31,8 +32,6 @@ const Hammer = React.lazy(() => import("../skills/Hammer"));
 const Wrench = React.lazy(() => import("../skills/Wrench"));
 const Glass = React.lazy(() => import("../skills/Glass"));
 const Lamp = React.lazy(() => import("../skills/Lamp"));
-
-const Logo = React.lazy(() => import("../logo/Logo"));
 
 const LanguageMap = React.lazy(() => import("../technos/SVG/LanguageMap"));
 const FrameworksMap = React.lazy(() => import("../technos/SVG/FrameworksMap"));
