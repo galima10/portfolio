@@ -2,21 +2,13 @@ import styles from "./ToolsBox.module.scss";
 
 import { skills } from "@constants/skills";
 
-import GenericButton from "@components/atoms/appElements/GenericButton";
 import Handle from "@components/atoms/svgIcons/skills/Handle";
+import ToolItem from "../ToolItem";
 
 import { useToolsBox } from "@hooks/appElements/molecules/useToolsBox";
 
-interface ToolsBoxProps {
-  className?: string;
-  actions?: () => void;
-}
-
-export default function ToolsBox({ className }: ToolsBoxProps) {
+export default function ToolsBox() {
   const {
-    hoveredItemId,
-    handleMouseEnter,
-    handleMouseLeave,
     selectedItemId,
     handleClick,
   } = useToolsBox();
@@ -25,32 +17,13 @@ export default function ToolsBox({ className }: ToolsBoxProps) {
       <Handle className={styles.handle} />
       <ul className={styles.toolsList}>
         {skills.map((skill) => {
-          const SkillIcon = skill.component;
           return (
-            <li
+            <ToolItem
               key={skill.label + skill.id}
-              className={
-                styles.toolItem +
-                (hoveredItemId === skill.id ? ` ${styles.hovered}` : "") +
-                (selectedItemId === skill.id ? ` ${styles.selected}` : "")
-              }
-            >
-              <GenericButton
-                onMouseEnter={() => handleMouseEnter(skill.id)}
-                onMouseLeave={handleMouseLeave}
-                
-                action={() => handleClick(skill.id)}
-              >
-                <div className={styles.toolIcon}>
-                  <SkillIcon
-                    className={
-                      styles.tool
-                    }
-                  />
-                </div>
-              </GenericButton>
-              <span>{skill.label}</span>
-            </li>
+              skill={skill}
+              selectedItemId={selectedItemId === skill.id}
+              handleClick={() => handleClick(skill.id)}
+            />
           );
         })}
       </ul>

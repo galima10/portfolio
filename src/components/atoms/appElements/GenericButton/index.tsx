@@ -25,7 +25,7 @@ export default function GenericButton({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onFocus={onMouseEnter}
-      onBlur={onMouseLeave} 
+      onBlur={onMouseLeave}
     >
       {children}
     </button>
