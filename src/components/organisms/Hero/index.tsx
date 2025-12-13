@@ -17,7 +17,7 @@ export default function Hero() {
         label="Téléchargez mon CV"
         type="secondary"
       />
-      <GenericButton className={styles.ctaLink}>
+      <GenericButton className={styles.ctaLink} to="#presentation">
         Une aventure humaine et pleine de sens
         <span>➧</span>
       </GenericButton>

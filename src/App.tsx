@@ -13,7 +13,7 @@ function App() {
         links={[
           { label: "Présentation", link: "/#presentation" },
           { label: "Compétences", link: "/#skills" },
-          { label: "Outils & Technos", link: "" },
+          { label: "Outils & Technos", link: "/#technos" },
           { label: "Mes projets", link: "" },
           { label: "Me contacter", link: "", isCTA: true },
         ]}
