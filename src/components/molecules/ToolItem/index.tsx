@@ -15,8 +15,8 @@ interface ToolItemProps {
 
 export default function ToolItem({ skill, selectedItemId, handleClick }: ToolItemProps) {
   const SkillIcon = skill.component;
-
   const [isFocused, setIsFocused] = useState(false);
+  
   return (
     <li
       key={skill.label + skill.id}
