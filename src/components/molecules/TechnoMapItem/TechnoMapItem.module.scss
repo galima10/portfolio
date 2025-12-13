@@ -11,13 +11,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  h3 {
+    position: absolute;
+  }
 }
 
 .map {
   width: 100%;
   height: 100%;
-  position: absolute;
-  z-index: -1;
 }
 
 .languageMap {
