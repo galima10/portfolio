@@ -2,7 +2,7 @@ interface ClassNameType {
   className?: string;
 }
 
-export default function React({ className }: ClassNameType) {
+export default function ReactIcon({ className }: ClassNameType) {
   return (
     <div className={`svgIcon ${className}`} aria-label="Icône React">
       <svg

@@ -1,6 +1,27 @@
 import React, { Suspense } from "react";
 
+const Bootstrap = React.lazy(() => import("../tools/Bootstrap"));
+const CSS = React.lazy(() => import("../tools/CSS"));
+const Elementor = React.lazy(() => import("../tools/Elementor"));
+const Expo = React.lazy(() => import("../tools/Expo"));
+const Express = React.lazy(() => import("../tools/Express"));
 const Github = React.lazy(() => import("../tools/Github"));
+const HTML = React.lazy(() => import("../tools/HTML"));
+const JavaScript = React.lazy(() => import("../tools/JavaScript"));
+const Jest = React.lazy(() => import("../tools/Jest"));
+const Node = React.lazy(() => import("../tools/Node"));
+const PHP = React.lazy(() => import("../tools/PHP"));
+const Postman = React.lazy(() => import("../tools/Postman"));
+const ReactIcon = React.lazy(() => import("../tools/ReactIcon"));
+const Sass = React.lazy(() => import("../tools/Sass"));
+const SQLite = React.lazy(() => import("../tools/SQLite"));
+const Supabase = React.lazy(() => import("../tools/Supabase"));
+const Three = React.lazy(() => import("../tools/Three"));
+const TypeScript = React.lazy(() => import("../tools/TypeScript"));
+const Vite = React.lazy(() => import("../tools/Vite"));
+const WampServer = React.lazy(() => import("../tools/WampServer"));
+const Wordpress = React.lazy(() => import("../tools/Wordpress"));
+
 const LinkedIn = React.lazy(() => import("../socialMedias/LinkedIn"));
 
 const Brush = React.lazy(() => import("../skills/Brush"));
@@ -28,7 +49,28 @@ interface AppSVGProps {
 }
 
 const icons = {
+  bootstrap: Bootstrap,
+  css: CSS,
+  elementor: Elementor,
+  expo: Expo,
+  express: Express,
   github: Github,
+  html: HTML,
+  javascript: JavaScript,
+  jest: Jest,
+  node: Node,
+  php: PHP,
+  postman: Postman,
+  react: ReactIcon,
+  sass: Sass,
+  sqlite: SQLite,
+  supabase: Supabase,
+  three: Three,
+  typescript: TypeScript,
+  vite: Vite,
+  wampserver: WampServer,
+  wordpress: Wordpress,
+
   linkedin: LinkedIn,
 
   logo: Logo,
