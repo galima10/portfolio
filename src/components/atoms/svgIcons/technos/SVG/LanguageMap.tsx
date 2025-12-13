@@ -1,4 +1,4 @@
-import { strokeWidth } from "@constants/technos";
+import { strokeWidth } from "@constants/global";
 
 interface ClassNameType {
   className?: string;

@@ -18,6 +18,10 @@ const FrameworksMap = React.lazy(() => import("../technos/SVG/FrameworksMap"));
 const ToolsMap = React.lazy(() => import("../technos/SVG/ToolsMap"));
 const DiscussedMap = React.lazy(() => import("../technos/SVG/DiscussedMap"));
 
+const Island1 = React.lazy(() => import("../projects/Island1"));
+const Island2 = React.lazy(() => import("../projects/Island2"));
+const Island3 = React.lazy(() => import("../projects/Island3"));
+
 interface AppSVGProps {
   className?: string;
   name: keyof typeof icons;
@@ -41,6 +45,10 @@ const icons = {
   frameworksMap: FrameworksMap,
   toolsMap: ToolsMap,
   discussedMap: DiscussedMap,
+
+  island1: Island1,
+  island2: Island2,
+  island3: Island3,
 };
 
 export default function AppSVG({ className, name }: AppSVGProps) {
