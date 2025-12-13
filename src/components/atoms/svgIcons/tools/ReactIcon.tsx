@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function ReactIcon({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône React">
+    <div className={`svgIcon ${className}`} aria-hidden="true">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"
