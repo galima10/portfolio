@@ -6,7 +6,6 @@
 .presentation {
   @extend %section-base;
   margin-top: sectionMargin();
-  align-items: center;
   @include responsive {
     flex-direction: row;
   }

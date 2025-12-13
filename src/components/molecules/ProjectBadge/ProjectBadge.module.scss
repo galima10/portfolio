@@ -34,7 +34,12 @@
 .stackList {
   margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: .5rem;
+  li {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 .focused {
