@@ -20,18 +20,21 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           label="Votre nom"
           placeholder="Ex : Jean Dupont"
           className={styles.input}
+          index={0}
         />
         <AppInput
           label="Votre email"
           type="email"
           placeholder="Ex : jean.dupont@example.com"
           className={styles.input}
+          index={1}
         />
         <AppInput
           label="Votre message"
           placeholder="Écrivez votre message ici..."
           isTextarea
           className={styles.input}
+          index={2}
         />
         <AppSubmitButton className={styles.submitButton} />
       </form>
