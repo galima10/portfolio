@@ -9,9 +9,10 @@ import AppSVG from "@components/atoms/svgIcons/AppSVG";
 
 interface NavLinkProps {
   links: { label: string; link: string; isCTA?: boolean }[];
-  ref: React.Ref<HTMLUListElement> | null;
-  handleMenuToggle: () => void;
+  ref?: React.Ref<HTMLUListElement> | null;
+  handleMenuToggle?: () => void;
   className?: string;
+  position?: "navbar" | "footer";
 }
 
 export default function NavLinks({
@@ -19,41 +20,50 @@ export default function NavLinks({
   ref,
   handleMenuToggle,
   className,
+  position = "navbar",
 }: NavLinkProps) {
   return (
-    <ul className={`${styles.navLinks} ${className}`} ref={ref}>
-      <li className={styles.closeMenu}>
-        <button
-          className={styles.closeButton}
-          aria-label="Close Menu"
-          onClick={handleMenuToggle}
-        >
-          <span className={styles.closeLine}></span>
-          <span className={styles.closeLine}></span>
-        </button>
-      </li>
-      <li>
-        <AppLogo className={styles.logo} to="/#hero" />
-      </li>
+    <ul className={`${position === "navbar" ? styles.headerNavLinks : styles.footerNavLinks} ${className}`} ref={ref}>
+      {position === "navbar" && (
+        <>
+          <li className={styles.closeMenu}>
+            <button
+              className={styles.closeButton}
+              aria-label="Close Menu"
+              onClick={handleMenuToggle}
+            >
+              <span className={styles.closeLine}></span>
+              <span className={styles.closeLine}></span>
+            </button>
+          </li>
+          <li>
+            <AppLogo className={styles.logo} to="/#hero" />
+          </li>
+        </>
+      )}
       {links.map((link) => (
         <li key={link.link + link.label} className={styles.navItem}>
           {link.isCTA ? (
             <AppButton type="primary" to={link.link} label={link.label} />
           ) : (
-            <NavButton position="navbar" to={link.link} label={link.label} />
+            <NavButton position={position} to={link.link} label={link.label} />
           )}
         </li>
       ))}
-      <li className={styles.githubIcon}>
-        <GenericButton to="https://github.com/galima10/">
-          <AppSVG name="github" className={styles.svgIcon} />
-        </GenericButton>
-      </li>
-      <li className={styles.linkedinIcon}>
-        <GenericButton to="https://www.linkedin.com/in/mai-magali/">
-          <AppSVG name="linkedin" className={styles.svgIcon} />
-        </GenericButton>
-      </li>
+      {position === "navbar" && (
+        <>
+          <li className={styles.githubIcon}>
+            <GenericButton to="https://github.com/galima10/">
+              <AppSVG name="github" className={styles.svgIcon} />
+            </GenericButton>
+          </li>
+          <li className={styles.linkedinIcon}>
+            <GenericButton to="https://www.linkedin.com/in/mai-magali/">
+              <AppSVG name="linkedin" className={styles.svgIcon} />
+            </GenericButton>
+          </li>
+        </>
+      )}
     </ul>
   );
 }

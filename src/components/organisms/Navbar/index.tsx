@@ -1,5 +1,3 @@
-import styles from "./Navbar.module.scss";
-
 import NavLinks from "@components/molecules/NavLinks";
 import MobileNavbar from "@components/molecules/MobileNavbar";
 
@@ -10,12 +8,22 @@ interface NavbarProps {
 }
 
 export default function Navbar({ links }: NavbarProps) {
-  const { mobileMenuRef, darkFilterRef, handleMenuToggle } = useNavbar(styles.active, styles.open);
+  const { mobileMenuRef, darkFilterRef, handleMenuToggle } = useNavbar(
+    "active",
+    "open"
+  );
   return (
-    <nav className={styles.navbar}>
-      <MobileNavbar handleMenuToggle={handleMenuToggle} />
-      <div className={styles.filterDark} ref={darkFilterRef}></div>
-      <NavLinks links={links} ref={mobileMenuRef} handleMenuToggle={handleMenuToggle} className={styles.navLinks} />
-    </nav>
+    <header>
+      <nav>
+        <MobileNavbar handleMenuToggle={handleMenuToggle} />
+        <div className="filterDark" ref={darkFilterRef}></div>
+        <NavLinks
+          links={links}
+          ref={mobileMenuRef}
+          handleMenuToggle={handleMenuToggle}
+          className="navLinks"
+        />
+      </nav>
+    </header>
   );
 }
