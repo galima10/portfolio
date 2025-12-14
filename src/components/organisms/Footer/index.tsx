@@ -26,8 +26,10 @@ export default function Footer({ links, projects }: FooterProps) {
     })) || [];
   return (
     <footer>
-      <AppButton label="Remonter au camp de base" type="tertiary" />
-      <p>
+      <div className="backToTop">
+        <AppButton label="Remonter au camp de base" type="tertiary" />
+      </div>
+      <p className="footerMessage">
         <strong>
           Merci d’avoir parcouru mon aventure, au plaisir de continuer le voyage
           avec vous !
@@ -38,7 +40,7 @@ export default function Footer({ links, projects }: FooterProps) {
       {projectsLinks.length > 0 && (
         <FooterProjects projectsLinks={projectsLinks} />
       )}
-      <p>
+      <p className="copyright">
         <small>© 2025 Mai Magali - Tous droits réservés.</small>
       </p>
     </footer>

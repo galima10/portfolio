@@ -7,9 +7,9 @@
   @extend %section-base;
   overflow: visible;
   display: block;
-  margin-bottom: $section-height;
+  margin-bottom: calc($section-height + ($section-margin * 2));
   @include responsive {
-    margin-bottom: calc($section-height + $section-margin);
+    margin-bottom: calc($section-height + ($section-margin * 3) );
   }
 }
 
