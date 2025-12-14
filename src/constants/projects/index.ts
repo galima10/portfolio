@@ -2,20 +2,36 @@ import Meami from "@assets/images/projects/boeuf_citronnelle.webp";
 import Teleconsultation from "@assets/images/projects/canard_laque.webp";
 import Aremacs from "@assets/images/projects/st_jacques.webp";
 
-export const projects: {
+import { ProjectDescription } from "@types";
+
+interface StackItem {
+  label: string;
+  icon:
+    | "typescript"
+    | "react"
+    | "expo"
+    | "jest"
+    | "supabase"
+    | "bootstrap"
+    | "html"
+    | "css"
+    | "javascript";
+}
+
+interface Project {
   id: string;
   slug: string;
   name: string;
   island: "island1" | "island2" | "island3";
   hook: string;
   label: string;
-  stack: {
-    label: string;
-    icon: "typescript" | "react" | "expo" | "jest" | "supabase" | "bootstrap" | "html" | "css" | "javascript";
-  }[];
+  stack: StackItem[];
   preview?: string;
-  description: string;
-}[] = [
+  description?: ProjectDescription;
+}
+
+
+export const projects: Project[] = [
   {
     id: "Projet 1",
     slug: "meami",
@@ -42,7 +58,6 @@ export const projects: {
       },
     ],
     preview: Meami,
-    description: "Description du projet Meam¡...",
   },
   {
     id: "Projet 2",
@@ -70,7 +85,6 @@ export const projects: {
       },
     ],
     preview: Teleconsultation,
-    description: "Description du projet Téléconsultation...",
   },
   {
     id: "Projet 3",
@@ -94,6 +108,5 @@ export const projects: {
       },
     ],
     preview: Aremacs,
-    description: "Description du projet Aremacs...",
   },
 ];
