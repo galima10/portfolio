@@ -35,6 +35,6 @@
     color: $secondary-color;
   }
   strong {
-    @include fluid-type(2);
+    @include font-base("h5");
   }
 }

@@ -13,43 +13,31 @@ body {
 }
 
 h1 {
-  @include fluid-type(6);
-  font-family: $font-heading;
-  font-weight: $extra-bold;
+  @include font-base("h1");
   color: $secondary-color;
 }
 
 h2 {
-  @include fluid-type(5);
-  font-family: $font-heading;
-  font-weight: $bold;
+  @include font-base("h2");
   text-transform: uppercase;
   letter-spacing: 5%;
   text-align: center;
 }
 
 h3 {
-  @include fluid-type(4);
-  font-family: $font-heading;
-  font-weight: $bold;
+  @include font-base("h3");
 }
 
 h4 {
-  @include fluid-type(3);
-  font-family: $font-heading;
-  font-weight: $semi-bold;
+  @include font-base("h4");
 }
 
 h5 {
-  @include fluid-type(2);
-  font-family: $font-body;
-  font-weight: $bold;
+  @include font-base("h5");
 }
 
 h6 {
-  @include fluid-type(1);
-  font-family: $font-body;
-  font-weight: $semi-bold;
+  @include font-base("h6");
 }
 
 p,
@@ -59,8 +47,7 @@ span,
 input,
 textarea,
 button {
-  @include fluid-type(0);
-  font-family: $font-body;
+  @include font-base("body");
 }
 
 p {
@@ -78,9 +65,7 @@ button {
 }
 
 small {
-  font-family: $font-body;
-  font-weight: $regular;
-  @include fluid-type(-1);
+  @include font-base("small");
 }
 
 section {

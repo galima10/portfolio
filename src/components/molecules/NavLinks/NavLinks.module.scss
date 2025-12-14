@@ -80,3 +80,9 @@
     transform: rotate(-45deg);
   }
 }
+
+.footerNavLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

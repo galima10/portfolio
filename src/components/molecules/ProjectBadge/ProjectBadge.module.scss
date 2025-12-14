@@ -12,7 +12,7 @@
     width: 100%;
   }
   strong {
-    @include fluid-type(2);
+    @include font-base("h5");
     color: $secondary-color;
   }
   p {

@@ -18,7 +18,7 @@
 .text {
   padding: 0 spaceCalc(0rem, 16rem, 16rem);
   strong {
-    @include fluid-type(1);
+    @include font-base("h6");
     color: $secondary-color;
   }
 }

@@ -11,7 +11,7 @@
   aspect-ratio: 442 / 215;
   height: 26rem;
   h3 {
-    @include fluid-type(2);
+    @include font-base("h5");
     text-transform: uppercase;
     color: $secondary-color;
     text-align: center;

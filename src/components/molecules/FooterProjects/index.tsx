@@ -6,7 +6,7 @@ interface FooterProjectsProps {
 
 export default function FooterProjects({ projectsLinks }: FooterProjectsProps) {
   return (
-    <div>
+    <div className="footerLinks footerProjectsLinks">
       <p>
         <strong>Projets</strong>
       </p>

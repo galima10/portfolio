@@ -6,9 +6,9 @@ interface FooterLinksProps {
 
 export default function FooterLinks({ links }: FooterLinksProps) {
   return (
-    <div>
+    <div className="footerLinks mainFooterLinks">
       <p>
-        <strong>Contenu du site</strong>
+        <strong>Navigation</strong>
       </p>
       <NavLinks links={links} className="navLinks" position="footer" />
     </div>

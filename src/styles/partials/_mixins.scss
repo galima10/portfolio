@@ -20,6 +20,42 @@
   }
 }
 
+@mixin font-base($level) {
+  @if $level == "h1" {
+    @include fluid-type(6);
+    font-family: $font-heading;
+    font-weight: $extra-bold;
+  } @else if $level == "h2" {
+    @include fluid-type(5);
+    font-family: $font-heading;
+    font-weight: $bold;
+  } @else if $level == "h3" {
+    @include fluid-type(4);
+    font-family: $font-heading;
+    font-weight: $bold;
+  } @else if $level == "h4" {
+    @include fluid-type(3);
+    font-family: $font-heading;
+    font-weight: $semi-bold;
+  } @else if $level == "h5" {
+    @include fluid-type(2);
+    font-family: $font-body;
+    font-weight: $bold;
+  } @else if $level == "h6" {
+    @include fluid-type(1);
+    font-family: $font-body;
+    font-weight: $semi-bold;
+  } @else if $level == "body" {
+    @include fluid-type(0);
+    font-family: $font-body;
+    font-weight: $regular;
+  } @else if $level == "small" {
+    @include fluid-type(-1);
+    font-family: $font-body;
+    font-weight: $regular;
+  }
+}
+
 // Mixin pour appliquer du style dynamique aux boutons de la page
 @mixin button-style($type) {
   @if $type == "primary" {

@@ -125,7 +125,7 @@ footer {
     text-align: center;
   }
   .footerMessage {
-    @include fluid-type(2);
+    @include font-base("h5");
   }
   .footerInfos {
     text-align: center;
@@ -151,5 +151,19 @@ footer {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+  }
+
+  .footerLinks {
+    flex: 1 1 1;
+    strong {
+      @include font-base("h4");
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  .copyright {
+    margin-top: 3rem;
+    color: $nuance-color;
   }
 }
