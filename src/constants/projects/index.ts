@@ -1,6 +1,6 @@
 export const projects: {
   id: string;
-  projectLink: string;
+  slug: string;
   name: string;
   island: "island1" | "island2" | "island3";
   hook: string;
@@ -13,7 +13,7 @@ export const projects: {
 }[] = [
   {
     id: "Projet 1",
-    projectLink: "/projects/meami",
+    slug: "meami",
     name: "Meam¡",
     island: "island1",
     hook: "Une aventure pas comme les autres, où je trace seule le chemin d’un projet qui m’appartient.",
@@ -40,7 +40,7 @@ export const projects: {
   },
   {
     id: "Projet 2",
-    projectLink: "/projects/teleconsultation",
+    slug: "teleconsultation",
     name: "Téléconsultation",
     island: "island2",
     hook: "Quand le code connecte patients et professionnels, chaque ligne rend les soins plus accessibles.",
@@ -67,7 +67,7 @@ export const projects: {
   },
   {
     id: "Projet 3",
-    projectLink: "/projects/aremacs",
+    slug: "aremacs",
     name: "Aremacs",
     island: "island3",
     hook: "Derrière chaque clic se cache une question éthique, là où le code rencontre les valeurs humaines.",

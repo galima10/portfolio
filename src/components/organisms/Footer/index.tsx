@@ -14,7 +14,7 @@ interface FooterProps {
     name: string;
     island: string;
     hook: string;
-    projectLink: string;
+    slug: string;
   }[];
 }
 
@@ -22,7 +22,7 @@ export default function Footer({ links, projects }: FooterProps) {
   const projectsLinks =
     projects?.map((project) => ({
       label: project.name,
-      link: project.projectLink,
+      link: "/projects/" + project.slug,
     })) || [];
   return (
     <footer>

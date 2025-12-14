@@ -3,7 +3,7 @@ import { projects } from "@constants/projects";
 
 export default function ProjectPage() {
   const { id } = useParams<{ id: string }>(); // Récupère l'ID depuis l'URL
-  const project = projects.find((project) => project.id === id); // Trouve le projet correspondant
+  const project = projects.find((project) => project.slug === id); // Trouve le projet correspondant
 
   if (!project) {
     return <p>Projet introuvable</p>; // Gestion des erreurs si l'ID est invalide
