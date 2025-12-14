@@ -22,6 +22,7 @@
   align-items: center;
   strong {
     @include font-base("h5");
+    color: $secondary-color;
   }
   li {
     width: fit-content;
