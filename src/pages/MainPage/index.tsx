@@ -3,6 +3,7 @@ import Presentation from "@components/organisms/Presentation";
 import Skills from "@components/organisms/Skills";
 import Technos from "@components/organisms/Technos";
 import Projects from "@components/organisms/Projects";
+import Contact from "@components/organisms/Contact";
 
 import SectionCTA from "@components/organisms/SectionCTA";
 
@@ -20,6 +21,7 @@ export default function MainPage() {
       <SectionCTA text="Voici ce qui m’accompagne au quotidien, mais avec les bonnes personnes, tout prend un vrai sens." />
       <Projects />
       <SectionCTA text="Chaque aventure m’a fait avancer. Et si la prochaine était la vôtre ?" />
+      <Contact />
     </>
   );
 }
