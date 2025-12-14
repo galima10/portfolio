@@ -28,7 +28,7 @@ export default function Contact() {
           </p>
         </li>
       </ul>
-      <ContactForm className={styles.contactForm} />
+      <ContactForm className={styles.contactForm} id="contactForm" />
     </SectionWrapper>
   );
 }

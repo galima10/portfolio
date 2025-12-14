@@ -5,14 +5,15 @@ import AppSubmitButton from "@components/atoms/appElements/AppSubmitButton";
 
 interface ContactFormProps {
   className?: string;
+  id?: string;
 }
 
-export default function ContactForm({ className }: ContactFormProps) {
+export default function ContactForm({ className, id }: ContactFormProps) {
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
   }
   return (
-    <div className={`${styles.contactForm} ${className}`}>
+    <div className={`${styles.contactForm} ${className}`} id={id}>
       <h3>Écrivons la suite, dès maintenant</h3>
       <form action="" onSubmit={handleSubmit}>
         <AppInput
