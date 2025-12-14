@@ -9,6 +9,7 @@ export const projects: {
     label: string;
     icon: "typescript" | "react" | "expo" | "jest" | "supabase" | "bootstrap" | "html" | "css" | "javascript";
   }[];
+  preview?: string;
   description: string;
 }[] = [
   {
@@ -36,6 +37,7 @@ export const projects: {
         icon: "jest",
       },
     ],
+    preview: "",
     description: "Description du projet Meam¡...",
   },
   {
@@ -63,6 +65,7 @@ export const projects: {
         icon: "bootstrap",
       },
     ],
+    preview: "",
     description: "Description du projet Téléconsultation...",
   },
   {
@@ -86,6 +89,7 @@ export const projects: {
         icon: "javascript",
       },
     ],
+    preview: "",
     description: "Description du projet Aremacs...",
   },
 ];

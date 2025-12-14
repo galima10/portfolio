@@ -1,0 +1,16 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.hero {
+  @extend %section-base;
+  li {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  strong {
+    @include font-base("h5");
+    color: $secondary-color;
+  }
+}
