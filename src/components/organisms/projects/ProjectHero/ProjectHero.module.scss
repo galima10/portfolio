@@ -16,9 +16,16 @@
       top: 50%;
       transform: translateY(-50%);
     }
+    h1 {
+      @include font-base("h2");
+      font-weight: $extra-bold;
+      @include responsive {
+        @include font-base("h1");
+      }
+    }
   }
   p {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     padding: 0;
     @include responsive {
       padding: 0 spaceCalc(5rem, 10rem, 10rem);
