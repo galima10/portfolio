@@ -19,7 +19,10 @@
   }
   p {
     margin-top: 2.5rem;
-    padding: 0 spaceCalc(0rem, 10rem, 10rem);
+    padding: 0;
+    @include responsive {
+      padding: 0 spaceCalc(5rem, 10rem, 10rem);
+    }
   }
   li {
     width: 3.5rem;
