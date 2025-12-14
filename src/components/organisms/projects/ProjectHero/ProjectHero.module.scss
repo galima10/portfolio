@@ -1,0 +1,63 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.hero {
+  @extend %section-base;
+  padding-bottom: 14rem;
+  background: linear-gradient($primary-color 50%, rgb(255, 250, 238, 0.25)),
+    var(--hero-bg-image) no-repeat center/cover;
+  text-align: center;
+
+  hgroup {
+    position: relative;
+    @include responsive {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  p {
+    margin-top: 2.5rem;
+    padding: 0 spaceCalc(0rem, 10rem, 10rem);
+  }
+  li {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  strong {
+    @include font-base("h5");
+    color: $secondary-color;
+  }
+  ul {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    @include responsive {
+      margin-top: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      flex-direction: column;
+    }
+  }
+  @include responsive {
+    padding-bottom: 8rem;
+    background: linear-gradient(
+        90deg,
+        $primary-color 50%,
+        rgb(255, 250, 238, 0.25)
+      ),
+      var(--hero-bg-image) no-repeat center/cover;
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

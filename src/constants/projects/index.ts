@@ -1,3 +1,7 @@
+import Meami from "@assets/images/projects/boeuf_citronnelle.webp";
+import Teleconsultation from "@assets/images/projects/canard_laque.webp";
+import Aremacs from "@assets/images/projects/st_jacques.webp";
+
 export const projects: {
   id: string;
   slug: string;
@@ -37,7 +41,7 @@ export const projects: {
         icon: "jest",
       },
     ],
-    preview: "",
+    preview: Meami,
     description: "Description du projet Meam¡...",
   },
   {
@@ -65,7 +69,7 @@ export const projects: {
         icon: "bootstrap",
       },
     ],
-    preview: "",
+    preview: Teleconsultation,
     description: "Description du projet Téléconsultation...",
   },
   {
@@ -89,7 +93,7 @@ export const projects: {
         icon: "javascript",
       },
     ],
-    preview: "",
+    preview: Aremacs,
     description: "Description du projet Aremacs...",
   },
 ];
