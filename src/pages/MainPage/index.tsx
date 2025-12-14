@@ -1,11 +1,11 @@
-import Hero from "@components/organisms/Hero";
-import Presentation from "@components/organisms/Presentation";
-import Skills from "@components/organisms/Skills";
-import Technos from "@components/organisms/Technos";
-import Projects from "@components/organisms/Projects";
-import Contact from "@components/organisms/Contact";
+import Hero from "@components/organisms/main/Hero";
+import Presentation from "@components/organisms/main/Presentation";
+import Skills from "@components/organisms/main/Skills";
+import Technos from "@components/organisms/main/Technos";
+import Projects from "@components/organisms/main/Projects";
+import Contact from "@components/organisms/main/Contact";
 
-import SectionCTA from "@components/organisms/SectionCTA";
+import SectionCTA from "@components/organisms/main/SectionCTA";
 
 import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHashOnLoad";
 
