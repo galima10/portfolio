@@ -1,6 +1,7 @@
 import styles from "./Contact.module.scss";
 
 import SectionWrapper from "@components/wrappers/SectionWrapper";
+import ContactForm from "@components/molecules/ContactForm";
 
 export default function Contact() {
   return (
@@ -27,6 +28,7 @@ export default function Contact() {
           </p>
         </li>
       </ul>
+      <ContactForm className={styles.contactForm} />
     </SectionWrapper>
   );
 }
