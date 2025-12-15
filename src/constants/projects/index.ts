@@ -5,6 +5,7 @@ import Aremacs from "@assets/images/projects/st_jacques.webp";
 import { ProjectType } from "@types";
 
 import meamiData from "@constants/projectSheets/meami.json";
+import teleconsultationData from "@constants/projectSheets/teleconsultation.json";
 
 export const projects: ProjectType[] = [
   {
@@ -61,6 +62,7 @@ export const projects: ProjectType[] = [
       },
     ],
     preview: Teleconsultation,
+    description: teleconsultationData,
   },
   {
     id: "Projet 3",

@@ -3,7 +3,7 @@ export interface ProjectDescriptionType {
     category: string;
     sector: string;
     type: string;
-    customer: string;
+    customer?: string;
     summaryInfos: string;
   };
   challenges: {
@@ -36,6 +36,7 @@ export interface ProjectDescriptionType {
       technical?: string[];
       budget?: string[];
       graphic?: string[];
+      geographic?: string[];
     };
     resources: {
       available: string[];

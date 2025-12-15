@@ -1,0 +1,144 @@
+{
+  "context": {
+    "category": "Professionnel",
+    "sector": "Développement web",
+    "type": "Application web en React",
+    "customer": "Client du secteur médical, visant à intégrer des solutions technologiques innovantes dans ses outils.",
+    "summaryInfos": "Projet réalisé pour Kaffeine Technologies, entreprise de développement web, en distanciel, au sein d’une équipe de 4 stagiaires, sur une durée de 44 jours (mai–juillet 2025)."
+  },
+  "challenges": {
+    "project": "Ce projet a été initié pour répondre aux difficultés d’accès aux soins dans les déserts médicaux. Il vise à faciliter les visites médicales dans les zones peu desservies, en créant un lien sécurisé entre professionnels de santé et patients, tout en garantissant la protection des données médicales sensibles face aux cyber-attaques.",
+    "personal": "Ce projet m’a motivé par son approche concrète des problèmes de société et la possibilité d’avoir un impact réel en mettant mes compétences digitales au service d’une cause sociale. Travailler dans une petite équipe passionnée m’a permis de m’intégrer facilement dans un contexte professionnel, d’apprendre à collaborer efficacement et de développer à la fois mes compétences techniques et mes savoir-faire en entreprise. Cette expérience enrichissante m’a aidé à confirmer mon projet professionnel et à affiner ma vision de mon évolution future dans le domaine du digital."
+  },
+  "objectives": {
+    "project": {
+      "main": "Créer une plateforme de téléconsultation offrant une expérience proche d’une consultation en présentiel.",
+      "key1": "Concevoir une interface intuitive et moderne.",
+      "key2": "Développer les fonctionnalités essentielles tout en protégeant les données sensibles.",
+      "secondary": "Ajouter des fonctionnalités complémentaires pour faciliter les échanges entre patient et spécialiste."
+    },
+    "personal": [
+      "Acquérir et mettre en pratique de nouvelles compétences dans un environnement professionnel.",
+      "Renforcer mes compétences techniques, humaines et professionnelles sur un projet client.",
+      "Transformer mes acquis de formation en compétences concrètes et directement applicables.",
+      "Explorer de nouvelles utilisations des outils et technologies en développement web.",
+      "Montrer que mes compétences digitales peuvent contribuer à des projets concrets et porteurs de sens."
+    ]
+  },
+  "target": {
+    "principal": "Médecins et patients qui utilisent la plateforme pour réaliser des consultations à distance, notamment dans les zones peu desservies. Ils ont besoin d’un outil performant, sécurisé et facile à utiliser, permettant une connexion fluide et la confidentialité des données, tout en simplifiant l’organisation et le suivi des consultations.",
+    "secondary": "Aucune cible secondaire, la plateforme étant exclusivement destinée à faciliter les échanges entre professionnels de santé et patients."
+  },
+  "deliverablesConstraintsResources": {
+    "deliverables": [
+      {
+        "name": "Moodboards",
+        "format": "Images",
+        "goal": "Choisir les couleurs, typographies et motifs définissant la direction artistique de l’interface.",
+        "specificities": "Deux moodboards présentés à Kaffeine Technologies.",
+        "technologies": "Miro, Figma"
+      },
+      {
+        "name": "Maquette de la refonte de l’interface",
+        "format": "Maquette Figma",
+        "goal": "Donner une direction claire pour le développement et projeter les fonctionnalités de la plateforme.",
+        "specificities": "Dashboard avec version spécialiste et version patient.",
+        "technologies": "Figma"
+      },
+      {
+        "name": "Documentation technique",
+        "format": "Textuel sur plateforme de documentation",
+        "goal": "Expliquer les technologies utilisées et fournir le mode d’emploi de la plateforme.",
+        "specificities": "Documentation privée",
+        "technologies": "Affine"
+      },
+      {
+        "name": "Plateforme de téléconsultation v2",
+        "format": "Plateforme déployée sur Vercel",
+        "goal": "Améliorer l’interface et intégrer les fonctionnalités demandées.",
+        "specificities": "Version de développement basée sur la v1, non refactorée, déployable.",
+        "technologies": "React, Web API Bluetooth LE, WebRTC"
+      }
+    ],
+    "constraints": {
+      "temporal": ["Développement de la v2 de la plateforme pendant 44 jours."],
+      "technical": [
+        "Technologies imposées : TypeScript, React.",
+        "Compatibilité sur tous les navigateurs.",
+        "Connexion entre deux utilisateurs en pair à pair."
+      ],
+      "geographic": ["Équipe en distanciel"]
+    },
+    "resources": {
+      "available": [
+        "Compétences : maîtrise de JavaScript et UX/UI design",
+        "Ressources humaines : 4 stagiaires et 3 développeurs expérimentés",
+        "Matériel et données : base de données fournie, v1 de la plateforme, matériel médical disponible"
+      ],
+      "missing": [
+        "Maîtrise des technologies utilisées → autoformation via documentation et tutoriels",
+        "Design system → création de l’identité visuelle"
+      ]
+    }
+  },
+  "planning": [
+    {
+      "name": "Analyse & Tests",
+      "mainTasks": "Revue du code existant et tests de compatibilité des appareils médicaux",
+      "deliverables": "Code vérifié et fonctionnel",
+      "deadline": "Semaine 1"
+    },
+    {
+      "name": "Recherche & Veille",
+      "mainTasks": "Benchmark concurrentiel, recherche d’images, choix des couleurs et typographies",
+      "deliverables": "Moodboards et plan d’inspiration visuelle",
+      "deadline": "Semaine 2"
+    },
+    {
+      "name": "Conception",
+      "mainTasks": "Création du zoning, des wireframes et des maquettes UI",
+      "deliverables": "Maquette complète de la plateforme",
+      "deadline": "Semaines 2 & 3"
+    },
+    {
+      "name": "Développement",
+      "mainTasks": "Intégration de la maquette et implémentation des fonctionnalités principales",
+      "deliverables": "Plateforme de téléconsultation v2 déployable",
+      "deadline": "Fin du projet (jour 44)"
+    }
+  ],
+  "actions": {
+    "missions": [
+      "J’ai analysé le code existant afin de comprendre la structure globale de la v1 de la plateforme.",
+      "J’ai réalisé deux moodboards et une planche inspirationnelle en m’appuyant sur une veille concurrentielle des sites et plateformes du secteur.",
+      "J’ai conçu la maquette UX/UI de la plateforme en intégrant les besoins de la cible ainsi que les fonctionnalités existantes et à venir.",
+      "J’ai intégré la maquette à la plateforme en utilisant les technologies déjà en place.",
+      "J’ai développé les fonctionnalités front-end demandées pour préparer la liaison avec le back-end.",
+      "J’ai documenté les fonctionnalités et les technologies utilisées dans une documentation technique en ligne."
+    ],
+    "tools": [
+      "Figma : moodboards et maquettes",
+      "Miro : veille et moodboards",
+      "VS Code : développement front-end",
+      "Vercel : déploiement dans un environnement de test",
+      "GitHub : versionning et collaboration"
+    ],
+    "skills": [
+      "Création de composants dynamiques",
+      "Mise en place de la navigation dans l’application et gestion de la base de données embarquée",
+      "Typage pour éviter les erreurs invisibles",
+      "Utilisation de styles utilitaires prédéfinis et réutilisables",
+      "Conception d’interfaces claires, intuitives et attractives",
+      "Adaptation et autoformation aux technologies utilisées",
+      "Coordination efficace avec l’équipe",
+      "Gestion du temps et travail en distanciel",
+      "Conception UX/UI épurée et fluide"
+    ]
+  },
+  "results": {
+    "achievements": "La livraison finale inclut la v2 de la plateforme de téléconsultation et sa documentation technique. Bien que non mise en ligne et reprise par d’autres développeurs pour finalisation, la plateforme bénéficie désormais d’une interface claire et épurée, facilitant l’ajout de nouvelles fonctionnalités.",
+    "learnings": "Ce projet m’a permis d’acquérir et de renforcer des compétences concrètes en UX/UI et développement, que j’applique aujourd’hui dans mes projets d’équipe.",
+    "testimonials": "J’ai reçu des retours positifs de la part de mon équipe ainsi que de mon maître de stage à la clôture du projet. “Hello Magali ! Ça a été un vrai plaisir de t'accueillir. La qualité de ton travail et ta motivation étaient au top. Avec plaisir pour te prendre en stage, et peut-être une alternance en 2026 ? :)” - Jean-Laurent Picard, co-fondateur de Kaffeine Technologies."
+  },
+  "consclusion": "Au départ, je pensais que mon rôle serait limité, étant donné mon manque d’expérience, et j’étais à la fois motivée et hésitante. Face aux contraintes techniques et au brief exigeant, j’ai dû m’adapter rapidement aux technologies utilisées pour entrer efficacement dans le projet. Cette période m’a permis de transformer ces contraintes en opportunité, en repensant mes méthodes de travail et en apprenant à collaborer avec l’équipe. J’ai consolidé mes compétences digitales et en développement web, tout en découvrant de nouvelles façons d’optimiser les outils et de travailler à distance. Si je devais recommencer, je communiquerais davantage sur les problèmes rencontrés et proposerais plus d’idées pour améliorer la productivité. Aujourd’hui, cette expérience représente une première étape précieuse qui renforce ma motivation à approfondir mes compétences techniques et à évoluer dans un environnement professionnel."
+}
