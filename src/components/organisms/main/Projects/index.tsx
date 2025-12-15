@@ -4,7 +4,7 @@ import SectionWrapper from "@components/wrappers/SectionWrapper";
 
 import { projects } from "@constants/projects";
 
-import ProjectItem from "@components/molecules/ProjectItem";
+import ProjectItem from "@components/molecules/main/ProjectItem";
 
 export default function Projects() {
   return (

@@ -1,5 +1,5 @@
-import NavLinks from "@components/molecules/NavLinks";
-import MobileNavbar from "@components/molecules/MobileNavbar";
+import NavLinks from "@components/molecules/general/NavLinks";
+import MobileNavbar from "@components/molecules/general/MobileNavbar";
 
 import { useNavbar } from "@hooks/appElements/organisms/useNavbar";
 

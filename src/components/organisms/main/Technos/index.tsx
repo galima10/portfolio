@@ -1,7 +1,7 @@
 import styles from "./Technos.module.scss";
 
 import SectionWrapper from "@components/wrappers/SectionWrapper";
-import TechnosMap from "@components/molecules/TechnosMap";
+import TechnosMap from "@components/molecules/main/TechnosMap";
 
 export default function Technos() {
   return (

@@ -17,3 +17,16 @@ export const footerNavLinks = [
   { label: "Mes projets", link: "/#projects" },
   { label: "Me contacter", link: "#contactForm",},
 ];
+
+export const projectTitleDesc = {
+  context: "Contexte",
+  challenges: "Enjeux",
+  objectives: "Objectifs",
+  target: "Cible",
+  deliverablesConstraintsResources: "Livrables, Contraintes, Ressources",
+  planning: "Étapes clés",
+  actions: "Mes actions, ma démarche",
+  results: "Résultats & Témoignages",
+  proofs: "Preuves",
+  conclusion: "Retour rélatif",
+}

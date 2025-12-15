@@ -2,36 +2,11 @@ import Meami from "@assets/images/projects/boeuf_citronnelle.webp";
 import Teleconsultation from "@assets/images/projects/canard_laque.webp";
 import Aremacs from "@assets/images/projects/st_jacques.webp";
 
-import { ProjectDescription } from "@types";
+import { ProjectType } from "@types";
 
-interface StackItem {
-  label: string;
-  icon:
-    | "typescript"
-    | "react"
-    | "expo"
-    | "jest"
-    | "supabase"
-    | "bootstrap"
-    | "html"
-    | "css"
-    | "javascript";
-}
+import meamiData from "@constants/projectSheets/meami.json";
 
-interface Project {
-  id: string;
-  slug: string;
-  name: string;
-  island: "island1" | "island2" | "island3";
-  hook: string;
-  label: string;
-  stack: StackItem[];
-  preview?: string;
-  description?: ProjectDescription;
-}
-
-
-export const projects: Project[] = [
+export const projects: ProjectType[] = [
   {
     id: "Projet 1",
     slug: "meami",
@@ -58,6 +33,7 @@ export const projects: Project[] = [
       },
     ],
     preview: Meami,
+    description: meamiData,
   },
   {
     id: "Projet 2",

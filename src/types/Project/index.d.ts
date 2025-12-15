@@ -1,4 +1,4 @@
-export interface ProjectDescription {
+export interface ProjectDescriptionType {
   context: {
     category: string;
     sector: string;
@@ -13,7 +13,8 @@ export interface ProjectDescription {
   objectives: {
     project: {
       main: string;
-      keys: string[];
+      key1: string;
+      key2?: string;
       secondary: string;
     };
     personal: string[];
@@ -22,57 +23,78 @@ export interface ProjectDescription {
     principal: string;
     secondary: string;
   };
-  deliverables: {
-    name: string;
-    format: string;
-    goal: string;
-    technologies: string;
-  }[];
-  constraints: {
-    temporal: string[];
-    technical: string[];
-    budget: string[];
-    graphic: string[];
-  };
-  resources: {
-    available: {
-      category: string;
-      items: string[];
-    }[];
-    missing: {
+  deliverablesConstraintsResources: {
+    deliverables: {
       name: string;
-      solution: string;
+      format: string;
+      goal: string;
+      specificities?: string;
+      technologies: string;
     }[];
+    constraints: {
+      temporal?: string[];
+      technical?: string[];
+      budget?: string[];
+      graphic?: string[];
+    };
+    resources: {
+      available: string[];
+      missing: string[];
+    };
   };
   planning: {
     name: string;
-    mainTasks: string[];
-    deliverables: string[];
+    mainTasks: string;
+    deliverables: string;
     deadline: string;
   }[];
-  missions: string[];
-  tools: {
-    name: string;
-    purpose: string;
-  }[];
-  skills: {
-    hard: string[];
-    soft: string[];
+  actions: {
+    missions: string[];
+    tools: string[];
+    skills: string[];
   };
   results: {
     achievements: string;
     learnings: string;
-    testimonials: string[];
+    testimonials?: string;
   };
-  proofs: {
-    name: string;
-    type: string;
-    imgSrc: string;
+  proofs?: {
+    list?: {
+      name: string;
+      type: string;
+      imgSrc: string;
+    }[];
+    demonstrationLinks?: {
+      name: string;
+      type: string;
+      url: string;
+    };
   }[];
-  demonstrationLinks?: {
-    name: string;
-    type: string;
-    url: string;
-  }[];
-  consclusions: string;
+  consclusion: string;
+}
+
+export interface StackItemType {
+  label: string;
+  icon:
+    | "typescript"
+    | "react"
+    | "expo"
+    | "jest"
+    | "supabase"
+    | "bootstrap"
+    | "html"
+    | "css"
+    | "javascript";
+}
+
+export interface ProjectType {
+  id: string;
+  slug: string;
+  name: string;
+  island: "island1" | "island2" | "island3";
+  hook: string;
+  label: string;
+  stack: StackItemType[];
+  preview?: string;
+  description?: ProjectDescriptionType;
 }

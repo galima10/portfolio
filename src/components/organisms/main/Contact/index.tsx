@@ -1,7 +1,7 @@
 import styles from "./Contact.module.scss";
 
 import SectionWrapper from "@components/wrappers/SectionWrapper";
-import ContactForm from "@components/molecules/ContactForm";
+import ContactForm from "@components/molecules/general/ContactForm";
 
 export default function Contact() {
   return (

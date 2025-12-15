@@ -8,6 +8,7 @@
     "jsxImportSource": "react",
     "strict": false,
     "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,

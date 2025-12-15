@@ -1,0 +1,172 @@
+{
+  "context": {
+    "category": "Personnel",
+    "sector": "Développement web",
+    "type": "Application mobile",
+    "customer": "Projet auto-initié pour répondre à un besoin quotidien personnel",
+    "summaryInfos": "Projet réalisé en autonomie partout où je pouvais avancer. J’ai mené ce projet seule depuis juin 2025 à aujourd’hui encore."
+  },
+  "challenges": {
+    "project": "Le projet est né d’une volonté de faciliter mon quotidien face à l’absence d’alternatives répondant pleinement à mes besoins. L’usage croissant des applications mobiles rend ce projet pertinent, nécessitant une solution simple, intuitive et efficace pour rendre la cuisine plus accessible. Il fallait également éviter la conception d’un produit inefficace, incapable d’apporter une réelle solution, et qui irait à l’encontre de l’objectif recherché.",
+    "personal": "Ce projet m’a motivée par l’envie de mettre en pratique l’ensemble de mes compétences, de la conception à la production, en réalisant un produit concret et porteur de sens. J’ai apprécié la liberté de décision à chaque étape et le défi de développer une application mobile. Il m’a permis de renforcer mes compétences en webdesign et en développement web, tout en expérimentant le travail en autonomie complète. Il fait aussi écho à mes valeurs et objectifs, en consolidant mes compétences techniques et mon autonomie, des atouts essentiels pour mes futurs projets individuels ou en équipe."
+  },
+  "objectives": {
+    "project": {
+      "main": "Créer une application mobile intuitive pour gérer facilement le menu hebdomadaire et la liste de courses.",
+      "key1": "Concevoir une interface claire et fluide pour simplifier la planification des repas et les courses",
+      "key2": "Déployer l’application sur Android avec une base de données synchronisée.",
+      "secondary": "Ajouter la gestion de la conservation et cuisson des ingrédients pour enrichir l’expérience utilisateur."
+    },
+    "personal": [
+      "Consolider mes compétences techniques et en gestion de projet pour gagner en autonomie.",
+      "Me mettre à l’épreuve en appliquant et en renforçant mes compétences existantes, notamment en développement web et en organisation.",
+      "Explorer de nouveaux horizons en développant des applications mobiles.",
+      "Découvrir de nouvelles technologies et confirmer mon intérêt pour le développement de sites et d’applications.",
+      "Démontrer ma capacité à mener un projet de A à Z, de la conception à la production."
+    ]
+  },
+  "target": {
+    "principal": "Jeunes adultes, principalement étudiants, qui cuisinent régulièrement et planifient leurs repas à l’avance. Ils recherchent un outil simple et intuitif pour organiser leur menu hebdomadaire, gérer leurs courses et gagner du temps. Ils attendent une interface attrayante, mobile-first sur Android, avec un mode d’emploi clair et des fonctionnalités pratiques. Leurs principales frustrations concernent les applications lentes, peu performantes ou à l’interface peu engageante.",
+    "secondary": "Utilisateurs plus âgés, comme des parents, cherchant à simplifier la planification des repas familiaux. L’application reste surtout adaptée aux jeunes (80 % des utilisateurs), mais peut aussi répondre aux besoins de ce public secondaire (20 %)."
+  },
+  "deliverablesConstraintsResources": {
+    "deliverables": [
+      {
+        "name": "Charte graphique et moodboard",
+        "format": "PDF",
+        "goal": "Définir l’univers visuel de l’application (logo, couleurs, typographies, icônes, images).",
+        "technologies": "Figma, Miro, Notion"
+      },
+      {
+        "name": "Roadmap et maquettes",
+        "format": "Maquettes Figma",
+        "goal": "Définir l’apparence et les fonctionnalités principales de l’application.",
+        "specificities": "Navigation et interactions détaillées.",
+        "technologies": "Figma"
+      },
+      {
+        "name": "Squelette du projet",
+        "format": "APK Android — Version 1.0.0",
+        "goal": "Initialiser le projet pour le déploiement avec l’interface issue du template React Native.",
+        "technologies": "React Native, Expo (EAS-cli)"
+      },
+      {
+        "name": "Versions APK intermédiaires (1.1.0 à 1.4.0)",
+        "format": "APK Android",
+        "goal": "Construire le squelette de navigation, intégrer le design final et développer progressivement les fonctionnalités (menu de la semaine, liste de courses).",
+        "specificities": "Navigation structurée, application du design system, préparation des composants pour la future base de données.",
+        "technologies": "React Native, Expo (EAS-cli)"
+      },
+      {
+        "name": "Application complète (livrable final)",
+        "format": "APK Android — Version finale",
+        "goal": "Version déployée et pleinement fonctionnelle avec base de données connectée et toutes les fonctionnalités finalisées.",
+        "technologies": "React Native, Expo (EAS-cli)"
+      },
+      {
+        "name": "Démonstrations du projet",
+        "format": "Vidéos (captures d’écran et démonstrations enregistrées)",
+        "goal": "Illustrer l’avancée du projet à chaque étape de développement",
+        "specificities": "Vidéos courtes présentant les nouvelles fonctionnalités ou améliorations visuelles.",
+        "technologies": "Enregistrement natif Android de l’écran"
+      }
+    ],
+    "constraints": {
+      "temporal": [
+        "Découpage en jalons avec livrables intermédiaires chaque fin de semaine pendant le premier mois",
+        "Vidéos de démonstration à chaque déploiement d’une nouvelle version"
+      ],
+      "technical": [
+        "Technologies imposées : React Native et Expo",
+        "Format : uniquement Android",
+        "Historique : versionning du code sur GitHub et versionning des APK"
+      ],
+      "budget": [
+        "Utilisation exclusive de ressources gratuites et libres de droits"
+      ],
+      "graphic": ["Univers visuel chaleureux et agréable imposé"]
+    },
+    "resources": {
+      "available": [
+        "Compétences : maîtrise de React, versionning, UX/UI design",
+        "Outils : Figma, Notion, GitHub, VS Code, Adobe Illustrator, ressources en ligne gratuites, LLM"
+      ],
+      "missing": [
+        "Connaissance de React Native et Expo → autoformation via documentation, tutoriels et LLM"
+      ]
+    }
+  },
+  "planning": [
+    {
+      "name": "Recherche & Veille",
+      "mainTasks": "Benchmark du marché, analyse des besoins et des fonctionnalités similaires",
+      "deliverables": "Carte mentale des besoins et inspirations",
+      "deadline": "Semaine 1"
+    },
+    {
+      "name": "Création de l’identité visuelle",
+      "mainTasks": "Définition de l’univers visuel (nom, logo, palette de couleurs, typographies, iconographie)",
+      "deliverables": "Charte graphique et moodboard",
+      "deadline": "Semaine 1"
+    },
+    {
+      "name": "Conception",
+      "mainTasks": "Élaboration de l’arborescence, structure et navigation (zoning, wireframes, maquettes)",
+      "deliverables": "Roadmap détaillée sur Figma avec maquette et annotations",
+      "deadline": "Semaine 2"
+    },
+    {
+      "name": "Configuration du projet",
+      "mainTasks": "Autoformation sur React Native et Expo, préparation du déploiement Android",
+      "deliverables": "APK Android — Version 1.0.0",
+      "deadline": "Semaine 3"
+    },
+    {
+      "name": "Développement front-end",
+      "mainTasks": "Intégration de la maquette, développement des composants et premières fonctionnalités",
+      "deliverables": "APK Android — Versions intermédiaires + démonstrations vidéos",
+      "deadline": "Semaine 4 à aujourd’hui"
+    },
+    {
+      "name": "Intégration de la base de données",
+      "mainTasks": "Création et connexion de la base de données au front-end",
+      "deliverables": "APK Android — Version bêta fonctionnelle",
+      "deadline": "Semaine 4 à aujourd’hui"
+    }
+  ],
+  "actions": {
+    "missions": [
+      "J’ai planifié les différentes étapes du projet pour les prioriser selon leur niveau d’importance.",
+      "J’ai analysé les fonctionnalités phares des outils concurrents pour réaliser un benchmark pertinent.",
+      "J’ai recherché des inspirations pour concevoir l’identité visuelle de l’application (logo, couleurs, typographies, icônes et images) en m’appuyant sur mon analyse et la cible.",
+      "J’ai conçu la maquette de l’application en utilisant zoning et wireframes, puis j’ai créé une roadmap détaillée avec toutes les indications nécessaires pour faciliter la phase de développement.",
+      "J’ai configuré et structuré le projet afin de le déployer sous forme d’APK Android.",
+      "J’ai intégré la maquette et le design system pour uniformiser l’interface et donner une ligne directrice cohérente.",
+      "J’ai développé les fonctionnalités front-end de l’application et les ai préparées pour les relier à la future base de données (en cours)."
+    ],
+    "tools": [
+      "Figma : charte graphique, moodboard, maquettes et roadmap détaillée",
+      "VS Code : développement front-end et base de données",
+      "GitHub : versionning du code et automatisation des tâches",
+      "Expo (EAS-cli) : versionning exécutable et déploiement Android",
+      "Notion : gestion du projet en tâches avec statut et priorité"
+    ],
+    "skills": [
+      "Création de composants dynamiques natifs pour mobile et intégration front-end",
+      "Mise en place de la navigation dans l’application et gestion de la base de données embarquée",
+      "Tests unitaires de la logique métier",
+      "Typage pour éviter les erreurs invisibles",
+      "Conception d’interfaces claires, intuitives et attractives",
+      "Gestion des deadlines et priorisation des tâches",
+      "Autoformation via documentation en ligne",
+      "Exploration de nouvelles pratiques pour améliorer la qualité du code",
+      "Présentation claire des démonstrations et documentation des fonctionnalités"
+    ]
+  },
+  "results": {
+    "achievements": "La livraison finale prévue est une application mobile Android développée en React Native et déployée via Expo, actuellement en cours de développement. Une vidéo de démonstration et un futur site vitrine sont prévus pour présenter le projet de manière professionnelle, l’application restant privée et non accessible au public.",
+    "learnings": "Le projet m’a permis d’acquérir de nouvelles compétences techniques et de maîtriser des outils demandés sur le marché, tout en expérimentant la gestion complète d’un projet en solo. J’ai pu concrétiser un univers visuel complet et améliorer ma créativité, ma rigueur, mon sens du détail et ma méthode de travail, que je continue de perfectionner à travers l’autoformation.",
+    "testimonials": "J’ai reçu des retours et suggestions de mes proches et amis, spécialisés ou non, qui m’ont permis d’ajuster l’application, notamment pour optimiser ses performances."
+  },
+  "consclusion": "Au départ, j’ai abordé ce projet comme un défi qui me permettrait de développer mes compétences, et j’étais à la fois curieuse et motivée de voir où il me mènerait. Les contraintes rencontrées m’ont poussée à repenser ma réflexion et mon analyse, les transformant en opportunités plutôt qu’en freins. J’ai appris à utiliser de nombreux outils et technologies inconnus auparavant, consolidant mes compétences techniques et ma capacité d’adaptation. Si je devais recommencer, je prendrais plus de temps pour approfondir les tests unitaires afin d’améliorer la qualité du code. Cette expérience me permet désormais de présenter un projet concret qui démontre ma rigueur et mes compétences, même dans un contexte personnel."
+}

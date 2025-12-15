@@ -1,35 +1,25 @@
 import styles from "./ProjectCarrousel.module.scss";
 
-import { ProjectDescription } from "@types";
+import { ProjectDescriptionType } from "@types";
+
+import ProjectDescriptionSlide from "@components/molecules/main/ProjectDescriptionSlide";
 
 interface ProjectCarrouselProps {
-  description: ProjectDescription;
+  description?: ProjectDescriptionType;
 }
 
 export default function ProjectCarrousel({
   description,
 }: ProjectCarrouselProps) {
-//   const {
-//     context,
-//     challenges,
-//     objectives,
-//     target,
-//     deliverables,
-//     constraints,
-//     resources,
-//     planning,
-//     missions,
-//     tools,
-//     skills,
-//     results,
-//     proofs,
-//     demonstrationLinks,
-//     consclusions,
-//   } = description;
-const descriptionKeys = description ? Object.keys(description) : [];
-  return <div className={styles.projectCarrousel}>
-    <ul>
-
-    </ul>
-  </div>;
+  return (
+    <div className={styles.projectCarrousel}>
+      <ul>
+        {description && Object.entries(description).map(([key, value]) => (
+          <li key={key}>
+            <ProjectDescriptionSlide dataKey={key} dataValue={JSON.stringify(value)} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }

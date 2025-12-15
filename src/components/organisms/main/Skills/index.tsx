@@ -1,7 +1,7 @@
 import styles from "./Skills.module.scss";
 
 import SectionWrapper from "@components/wrappers/SectionWrapper";
-import ToolsBox from "@components/molecules/ToolsBox";
+import ToolsBox from "@components/molecules/main/ToolsBox";
 
 export default function Skills() {
   return (

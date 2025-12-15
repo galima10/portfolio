@@ -1,4 +1,4 @@
-import NavLinks from "@components/molecules/NavLinks";
+import NavLinks from "@components/molecules/general/NavLinks";
 
 interface FooterProjectsProps {
   projectsLinks: { label: string; link: string; isCTA?: boolean }[];

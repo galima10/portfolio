@@ -1,11 +1,7 @@
 import AppButton from "@components/atoms/appElements/AppButton";
-import NavLinks from "@components/molecules/NavLinks";
-import AppSVG from "@components/atoms/svgIcons/AppSVG";
-import GenericButton from "@components/atoms/appElements/GenericButton";
-
-import FooterInfos from "@components/molecules/FooterInfos";
-import FooterLinks from "@components/molecules/FooterLinks";
-import FooterProjects from "@components/molecules/FooterProjects";
+import FooterInfos from "@components/molecules/general/FooterInfos";
+import FooterLinks from "@components/molecules/general/FooterLinks";
+import FooterProjects from "@components/molecules/general/FooterProjects";
 
 interface FooterProps {
   links: { label: string; link: string; isCTA?: boolean }[];
