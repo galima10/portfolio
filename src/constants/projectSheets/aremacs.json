@@ -1,0 +1,138 @@
+{
+  "context": {
+    "category": "Académique",
+    "sector": "Développement web & UX/UI Design",
+    "type": "Refonte d’interface",
+    "customer": "Aremacs, association engagée dans la sensibilisation et la lutte pour les causes environnementales lors des festivals.",
+    "summaryInfos": "Projet réalisé en binôme lors du hackathon Digital Sans Frontières 2025, au profit d’une association, sur une semaine."
+  },
+  "challenges": {
+    "project": "Le projet est né du constat que l’association avait une présence en ligne peu optimale, alors qu’un site développé constitue aujourd’hui un levier essentiel de sensibilisation. Lancé lors d’un hackathon à but non lucratif, il visait à mettre les compétences digitales au service de l’association. Le projet est pertinent face à l’impact croissant du numérique dans la promotion des causes et répond au besoin de refondre un site mal organisé tout en évitant des outils ou propositions contraires à l’esprit de l’association.",
+    "personal": "Ce projet m’a attirée par l’opportunité de mettre mes compétences en pratique dans un contexte concret, en dehors du cadre de ma formation. La dimension de compétition positive m’a motivée à m’impliquer pleinement dans un projet à la fois impactant et pertinent. J’y ai découvert comment le digital peut servir une bonne cause et comment le rendre plus responsable. Cette expérience fait écho à mes valeurs et objectifs, en me permettant de contribuer à un projet porteur de sens au service d’une association engagée pour l’environnement."
+  },
+  "objectives": {
+    "project": {
+      "main": "Refaire le site vitrine de l’association.",
+      "key1": "Concevoir une maquette UX claire et intuitive pour faciliter la navigation et l’accès à l’information.",
+      "key2": "Intégrer la maquette sur le web en respectant les bonnes pratiques d’accessibilité, de sémantique et de performance.",
+      "secondary": "Sensibiliser aux causes environnementales et humaines."
+    },
+    "personal": [
+      "Apprendre à rendre mon code de qualité et adopter les bonnes pratiques pour un projet responsable et accessible.",
+      "Renforcer mes compétences techniques en développement web et en UX/UI design.",
+      "Mettre en pratique mes connaissances théoriques dans une expérience concrète et collaborative."
+    ]
+  },
+  "target": {
+    "principal": "Jeunes festivaliers sensibles aux enjeux environnementaux, souhaitant rendre les festivals plus responsables. Ils recherchent des informations claires et rapides sur les actions de l’association, veulent suivre les événements et campagnes facilement, et participer activement. Ils attendent une navigation fluide sur mobile, des informations fiables, ainsi qu’une transparence et authenticité dans les initiatives présentées. Leur frustration provient des sites mal organisés, peu ergonomiques ou lents, et ils privilégient les plateformes éco-conçues et performantes.",
+    "secondary": "Organisateurs de festivals, bénévoles et partenaires engagés, qui souhaitent collaborer avec l’association pour rendre les événements plus durables et promouvoir des pratiques éco-responsables."
+  },
+  "deliverablesConstraintsResources": {
+    "deliverables": [
+      {
+        "name": "Maquettes interactives de la refonte",
+        "format": "Maquette Figma",
+        "goal": "Réorganiser le site pour le rendre plus clair, fluide, performant, intuitif et attrayant.",
+        "specificities": "Responsive (desktop et mobile)",
+        "technologies": "Figma"
+      },
+      {
+        "name": "Site vitrine",
+        "format": "Site web",
+        "goal": "Intégrer la maquette sur le web pour visualiser le résultat final.",
+        "specificities": "Page d’accueil uniquement, optimisation et accessibilité mises en avant",
+        "technologies": "HTML / CSS / JS"
+      },
+      {
+        "name": "Présentation orale",
+        "format": "Diapositives",
+        "goal": "Démontrer le travail fourni et présenter le projet.",
+        "specificities": "Maquette desktop et mobile et page d’accueil développée",
+        "technologies": "Google Slides"
+      }
+    ],
+    "constraints": {
+      "temporal": [
+        "Hackathon d’une semaine"
+      ],
+      "technical": [
+        "Performances, accessibilité et responsive design"
+      ],
+      "budget": [
+        "Utilisation exclusive de ressources gratuites et libres de droits"
+      ],
+      "graphic": [
+        "Respect strict de la charte graphique fournie par l’association"
+      ]
+    },
+    "resources": {
+      "available": [
+        "Compétences : maîtrise de HTML/CSS/JS et pratiques d’UX/UI design",
+        "Ressources humaines : équipe de 2 personnes",
+        "Matériel et données : charte graphique, logo, site vitrine actuel",
+        "Outils : Figma, VS Code, Notion, Google Slides"
+      ],
+      "missing": [
+        "Encadrement direct de l’association → communication par mail"
+      ]
+    }
+  },
+  "planning": [
+    {
+      "name": "Recherche & Analyse",
+      "mainTasks": "Benchmark du site existant et analyse des sites concurrents, définition des besoins",
+      "deliverables": "Tableau synthétique des constats et recommandations",
+      "deadline": "Jours 1 & 2"
+    },
+    {
+      "name": "Conception",
+      "mainTasks": "Zoning, wireframes et maquettes pour formats desktop et mobile",
+      "deliverables": "Maquettes Figma",
+      "deadline": "Jours 3 & 4"
+    },
+    {
+      "name": "Développement",
+      "mainTasks": "Intégration web de la maquette, optimisation et tests",
+      "deliverables": "Site vitrine fonctionnel (page d’accueil)",
+      "deadline": "Jours 4 & 5"
+    },
+    {
+      "name": "Présentation & Bilan",
+      "mainTasks": "Préparation du rendu final et présentation orale",
+      "deliverables": "Présentation orale",
+      "deadline": "Jour 5"
+    }
+  ],
+  "actions": {
+    "missions": [
+      "J’ai analysé le site existant pour repérer les failles et identifier les améliorations à apporter dans la refonte.",
+      "J’ai conçu les maquettes UX/UI desktop et mobile en réorganisant l’arborescence et les informations pour les rendre plus claires, accessibles et intuitives.",
+      "J’ai intégré la page d’accueil desktop de la maquette pour permettre à l’association de se projeter dans la refonte et concrétiser ma proposition.",
+      "J’ai présenté à l’oral le travail réalisé à l’aide de diapositives pour démontrer la refonte du site vitrine et expliquer mes choix."
+    ],
+    "tools": [
+      "Figma : création de maquettes et prototypes",
+      "VS Code : développement front-end",
+      "Notion : gestion de projet"
+    ],
+    "skills": [
+      "Intégration web et structuration du contenu",
+      "Adaptation fluide aux formats desktop, mobile et tablette",
+      "Conception d’interfaces claires, intuitives et attractives",
+      "Rendu du site utilisable par tous",
+      "Optimisation du référencement naturel",
+      "Conception d'un site rapide et économe en ressources",
+      "Recherche et mise en œuvre des bonnes pratiques",
+      "Prise en compte de l’impact environnemental et humain du numérique",
+      "Coordination et échanges clairs avec l’équipe",
+      "Priorisation des tâches dans des délais serrés",
+      "Conception d’interfaces originales et attrayantes"
+    ]
+  },
+  "results": {
+    "achievements": "La livraison finale comprenait les maquettes interactives de la refonte et, éventuellement, l’intégration web de la page d’accueil. Le projet a permis de clarifier l’arborescence du site et de rendre la navigation plus intuitive par rapport à la version précédente.",
+    "learnings": "Cette expérience m’a permis de me sensibiliser aux causes environnementales, à l’accessibilité et à l’impact du digital, tout en testant des outils pour optimiser les performances et réduire l’empreinte des projets. Elle confirme aujourd’hui mon intérêt pour des réalisations réfléchies, responsables et porteuses de sens.",
+    "testimonials": "L’examinateur du hackathon a souligné que notre projet faisait partie des plus aboutis, avec un rendu particulièrement professionnel, reconnu pour le sérieux et l’investissement de l’équipe."
+  },
+  "consclusion": "Au départ, je pensais que ce projet serait anodin, similaire à ceux réalisés pendant ma formation, et j’étais donc hésitante et peu motivée. Les contraintes imposées m’ont poussée à considérer le projet sous un angle plus profond, révélant des enjeux éthiques et responsables liés au web. Le hackathon m’a permis d’acquérir des compétences inédites, notamment sur les outils d’analyse de performance et d’accessibilité, ainsi que sur les normes environnementales et bonnes pratiques à adopter. Avec du recul, j’aurais pris le projet plus au sérieux dès le début pour mieux gérer les délais serrés et finaliser la refonte. Cette expérience m’inspire désormais à approfondir mes connaissances sur la sensibilisation, l’impact environnemental et l’accessibilité, afin de rendre mes futurs projets plus responsables et porteurs de sens."
+}

@@ -59,18 +59,6 @@ export interface ProjectDescriptionType {
     learnings: string;
     testimonials?: string;
   };
-  proofs?: {
-    list?: {
-      name: string;
-      type: string;
-      imgSrc: string;
-    }[];
-    demonstrationLinks?: {
-      name: string;
-      type: string;
-      url: string;
-    };
-  }[];
   consclusion: string;
 }
 
@@ -98,4 +86,16 @@ export interface ProjectType {
   stack: StackItemType[];
   preview?: string;
   description?: ProjectDescriptionType;
+  proofs?: {
+    list?: {
+      name: string;
+      type: string;
+      imgSrc: string;
+    }[];
+    demonstrationLinks?: {
+      name: string;
+      type: string;
+      url: string;
+    };
+  }[];
 }
