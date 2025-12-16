@@ -6,6 +6,7 @@ import { ProjectType } from "@types";
 
 import meamiData from "@constants/projectSheets/meami.json";
 import teleconsultationData from "@constants/projectSheets/teleconsultation.json";
+import aremacsData from "@constants/projectSheets/aremacs.json";
 
 export const projects: ProjectType[] = [
   {
@@ -86,5 +87,6 @@ export const projects: ProjectType[] = [
       },
     ],
     preview: Aremacs,
+    description: aremacsData,
   },
 ];
