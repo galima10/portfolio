@@ -6,3 +6,12 @@
 .projectCarrousel {
   @extend %section-base;
 }
+
+.slides {
+  width: 100%;
+  height: 100%;
+  li {
+    width: 100%;
+    height: 100%;
+  }
+}

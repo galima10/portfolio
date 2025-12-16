@@ -13,7 +13,7 @@ export default function ProjectCarrousel({
 }: ProjectCarrouselProps) {
   return (
     <div className={styles.projectCarrousel}>
-      <ul>
+      <ul className={styles.slides}>
         {description && Object.entries(description).map(([key, value]) => (
           <li key={key}>
             <ProjectDescriptionSlide dataKey={key} dataValue={JSON.stringify(value)} />
