@@ -2,7 +2,7 @@ import styles from "./ProjectCarrousel.module.scss";
 
 import { ProjectDescriptionType } from "@types";
 
-import ProjectDescriptionSlide from "@components/molecules/main/ProjectDescriptionSlide";
+import ProjectDescriptionSlide from "@components/organisms/projects/ProjectDescriptionSlide";
 
 interface ProjectCarrouselProps {
   description?: ProjectDescriptionType;
