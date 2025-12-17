@@ -10,18 +10,21 @@ interface TargetSlideProps {
 }
 
 export default function TargetSlide({ target }: TargetSlideProps) {
-  return <div className={styles.targetSlide}>
-    {target && (
-      <>
-        <p>
-            <strong>{translationsProjects["principal"]}:</strong> {target.principal}
-        </p>
-        {target.relay && (
+  return (
+    <div className={`${styles.slides} ${styles.targetSlide}`}>
+      {target && (
+        <>
           <p>
-            <strong>{translationsProjects["relay"]}:</strong> {target.relay}
+            <strong>{translationsProjects["principal"]}:</strong>{" "}
+            {target.principal}
           </p>
-        )}
-      </>
-    )}
-  </div>;
+          {target.relay && (
+            <p>
+              <strong>{translationsProjects["relay"]}:</strong> {target.relay}
+            </p>
+          )}
+        </>
+      )}
+    </div>
+  );
 }

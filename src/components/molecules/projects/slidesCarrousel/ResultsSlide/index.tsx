@@ -10,7 +10,7 @@ interface ResultsSlideProps {
 
 export default function ResultsSlide({ results }: ResultsSlideProps) {
   return (
-    <div className={styles.resultsSlide}>
+    <div className={`${styles.slides} ${styles.resultsSlide}`}>
       {results &&
         Object.entries(results).map(([key, value]) => (
           <p key={key}>

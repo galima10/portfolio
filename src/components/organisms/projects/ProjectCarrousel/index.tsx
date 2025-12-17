@@ -40,7 +40,7 @@ export default function ProjectCarrousel({
           </li>
         </ul>
       </div>
-      <ul className={styles.slides}>
+      <ul className={styles.slider}>
         {descAndProofs &&
           Object.entries(descAndProofs).map(([key, value]) => (
             <li key={key}>

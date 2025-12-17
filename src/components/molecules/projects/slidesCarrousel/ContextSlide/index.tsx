@@ -2,7 +2,6 @@ import styles from "../Carrousel.module.scss";
 
 import { translationsProjects } from "@constants/global";
 
-
 interface ContextSlideProps {
   context: {
     category: string;
@@ -15,11 +14,16 @@ interface ContextSlideProps {
 
 export default function ContextSlide({ context }: ContextSlideProps) {
   return (
-    <div className={styles.contextSlide}>
+    <div className={`${styles.slides} ${styles.contextSlide}`}>
       {context &&
         Object.entries(context).map(([key, value]) => (
           <p key={key}>
-            {key !== "summaryInfos" && <strong>{translationsProjects[key]}:</strong>} {value}
+            {key !== "summaryInfos" && (
+              <span>
+                <strong>{translationsProjects[key]}:</strong>
+              </span>
+            )}{" "}
+            <span>{value}</span>
           </p>
         ))}
     </div>

@@ -10,7 +10,7 @@ interface ActionsSlideProps {
 
 export default function ActionsSlide({ actions }: ActionsSlideProps) {
   return (
-    <div className={styles.actionsSlide}>
+    <div className={`${styles.slides} ${styles.actionsSlide}`}>
       <div>
         <strong>Missions</strong>
         <ul>

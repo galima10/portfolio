@@ -17,7 +17,7 @@ interface ProofsSlideProps {
 
 export default function ProofsSlide({ proofs }: ProofsSlideProps) {
   return (
-    <div className={styles.proofsSlide}>
+    <div className={`${styles.slides} ${styles.proofsSlide}`}>
       {proofs &&
         proofs.map((proof, index) => (
           <div key={`proof-${index}`}>

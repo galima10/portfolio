@@ -3,3 +3,15 @@
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
 
+.slides {
+//   background-color: red;
+  span {
+    display: block;
+  }
+}
+
+.contextSlide {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

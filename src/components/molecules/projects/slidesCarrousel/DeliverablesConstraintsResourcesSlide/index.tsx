@@ -28,9 +28,8 @@ interface DeliverablesConstraintsResourcesSlideProps {
 export default function DeliverablesConstraintsResources({
   deliverablesConstraintsResources,
 }: DeliverablesConstraintsResourcesSlideProps) {
-  console.log(deliverablesConstraintsResources);
   return (
-    <div className={styles.deliverablesConstraintsResourcesSlide}>
+    <div className={`${styles.slides} ${styles.deliverablesConstraintsResourcesSlide}`}>
       <div>
         <strong>{translationsProjects["deliverables"]}</strong>
         <ul>

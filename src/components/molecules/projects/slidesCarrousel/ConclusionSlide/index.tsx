@@ -5,7 +5,7 @@ interface ConclusionSlideProps {
 }
 
 export default function ConclusionSlide({ conclusion }: ConclusionSlideProps) {
-  return <div className={styles.conclusionSlide}>
+  return <div className={`${styles.slides} ${styles.conclusionSlide}`}>
     <p>{conclusion}</p>
   </div>;
 }

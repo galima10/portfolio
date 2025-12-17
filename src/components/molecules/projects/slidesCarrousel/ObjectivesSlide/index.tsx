@@ -16,7 +16,7 @@ interface ObjectivesSlideProps {
 
 export default function ObjectivesSlide({ objectives }: ObjectivesSlideProps) {
   return (
-    <div className={styles.objectivesSlide}>
+    <div className={`${styles.slides} ${styles.objectivesSlide}`}>
       {objectives && (
         <>
           <div>

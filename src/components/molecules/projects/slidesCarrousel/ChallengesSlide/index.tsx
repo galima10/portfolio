@@ -11,7 +11,7 @@ interface ChallengesSlideProps {
 
 export default function ChallengesSlide({ challenges }: ChallengesSlideProps) {
   return (
-    <div className={styles.challengesSlide}>
+    <div className={`${styles.slides} ${styles.challengesSlide}`}>
       {challenges &&
         Object.entries(challenges).map(([key, value]) => (
           <p key={key}>
