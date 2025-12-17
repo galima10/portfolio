@@ -60,5 +60,8 @@ export const translationsProjects = {
   geographic: "Géographiques",
   available: "Disponibles",
   missing: "Manquantes",
+  missions: "Missions",
+  tools: "Outils",
+  skills: "Compétences",
 }
 

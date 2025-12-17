@@ -68,7 +68,8 @@
 .challengesSlide,
 .objectivesSlide,
 .targetSlide,
-.deliverablesConstraintsResourcesSlideContent {
+.deliverablesConstraintsResourcesSlideContent,
+.actionsSlide {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -105,5 +106,19 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+.actionsSlide {
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
