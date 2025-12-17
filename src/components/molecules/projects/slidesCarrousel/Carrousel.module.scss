@@ -21,8 +21,22 @@
   }
 }
 
+.cardItem {
+  @extend %card-project;
+  strong {
+    @include font-base("h5");
+    margin-bottom: .5rem;
+    display: block;
+  }
+}
+
 .contextSlide {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+.challengesSlide {
+  display: flex;
+  gap: 1rem;
 }

@@ -21,3 +21,10 @@
   position: relative;
   overflow: hidden;
 }
+
+%card-project {
+  border: .2rem solid $light-color;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  margin-bottom: 1rem;
+}

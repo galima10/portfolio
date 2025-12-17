@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/projects/:slug" element={<ProjectPage />} />
       </Routes>
-      {/* <Footer links={footerNavLinks} projects={projects} /> */}
+      <Footer links={footerNavLinks} projects={projects} />
     </BrowserRouter>
   );
 }
