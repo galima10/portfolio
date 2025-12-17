@@ -1,0 +1,161 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.indicators {
+  width: 0.75rem;
+  height: 140%;
+  background-color: $nuance-color;
+  position: relative;
+  border-radius: 2rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 100%;
+    gap: 4.5%;
+    @include responsive {
+      gap: 3.5%;
+    }
+  }
+}
+
+.startButton {
+  text-align: start;
+  width: 10rem;
+  color: $secondary-color;
+  position: absolute;
+  top: -7rem;
+  display: flex;
+  flex-direction: column;
+  span {
+    display: block;
+    width: fit-content;
+    transform: rotate(90deg);
+    font-size: 2rem;
+    color: $secondary-color;
+  }
+  @include responsive {
+    top: -1.5rem;
+    left: calc(100% + 2rem);
+    flex-direction: row-reverse;
+    gap: 1rem;
+    span {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  div {
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $nuance-color;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease;
+  }
+  span {
+    flex-shrink: 0;
+    display: none;
+    width: 11rem;
+    strong {
+      display: block;
+      width: 100%;
+      text-align: start;
+      color: $secondary-color;
+      margin-left: 1rem;
+      transition: color 0.3s ease;
+    }
+  }
+  &:hover,
+  .active {
+    div {
+      background-color: $accent-color;
+    }
+    span {
+      strong {
+        color: $accent-color;
+      }
+    }
+  }
+  @include responsive {
+    span {
+      display: block;
+    }
+    &:active {
+      div {
+        background-color: $accent-color;
+      }
+      span {
+        strong {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.startPoint {
+  position: absolute;
+  top: -0.75rem;
+}
+
+.progress {
+  width: 100%;
+  height: 50%;
+  background-color: $accent-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.endRod {
+  height: 0.75rem;
+  width: 5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: $nuance-color;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 2rem;
+  @include responsive {
+    width: 13vw;
+  }
+}
+
+.endPoint {
+  position: absolute;
+  right: -0.75rem;
+  div {
+    border-radius: 50%;
+    background-color: $accent-color;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.endLabel {
+  position: absolute;
+  // left: calc(100% + 2rem);
+  width: calc(100vw - #{$padding-global} * 2);
+  padding-left: 6.5rem;
+  left: 0;
+  strong {
+    width: 100%;
+    @include font-base("h6");
+    color: $secondary-color;
+  }
+  @include responsive {
+    padding-left: calc(13vw + 2rem);
+  }
+}

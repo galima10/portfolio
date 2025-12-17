@@ -1,0 +1,69 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  div {
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $nuance-color;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease;
+  }
+  span {
+    flex-shrink: 0;
+    display: none;
+    width: 11rem;
+    strong {
+      display: block;
+      width: 100%;
+      text-align: start;
+      color: $secondary-color;
+      margin-left: 1rem;
+      transition: color 0.3s ease;
+    }
+  }
+  &:hover,
+  .active {
+    div {
+      background-color: $accent-color;
+    }
+    span {
+      strong {
+        color: $accent-color;
+      }
+    }
+  }
+  @include responsive {
+    span {
+      display: block;
+    }
+    &:active {
+      div {
+        background-color: $accent-color;
+      }
+      span {
+        strong {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.focused, .active {
+  div {
+    background-color: $accent-color;
+  }
+  span {
+    strong {
+      color: $accent-color;
+    }
+  }
+}

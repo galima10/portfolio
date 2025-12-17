@@ -4,9 +4,9 @@ import { ProjectDescriptionType } from "@types";
 
 import { projectsSlides, keysOrder } from "@constants/projects";
 
-import GenericButton from "@components/atoms/appElements/GenericButton";
-
 import React from "react";
+
+import IndicatorRod from "@components/molecules/projects/IndicatorRod";
 
 interface ProjectCarrouselProps {
   description?: ProjectDescriptionType;
@@ -35,35 +35,7 @@ export default function ProjectCarrousel({
 
   return (
     <div className={styles.projectCarrousel}>
-      <div className={styles.indicators}>
-        <GenericButton className={styles.startButton}>
-          Plongez dans l’aventure
-          <span>➧</span>
-        </GenericButton>
-        <ul>
-          <li className={styles.startPoint}>
-            <GenericButton className={styles.indicator}>
-              <div></div>
-            </GenericButton>
-          </li>
-          {keysOrder.map((key) => (
-            <li key={key}>
-              <GenericButton className={styles.indicator}>
-                <div></div>
-              </GenericButton>
-            </li>
-          ))}
-        </ul>
-        <div className={styles.progress}></div>
-        <div className={styles.endRod}>
-          <GenericButton className={styles.endPoint}>
-            <div></div>
-          </GenericButton>
-          <p className={styles.endLabel}>
-            <strong>Ces expériences sont mon histoire.</strong>
-          </p>
-        </div>
-      </div>
+      <IndicatorRod />
       <div className={styles.sliderContainer}>
         <ul className={styles.slider}>
           {descAndProofs &&
