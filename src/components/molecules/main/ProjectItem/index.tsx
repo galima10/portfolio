@@ -3,6 +3,8 @@ import styles from "./ProjectItem.module.scss";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 import ProjectBadge from "../ProjectBadge";
 
+import { ProjectDescriptionType } from "@customTypes/projectTypes";
+
 import { useState } from "react";
 
 interface ProjectItemProps {
@@ -26,7 +28,7 @@ interface ProjectItemProps {
         | "css"
         | "javascript";
     }[];
-    description: string;
+    description: ProjectDescriptionType;
   };
   orientation?: "left" | "right";
 }
