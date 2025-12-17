@@ -108,7 +108,7 @@
   top: -0.75rem;
 }
 
-.progress {
+.progress1 {
   width: 100%;
   height: 50%;
   background-color: $accent-color;
@@ -116,6 +116,17 @@
   top: 0;
   left: 0;
   pointer-events: none;
+  border-radius: 2rem;
+}
+.progress2 {
+  width: 50%;
+  height: 100%;
+  background-color: $accent-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 2rem;
 }
 
 .endRod {

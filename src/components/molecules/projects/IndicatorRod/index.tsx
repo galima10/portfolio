@@ -23,7 +23,7 @@ export default function IndicatorRod() {
           </li>
         ))}
       </ul>
-      <div className={styles.progress}></div>
+      <div className={styles.progress1}></div>
       <div className={styles.endRod}>
         <GenericButton className={styles.endPoint}>
           <div></div>
@@ -31,6 +31,7 @@ export default function IndicatorRod() {
         <p className={styles.endLabel}>
           <strong>Ces expériences sont mon histoire.</strong>
         </p>
+        <div className={styles.progress2}></div>
       </div>
     </div>
   );
