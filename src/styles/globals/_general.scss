@@ -40,6 +40,14 @@ body {
   }
 }
 
+.project-h2 {
+  @include font-base("h3");
+  color: $primary-color;
+  background: $gradient;
+  padding: .5rem $padding-global .5rem 1.75rem;
+  border-radius: 0 0 0 2.25rem;
+}
+
 .svgIcon {
   svg {
     width: 100%;

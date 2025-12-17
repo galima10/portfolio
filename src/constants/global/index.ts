@@ -23,12 +23,12 @@ export const projectTitleDesc = {
   challenges: "Enjeux",
   objectives: "Objectifs",
   target: "Cible",
-  deliverablesConstraintsResources: "Livrables, Contraintes, Ressources",
-  planning: "Étapes clés",
-  actions: "Mes actions, ma démarche",
-  results: "Résultats & Témoignages",
+  deliverablesConstraintsResources: "Éléments clés",
+  planning: "Déroulement",
+  actions: "Mes actions",
+  results: "Résultats",
   proofs: "Preuves",
-  conclusion: "Retour rélatif",
+  conclusion: "Retour réflexif",
 }
 
 export const translationsProjects = {

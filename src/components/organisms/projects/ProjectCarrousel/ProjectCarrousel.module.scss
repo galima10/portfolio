@@ -9,6 +9,7 @@
   align-items: center;
   overflow: visible;
   gap: 2rem;
+  padding-right: 0;
   @include responsive {
     gap: 15rem;
   }
@@ -17,8 +18,9 @@
 .sliderContainer {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  padding-right: $padding-global;
 }
 
 .slider {
@@ -28,7 +30,7 @@
   // top: calc(-100%);
   li {
     height: 100%;
-    padding: 2rem 0;
+    padding: 5rem 0 2rem;
   }
 }
 
