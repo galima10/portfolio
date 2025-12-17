@@ -3,7 +3,7 @@ import styles from "./ProjectItem.module.scss";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 import ProjectBadge from "../ProjectBadge";
 
-import { ProjectDescriptionType } from "@customTypes/projectTypes";
+import { ProjectDescriptionType } from "@types";
 
 import { useState } from "react";
 
