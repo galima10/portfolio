@@ -1,29 +1,30 @@
 import styles from "../Carrousel.module.scss";
 
-import { translationsProjects } from "@constants/global";
+import { translationsProjects, projectTitleDesc } from "@constants/global";
 
 interface TargetSlideProps {
   target: {
     principal: string;
-    relay?: string;
+    relay: string;
   };
 }
 
 export default function TargetSlide({ target }: TargetSlideProps) {
   return (
-    <div className={`${styles.slides} ${styles.targetSlide}`}>
+    <div className={styles.slides}>
+      <h2 className="project-h2">{projectTitleDesc.target}</h2>
       {target && (
-        <>
-          <p>
-            <strong>{translationsProjects["principal"]}:</strong>{" "}
-            {target.principal}
-          </p>
-          {target.relay && (
-            <p>
-              <strong>{translationsProjects["relay"]}:</strong> {target.relay}
-            </p>
-          )}
-        </>
+        <div className={`${styles.slideContent} ${styles.targetSlide}`}>
+          <div className={styles.cardItem}>
+            <h3>{translationsProjects["principal"]}</h3>
+            <p>{target.principal}</p>
+          </div>
+
+          <div className={styles.cardItem}>
+            <h3>{translationsProjects["relay"]}</h3>
+            <p>{target.relay}</p>
+          </div>
+        </div>
       )}
     </div>
   );

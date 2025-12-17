@@ -1,6 +1,6 @@
 import styles from "../Carrousel.module.scss";
 
-import { translationsProjects } from "@constants/global";
+import { translationsProjects, projectTitleDesc } from "@constants/global";
 
 interface ObjectivesSlideProps {
   objectives: {
@@ -16,10 +16,11 @@ interface ObjectivesSlideProps {
 
 export default function ObjectivesSlide({ objectives }: ObjectivesSlideProps) {
   return (
-    <div className={`${styles.slides} ${styles.objectivesSlide}`}>
+    <div className={styles.slides}>
+      <h2 className="project-h2">{projectTitleDesc.objectives}</h2>
       {objectives && (
-        <>
-          <div>
+        <div className={`${styles.slideContent} ${styles.objectivesSlide}`}>
+          <div className={styles.cardItem}>
             <h3>{translationsProjects["project"]}</h3>
             <ul>
               <li>
@@ -44,7 +45,7 @@ export default function ObjectivesSlide({ objectives }: ObjectivesSlideProps) {
               )}
             </ul>
           </div>
-          <div>
+          <div className={styles.cardItem}>
             <h3>{translationsProjects["personal"]}</h3>
             <ul>
               {objectives.personal.map((obj, index) => (
@@ -52,7 +53,7 @@ export default function ObjectivesSlide({ objectives }: ObjectivesSlideProps) {
               ))}
             </ul>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

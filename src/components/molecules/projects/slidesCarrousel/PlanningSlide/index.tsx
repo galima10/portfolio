@@ -1,5 +1,8 @@
 import styles from "../Carrousel.module.scss";
 
+import GenericButton from "@components/atoms/appElements/GenericButton";
+import { translationsProjects } from "@constants/global";
+
 interface PlanningSlideProps {
   planning: {
     name: string;
@@ -11,15 +14,25 @@ interface PlanningSlideProps {
 
 export default function PlanningSlide({ planning }: PlanningSlideProps) {
   return (
-    <div className={`${styles.slides} ${styles.planningSlide}`}>
-      <ul>
-        {planning.map((plan, index) => (
-          <li key={`${plan.name}-${index}`}>
-            <strong>{plan.name}</strong> - {plan.mainTasks} -{" "}
-            {plan.deliverables} - {plan.deadline}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.slides}>
+      <h2 className="project-h2">{translationsProjects["planning"]}</h2>
+      <div className={`${styles.slideContent} ${styles.planningSlide}`}>
+        <ul>
+          {planning.map((plan, index) => (
+            <li key={`${plan.name}-${index}`}>
+              <div className={styles.buttonItem}>
+                <GenericButton className={styles.button}>
+                  <span>{plan.name}</span>
+                  <span>▶</span>
+                </GenericButton>
+                <span>Tâches : {plan.mainTasks}</span>
+                <span>Livrables : {plan.deliverables}</span>
+                <span>Deadline : {plan.deadline}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

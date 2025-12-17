@@ -22,7 +22,7 @@ export const projectTitleDesc = {
   context: "Contexte",
   challenges: "Enjeux",
   objectives: "Objectifs",
-  target: "Cible",
+  target: "Public cible",
   deliverablesConstraintsResources: "Éléments clés",
   planning: "Déroulement",
   actions: "Mes actions",
