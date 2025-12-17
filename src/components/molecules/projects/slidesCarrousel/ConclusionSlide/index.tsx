@@ -1,7 +1,9 @@
 import styles from "../Carrousel.module.scss";
 
-export default function ConclusionSlide(){
-    return (
-        <div></div>
-    );
-};
+interface ConclusionSlideProps {
+  conclusion: string;
+}
+
+export default function ConclusionSlide({ conclusion }: ConclusionSlideProps) {
+  return <div className={styles.conclusionSlide}>dzd{conclusion}</div>;
+}
