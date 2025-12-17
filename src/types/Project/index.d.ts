@@ -85,7 +85,7 @@ export interface ProjectType {
   label: string;
   stack: StackItemType[];
   preview?: string;
-  description?: ProjectDescriptionType;
+  description: ProjectDescriptionType;
   proofs?: {
     list?: {
       name: string;
