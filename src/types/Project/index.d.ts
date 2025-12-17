@@ -59,7 +59,7 @@ export interface ProjectDescriptionType {
     learnings: string;
     testimonials?: string;
   };
-  consclusion: string;
+  conclusion: string;
 }
 
 export interface StackItemType {
