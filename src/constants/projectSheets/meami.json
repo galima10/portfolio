@@ -27,7 +27,7 @@
   },
   "target": {
     "principal": "Jeunes adultes, principalement étudiants, qui cuisinent régulièrement et planifient leurs repas à l’avance. Ils recherchent un outil simple et intuitif pour organiser leur menu hebdomadaire, gérer leurs courses et gagner du temps. Ils attendent une interface attrayante, mobile-first sur Android, avec un mode d’emploi clair et des fonctionnalités pratiques. Leurs principales frustrations concernent les applications lentes, peu performantes ou à l’interface peu engageante.",
-    "secondary": "Utilisateurs plus âgés, comme des parents, cherchant à simplifier la planification des repas familiaux. L’application reste surtout adaptée aux jeunes (80 % des utilisateurs), mais peut aussi répondre aux besoins de ce public secondaire (20 %)."
+    "relay": "Utilisateurs plus âgés, comme des parents, cherchant à simplifier la planification des repas familiaux. L’application reste surtout adaptée aux jeunes (80 % des utilisateurs), mais peut aussi répondre aux besoins de ce public secondaire (20 %)."
   },
   "deliverablesConstraintsResources": {
     "deliverables": [

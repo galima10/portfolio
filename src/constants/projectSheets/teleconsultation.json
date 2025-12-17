@@ -27,7 +27,7 @@
   },
   "target": {
     "principal": "Médecins et patients qui utilisent la plateforme pour réaliser des consultations à distance, notamment dans les zones peu desservies. Ils ont besoin d’un outil performant, sécurisé et facile à utiliser, permettant une connexion fluide et la confidentialité des données, tout en simplifiant l’organisation et le suivi des consultations.",
-    "secondary": "Aucune cible secondaire, la plateforme étant exclusivement destinée à faciliter les échanges entre professionnels de santé et patients."
+    "relay": "Aucune cible secondaire, la plateforme étant exclusivement destinée à faciliter les échanges entre professionnels de santé et patients."
   },
   "deliverablesConstraintsResources": {
     "deliverables": [

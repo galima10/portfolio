@@ -21,7 +21,7 @@ export interface ProjectDescriptionType {
   };
   target: {
     principal: string;
-    secondary: string;
+    relay: string;
   };
   deliverablesConstraintsResources: {
     deliverables: {

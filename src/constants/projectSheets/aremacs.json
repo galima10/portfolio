@@ -25,7 +25,7 @@
   },
   "target": {
     "principal": "Jeunes festivaliers sensibles aux enjeux environnementaux, souhaitant rendre les festivals plus responsables. Ils recherchent des informations claires et rapides sur les actions de l’association, veulent suivre les événements et campagnes facilement, et participer activement. Ils attendent une navigation fluide sur mobile, des informations fiables, ainsi qu’une transparence et authenticité dans les initiatives présentées. Leur frustration provient des sites mal organisés, peu ergonomiques ou lents, et ils privilégient les plateformes éco-conçues et performantes.",
-    "secondary": "Organisateurs de festivals, bénévoles et partenaires engagés, qui souhaitent collaborer avec l’association pour rendre les événements plus durables et promouvoir des pratiques éco-responsables."
+    "relay": "Organisateurs de festivals, bénévoles et partenaires engagés, qui souhaitent collaborer avec l’association pour rendre les événements plus durables et promouvoir des pratiques éco-responsables."
   },
   "deliverablesConstraintsResources": {
     "deliverables": [
