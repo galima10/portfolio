@@ -69,10 +69,12 @@
 .objectivesSlide,
 .targetSlide,
 .deliverablesConstraintsResourcesSlideContent,
-.actionsSlide {
+.actionsSlide,
+.resultsSlide {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  
   @include responsive {
     flex-direction: row;
   }
