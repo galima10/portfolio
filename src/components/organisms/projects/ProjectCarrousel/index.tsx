@@ -4,6 +4,8 @@ import { ProjectDescriptionType } from "@types";
 
 import { projectsSlides, keysOrder } from "@constants/projects";
 
+import GenericButton from "@components/atoms/appElements/GenericButton";
+
 import React from "react";
 
 interface ProjectCarrouselProps {
@@ -33,22 +35,46 @@ export default function ProjectCarrousel({
 
   return (
     <div className={styles.projectCarrousel}>
-      <div>
+      <div className={styles.indicators}>
+        <GenericButton className={styles.startButton}>
+          Plongez dans l’aventure
+          <span>➧</span>
+        </GenericButton>
         <ul>
-          <li>
-            <div></div>
+          <li className={styles.startPoint}>
+            <GenericButton className={styles.indicator}>
+              <div></div>
+            </GenericButton>
           </li>
-        </ul>
-      </div>
-      <ul className={styles.slider}>
-        {descAndProofs &&
-          Object.entries(descAndProofs).map(([key, value]) => (
+          {keysOrder.map((key) => (
             <li key={key}>
-              {projectsSlides[key] &&
-                React.createElement(projectsSlides[key], { [key]: value })}
+              <GenericButton className={styles.indicator}>
+                <div></div>
+              </GenericButton>
             </li>
           ))}
-      </ul>
+        </ul>
+        <div className={styles.progress}></div>
+        <div className={styles.endRod}>
+          <GenericButton className={styles.endPoint}>
+            <div></div>
+          </GenericButton>
+          <p className={styles.endLabel}>
+            <strong>Ces expériences sont mon histoire.</strong>
+          </p>
+        </div>
+      </div>
+      <div className={styles.sliderContainer}>
+        <ul className={styles.slider}>
+          {descAndProofs &&
+            Object.entries(descAndProofs).map(([key, value]) => (
+              <li key={key}>
+                {projectsSlides[key] &&
+                  React.createElement(projectsSlides[key], { [key]: value })}
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 }
