@@ -18,7 +18,7 @@ export default function ContextSlide({ context }: ContextSlideProps) {
     <div className={styles.contextSlide}>
       {context &&
         Object.entries(context).map(([key, value]) => (
-          <p>
+          <p key={key}>
             {key !== "summaryInfos" && <strong>{translationsProjects[key]}:</strong>} {value}
           </p>
         ))}

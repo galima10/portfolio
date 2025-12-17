@@ -14,7 +14,7 @@ export default function ChallengesSlide({ challenges }: ChallengesSlideProps) {
     <div className={styles.challengesSlide}>
       {challenges &&
         Object.entries(challenges).map(([key, value]) => (
-          <p>
+          <p key={key}>
             <strong>{translationsProjects[key]}:</strong>
             {value}
           </p>
