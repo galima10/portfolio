@@ -15,7 +15,7 @@ export interface ProjectDescriptionType {
       main: string;
       key1: string;
       key2?: string;
-      secondary: string;
+      secondary?: string;
     };
     personal: string[];
   };

@@ -2,7 +2,9 @@ import styles from "./ProjectCarrousel.module.scss";
 
 import { ProjectDescriptionType } from "@types";
 
-import ProjectDescriptionSlide from "@components/organisms/projects/ProjectDescriptionSlide";
+import { projectsSlides } from "@constants/projects";
+
+import React from "react";
 
 interface ProjectCarrouselProps {
   description?: ProjectDescriptionType;
@@ -11,12 +13,13 @@ interface ProjectCarrouselProps {
 export default function ProjectCarrousel({
   description,
 }: ProjectCarrouselProps) {
+  const { context } = description || {};
   return (
     <div className={styles.projectCarrousel}>
       <ul className={styles.slides}>
         {description && Object.entries(description).map(([key, value]) => (
           <li key={key}>
-            <ProjectDescriptionSlide dataKey={key} dataValue={JSON.stringify(value)} />
+            {projectsSlides[key] && React.createElement(projectsSlides[key], { [key]: value })}
           </li>
         ))}
       </ul>

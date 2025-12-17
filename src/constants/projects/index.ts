@@ -8,6 +8,17 @@ import meamiData from "@constants/projectSheets/meami.json";
 import teleconsultationData from "@constants/projectSheets/teleconsultation.json";
 import aremacsData from "@constants/projectSheets/aremacs.json";
 
+import ContextSlide from "@components/molecules/projects/slidesCarrousel/ContextSlide";
+import ChallengesSlide from "@components/molecules/projects/slidesCarrousel/ChallengesSlide";
+import ObjectivesSlide from "@components/molecules/projects/slidesCarrousel/ObjectivesSlide";
+import TargetSlide from "@components/molecules/projects/slidesCarrousel/TargetSlide";
+import DeliverablesConstraintsResourcesSlide from "@components/molecules/projects/slidesCarrousel/DeliverablesConstraintsResourcesSlide";
+import PlanningSlide from "@components/molecules/projects/slidesCarrousel/PlanningSlide";
+import ActionsSlide from "@components/molecules/projects/slidesCarrousel/ActionsSlide";
+import ResultsSlide from "@components/molecules/projects/slidesCarrousel/ResultsSlide";
+import ConclusionSlide from "@components/molecules/projects/slidesCarrousel/ConclusionSlide";
+
+
 export const projects: ProjectType[] = [
   {
     id: "Projet 1",
@@ -90,3 +101,15 @@ export const projects: ProjectType[] = [
     description: aremacsData,
   },
 ];
+
+export const projectsSlides = {
+  context: ContextSlide,
+  challenges: ChallengesSlide,
+  objectives: ObjectivesSlide,
+  target: TargetSlide,
+  deliverablesConstraintsResources: DeliverablesConstraintsResourcesSlide,
+  planning: PlanningSlide,
+  actions: ActionsSlide,
+  results: ResultsSlide,
+  conclusion: ConclusionSlide,
+}
