@@ -4,7 +4,7 @@ import { projects } from "@constants/projects";
 import ProjectHero from "@components/organisms/projects/ProjectHero";
 import ProjectCarrousel from "@components/organisms/projects/ProjectCarrousel";
 import CTASection from "@components/organisms/projects/CTASection";
-
+import FormProject from "@components/organisms/projects/FormProject";
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -20,6 +20,7 @@ export default function ProjectPage() {
       <ProjectHero name={name} stack={stack.map((item) => item.icon)} hook={hook} imageSrc={preview} />
       <ProjectCarrousel description={description} proofs={proofs} />
       <CTASection />
+      <FormProject />
     </>
   );
 }

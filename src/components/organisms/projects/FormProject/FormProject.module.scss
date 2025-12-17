@@ -1,0 +1,11 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.formProject {
+  @extend %section-base;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $section-margin;
+}
