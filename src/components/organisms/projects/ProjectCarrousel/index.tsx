@@ -9,7 +9,7 @@ import React from "react";
 import IndicatorRod from "@components/molecules/projects/IndicatorRod";
 
 interface ProjectCarrouselProps {
-  description?: ProjectDescriptionType;
+  description: ProjectDescriptionType;
   proofs?: {
     list?: {
       name: string;
