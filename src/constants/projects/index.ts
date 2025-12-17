@@ -4,6 +4,8 @@ import Aremacs from "@assets/images/projects/st_jacques.webp";
 
 import { ProjectType } from "@types";
 
+import fallbackImg from "@assets/images/fallback.webp";
+
 import meamiData from "@constants/projectSheets/meami.json";
 import teleconsultationData from "@constants/projectSheets/teleconsultation.json";
 import aremacsData from "@constants/projectSheets/aremacs.json";
@@ -16,8 +18,8 @@ import DeliverablesConstraintsResourcesSlide from "@components/molecules/project
 import PlanningSlide from "@components/molecules/projects/slidesCarrousel/PlanningSlide";
 import ActionsSlide from "@components/molecules/projects/slidesCarrousel/ActionsSlide";
 import ResultsSlide from "@components/molecules/projects/slidesCarrousel/ResultsSlide";
+import ProofsSlide from "@components/molecules/projects/slidesCarrousel/ProofsSlides";
 import ConclusionSlide from "@components/molecules/projects/slidesCarrousel/ConclusionSlide";
-
 
 export const projects: ProjectType[] = [
   {
@@ -47,6 +49,22 @@ export const projects: ProjectType[] = [
     ],
     preview: Meami,
     description: meamiData,
+    proofs: [
+      {
+        list: [
+          {
+            name: "App Store",
+            type: "application/mobile",
+            imgSrc: fallbackImg,
+          },
+          {
+            name: "Google Play",
+            type: "application/mobile",
+            imgSrc: fallbackImg,
+          },
+        ],
+      },
+    ],
   },
   {
     id: "Projet 2",
@@ -75,6 +93,22 @@ export const projects: ProjectType[] = [
     ],
     preview: Teleconsultation,
     description: teleconsultationData,
+    proofs: [
+      {
+        list: [
+          {
+            name: "App Store",
+            type: "application/mobile",
+            imgSrc: fallbackImg,
+          },
+          {
+            name: "Google Play",
+            type: "application/mobile",
+            imgSrc: fallbackImg,
+          },
+        ],
+      },
+    ],
   },
   {
     id: "Projet 3",
@@ -99,6 +133,22 @@ export const projects: ProjectType[] = [
     ],
     preview: Aremacs,
     description: aremacsData,
+    proofs: [
+      {
+        list: [
+          {
+            name: "App Store",
+            type: "application/mobile",
+            imgSrc: fallbackImg,
+          },
+          {
+            name: "Google Play",
+            type: "application/mobile",
+            imgSrc: fallbackImg,
+          },
+        ],
+      },
+    ],
   },
 ];
 
@@ -111,5 +161,20 @@ export const projectsSlides = {
   planning: PlanningSlide,
   actions: ActionsSlide,
   results: ResultsSlide,
+  proofs: ProofsSlide,
   conclusion: ConclusionSlide,
-}
+};
+
+export const keysOrder = [
+  "context",
+  "challenges",
+  "objectives",
+  "target",
+  "deliverablesConstraintsResources",
+  "planning",
+  "actions",
+  "results",
+  "proofs",
+  "conclusion",
+];
+
