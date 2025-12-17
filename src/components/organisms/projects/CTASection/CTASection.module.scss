@@ -1,0 +1,25 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.ctaSection {
+  @extend %section-base;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  p {
+    text-align: center;
+    padding: 0 spaceCalc(0rem, 8rem, 8rem);
+  }
+  strong {
+    @include font-base("h4");
+    color: $accent-color;
+  }
+}
+
+.ctaButton {
+  color: $accent-color;
+  transform: rotate(90deg);
+  @include font-base("h4");
+}
