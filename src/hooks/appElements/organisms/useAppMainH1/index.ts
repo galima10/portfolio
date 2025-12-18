@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-export function useHero() {
+export function useAppMainH1() {
   const titles = [
     "Bienvenue sur mon portfolio",
-    "Développement web",
+    "Développeuse web",
     "Magali MAI",
     "Ma passion, bien plus qu'un métier",
   ];
