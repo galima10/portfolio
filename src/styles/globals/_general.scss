@@ -128,13 +128,21 @@ footer {
   }
 }
 
-.footerBtnSecondary,
+
 .footerBtnTertiary {
   color: $accent-color-lighter !important;
+  &:hover {
+    color: $nuance-color !important;
+  }
 }
 
 .footerBtnSecondary {
+  color: $accent-color-lighter !important;
   border-color: $accent-color-lighter !important;
+  &:hover {
+    color: $nuance-color !important;
+    border-color: $nuance-color !important;
+  }
 }
 
 .backToTop,
