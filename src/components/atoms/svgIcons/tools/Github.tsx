@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Github({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône Github">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Github">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"

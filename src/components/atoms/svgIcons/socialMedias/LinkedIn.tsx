@@ -4,7 +4,7 @@ interface LinkedInProps {
 
 export default function LinkedIn({ className }: LinkedInProps) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône LinkedIn">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône LinkedIn">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"

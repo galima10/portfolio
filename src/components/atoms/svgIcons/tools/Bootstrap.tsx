@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Bootstrap({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-hidden="true">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Bootstrap">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"

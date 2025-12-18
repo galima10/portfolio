@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Wrench({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône Clé à molette">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Clé à molette">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="152"

@@ -6,6 +6,7 @@ export default function Logo({ className }: ClassNameType) {
   return (
     <div
       className={className}
+      role="img"
       aria-label="Mon logo monogramme (deux lettres M se chevauchant)"
     >
       <svg

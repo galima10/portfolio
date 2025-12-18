@@ -5,9 +5,7 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 export default function FooterInfos() {
   return (
     <div className="footerInfos">
-      <div aria-hidden="true">
-        <AppSVG name="logo" className="logo" />
-      </div>
+      <AppSVG name="logo" className="logo" aria-label="Mon logo monogramme (deux lettres M se chevauchant)" />
       <AppButton label="Téléchargez mon CV" type="secondary" />
       <div>
         <p>Retrouvez-moi au delà des océans</p>

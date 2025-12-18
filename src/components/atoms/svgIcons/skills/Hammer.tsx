@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Hammer({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône Marteau">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Marteau">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="152"

@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Glass({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône Loupe">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Loupe">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="152"

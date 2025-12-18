@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Talkie({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône Talkie-Walkie">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Talkie-Walkie">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="152"

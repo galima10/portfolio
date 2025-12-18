@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function TypeScript({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-hidden="true">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône TypeScript">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"

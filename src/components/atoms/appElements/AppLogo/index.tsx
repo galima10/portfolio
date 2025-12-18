@@ -14,7 +14,7 @@ export default function AppLogo({ className = "", action, to }: AppLogoProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
     <button className={`${styles.logo} ${className}`} onClick={handleClick}>
-      <AppSVG name="logo" />
+      <AppSVG name="logo" aria-label="Mon logo monogramme (deux lettres M se chevauchant)" />
     </button>
   );
 }

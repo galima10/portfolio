@@ -4,7 +4,7 @@ interface ClassNameType {
 
 export default function Lamp({ className }: ClassNameType) {
   return (
-    <div className={`svgIcon ${className}`} aria-label="Icône Lampe-torche">
+    <div className={`svgIcon ${className}`} role="img" aria-label="Icône Lampe-torche">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="152"
