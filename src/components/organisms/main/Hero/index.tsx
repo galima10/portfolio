@@ -4,12 +4,25 @@ import AppButton from "@components/atoms/appElements/AppButton";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
 import { useCVDownload } from "@hooks/globals/CVDownload";
+import { useHero } from "@hooks/appElements/organisms/useHero";
 
 export default function Hero() {
   const { handleDownload } = useCVDownload();
+  const { titles, currentTitleIndex, prevTitleIndex } = useHero();
   return (
     <section className={styles.hero} id="hero">
-      <h1>Ma passion, bien plus qu'un métier</h1>
+      <h1>
+        {titles.map((title, index) => (
+          <span
+            key={index}
+            className={
+              index === currentTitleIndex ? styles.visible : index === prevTitleIndex ? styles.hidden : ""
+            }
+          >
+            {title}
+          </span>
+        ))}
+      </h1>
       <AppButton
         className={styles.ctaPrimary}
         label="Envoyez moi un message !"

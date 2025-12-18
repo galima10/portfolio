@@ -2,6 +2,7 @@
 @use "@styles/partials/mixins" as *;
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
+@use "@styles/partials/keyframes" as *;
 
 .hero {
   padding: 2rem $padding-global 8rem;
@@ -17,6 +18,23 @@
     width: 100%;
     text-align: center;
     margin-bottom: 3rem;
+    position: relative;
+    background-color: red;
+    span {
+      width: 100%;
+      @include font-base("h1");
+      color: $secondary-color;
+      display: block;
+      position: absolute;
+      // opacity: 0;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      &.visible {
+        animation: revealTitle 1.5s forwards;
+      }
+      &.hidden {
+        animation: hideTitle 1.5s forwards;
+      }
+    }
   }
   @include responsive {
     padding: 4rem $padding-global 6rem;
