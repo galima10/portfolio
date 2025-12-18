@@ -14,12 +14,12 @@
   }
   strong {
     @include font-base("h4");
-    color: $accent-color;
+    color: $accent-color-darker;
   }
 }
 
 .ctaButton {
-  color: $accent-color;
+  color: $accent-color-darker;
   transform: rotate(90deg);
   @include font-base("h4");
 }

@@ -16,7 +16,7 @@ interface ObjectivesSlideProps {
 
 export default function ObjectivesSlide({ objectives }: ObjectivesSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive des objectifs du projet" role="region">
       <h2 className="project-h2">{projectTitleDesc.objectives}</h2>
       {objectives && (
         <div className={`${styles.slideContent} ${styles.objectivesSlide}`}>

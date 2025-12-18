@@ -75,11 +75,11 @@
 .hovered,
 .selected {
   span {
-    color: $accent-color;
+    color: $accent-color-darker;
     font-weight: $bold;
   }
   path {
-    fill: $accent-color !important;
+    fill: $accent-color-darker !important;
   }
 }
 

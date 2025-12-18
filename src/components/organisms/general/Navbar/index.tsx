@@ -13,8 +13,8 @@ export default function Navbar({ links }: NavbarProps) {
     "open"
   );
   return (
-    <header>
-      <nav>
+    <header id="main-navbar">
+      <nav aria-label="Navigation principale">
         <MobileNavbar handleMenuToggle={handleMenuToggle} />
         <div className="filterDark" ref={darkFilterRef}></div>
         <NavLinks

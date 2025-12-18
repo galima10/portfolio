@@ -16,13 +16,13 @@ import { projects } from "@constants/projects";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar
-        links={headerNavLinks}
-      />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/projects/:slug" element={<ProjectPage />} />
-      </Routes>
+      <Navbar links={headerNavLinks} />
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+        </Routes>
+      </main>
       <Footer links={footerNavLinks} projects={projects} />
     </BrowserRouter>
   );

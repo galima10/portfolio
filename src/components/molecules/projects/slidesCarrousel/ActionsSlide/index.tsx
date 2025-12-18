@@ -13,7 +13,7 @@ interface ActionsSlideProps {
 
 export default function ActionsSlide({ actions }: ActionsSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive des actions réalisées dans le projet" role="region">
       <h2 className="project-h2">{projectTitleDesc["actions"]}</h2>
       <div className={`${styles.slideContent} ${styles.actionsSlide}`}>
         <div className={styles.buttonItem}>

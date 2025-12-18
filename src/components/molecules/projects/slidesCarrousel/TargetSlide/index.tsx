@@ -11,7 +11,7 @@ interface TargetSlideProps {
 
 export default function TargetSlide({ target }: TargetSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive de la cible du projet" role="region">
       <h2 className="project-h2">{projectTitleDesc.target}</h2>
       {target && (
         <div className={`${styles.slideContent} ${styles.targetSlide}`}>

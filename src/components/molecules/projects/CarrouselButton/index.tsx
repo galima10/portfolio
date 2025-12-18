@@ -7,7 +7,12 @@ import { useState } from "react";
 export default function CarrouselButton({ keyProp }: { keyProp: string }) {
   const [isFocused, setIsFocused] = useState(false);
   return (
-    <GenericButton className={styles.indicator + (isFocused ? ` ${styles.focused}` : "")} onMouseEnter={() => setIsFocused(true)} onMouseLeave={() => setIsFocused(false)}>
+    <GenericButton
+      className={styles.indicator + (isFocused ? ` ${styles.focused}` : "")}
+      onMouseEnter={() => setIsFocused(true)}
+      onMouseLeave={() => setIsFocused(false)}
+      ariaLabel={`Bouton carrousel pour ${keyProp && projectTitleDesc[keyProp]}`}
+    >
       <div></div>
       <span>
         <strong>{keyProp && projectTitleDesc[keyProp]}</strong>

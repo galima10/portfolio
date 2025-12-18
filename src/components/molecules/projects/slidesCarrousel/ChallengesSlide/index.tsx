@@ -11,7 +11,7 @@ interface ChallengesSlideProps {
 
 export default function ChallengesSlide({ challenges }: ChallengesSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive des défis rencontrés dans le projet" role="region">
       <h2 className="project-h2">{projectTitleDesc.challenges}</h2>
       <div className={`${styles.slideContent} ${styles.challengesSlide}`}>
         {challenges &&

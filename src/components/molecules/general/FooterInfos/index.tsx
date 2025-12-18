@@ -6,7 +6,7 @@ export default function FooterInfos() {
   return (
     <div className="footerInfos">
       <AppSVG name="logo" className="logo" aria-label="Mon logo monogramme (deux lettres M se chevauchant)" />
-      <AppButton label="Téléchargez mon CV" type="secondary" />
+      <AppButton label="Téléchargez mon CV" type="secondary" className="footerBtnSecondary" />
       <div>
         <p>Retrouvez-moi au delà des océans</p>
         <ul className="socialMediaIcons">

@@ -8,7 +8,7 @@ interface ConclusionSlideProps {
 
 export default function ConclusionSlide({ conclusion }: ConclusionSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive de conclusion du projet" role="region">
       <h2 className="project-h2">{projectTitleDesc["conclusion"]}</h2>
       <div className={`${styles.slideContent} ${styles.conclusionSlide}`}>
         {conclusion.split(". ").map((sentence, index) => (

@@ -6,14 +6,17 @@ import CarrouselButton from "../CarrouselButton";
 
 export default function IndicatorRod() {
   return (
-    <div className={styles.indicators}>
+    <div className={styles.indicators} aria-label="Indicateur de progression du carrousel de projets" role="region">
       <GenericButton className={styles.startButton}>
         Plongez dans l’aventure
         <span>➧</span>
       </GenericButton>
       <ul>
         <li className={styles.startPoint}>
-          <GenericButton className={styles.indicator}>
+          <GenericButton
+            className={styles.indicator}
+            ariaLabel="Point de départ"
+          >
             <div></div>
           </GenericButton>
         </li>
@@ -23,15 +26,15 @@ export default function IndicatorRod() {
           </li>
         ))}
       </ul>
-      <div className={styles.progress1}></div>
+      <div className={styles.progress1} aria-hidden="true"></div>
       <div className={styles.endRod}>
-        <GenericButton className={styles.endPoint}>
+        <GenericButton className={styles.endPoint} ariaLabel="Point d'arrivée">
           <div></div>
         </GenericButton>
         <p className={styles.endLabel}>
           <strong>Ces expériences sont mon histoire.</strong>
         </p>
-        <div className={styles.progress2}></div>
+        <div className={styles.progress2} aria-hidden="true"></div>
       </div>
     </div>
   );

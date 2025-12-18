@@ -14,7 +14,7 @@ interface ContextSlideProps {
 
 export default function ContextSlide({ context }: ContextSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive de contexte du projet" role="region">
       <h2 className="project-h2">{projectTitleDesc.context}</h2>
       <div className={`${styles.slideContent} ${styles.contextSlide}`}>
         {context &&

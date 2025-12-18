@@ -4,8 +4,8 @@
 $primary-color: #fffaee;
 $secondary-color: #4e4b6e;
 $tertiary-color: #505959;
-// $accent-color: #5c967d;
-$accent-color: #428b6a;
+$accent-color-lighter: #5c967d;
+$accent-color-darker: #428b6a;
 
 $nuance-color: #e8deda;
 
@@ -20,7 +20,7 @@ $violet-color: #b770a5;
 $light-color: #F3ECE4;
 
 // Dégradé
-$gradient: linear-gradient(-90deg, $accent-color 0%, $secondary-color 100%);
+$gradient: linear-gradient(-90deg, $accent-color-darker 0%, $secondary-color 100%);
 
 // Typographie
 $font-heading: "Fira Sans", sans-serif;

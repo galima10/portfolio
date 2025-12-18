@@ -44,7 +44,7 @@ body {
   @include font-base("h3");
   color: $primary-color;
   background: $gradient;
-  padding: .5rem $padding-global .5rem 1.75rem;
+  padding: 0.5rem $padding-global 0.5rem 1.75rem;
   border-radius: 0 0 0 2.25rem;
 }
 
@@ -126,6 +126,15 @@ footer {
   @include responsive {
     justify-content: space-evenly;
   }
+}
+
+.footerBtnSecondary,
+.footerBtnTertiary {
+  color: $accent-color-lighter !important;
+}
+
+.footerBtnSecondary {
+  border-color: $accent-color-lighter !important;
 }
 
 .backToTop,

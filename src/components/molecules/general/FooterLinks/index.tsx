@@ -10,7 +10,9 @@ export default function FooterLinks({ links }: FooterLinksProps) {
       <p>
         <strong>Navigation</strong>
       </p>
-      <NavLinks links={links} className="navLinks" position="footer" />
+      <nav aria-label="Navigation du pied de page">
+        <NavLinks links={links} className="navLinks" position="footer" />
+      </nav>
     </div>
   );
 }

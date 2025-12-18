@@ -32,11 +32,11 @@
   &:hover,
   .active {
     div {
-      background-color: $accent-color;
+      background-color: $accent-color-darker;
     }
     span {
       strong {
-        color: $accent-color;
+        color: $accent-color-darker;
       }
     }
   }
@@ -46,11 +46,11 @@
     }
     &:active {
       div {
-        background-color: $accent-color;
+        background-color: $accent-color-darker;
       }
       span {
         strong {
-          color: $accent-color;
+          color: $accent-color-darker;
         }
       }
     }
@@ -59,11 +59,11 @@
 
 .focused, .active {
   div {
-    background-color: $accent-color;
+    background-color: $accent-color-darker;
   }
   span {
     strong {
-      color: $accent-color;
+      color: $accent-color-darker;
     }
   }
 }

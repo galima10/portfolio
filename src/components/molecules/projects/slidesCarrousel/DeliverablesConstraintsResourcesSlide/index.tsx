@@ -31,7 +31,7 @@ export default function DeliverablesConstraintsResources({
   deliverablesConstraintsResources,
 }: DeliverablesConstraintsResourcesSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive des livrables, contraintes et ressources du projet" role="region">
       <h2 className="project-h2">
         {projectTitleDesc.deliverablesConstraintsResources}
       </h2>

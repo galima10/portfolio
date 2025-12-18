@@ -23,7 +23,7 @@ export default function Footer({ links, projects }: FooterProps) {
   return (
     <footer>
       <div className="backToTop">
-        <AppButton label="Remonter au camp de base" type="tertiary" />
+        <AppButton label="Remonter au camp de base" type="tertiary" className="footerBtnTertiary" />
       </div>
       <p className="footerMessage">
         <strong>

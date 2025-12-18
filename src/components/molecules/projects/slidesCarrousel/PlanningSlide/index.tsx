@@ -14,7 +14,7 @@ interface PlanningSlideProps {
 
 export default function PlanningSlide({ planning }: PlanningSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive de planification du projet" role="region">
       <h2 className="project-h2">{translationsProjects["planning"]}</h2>
       <div className={`${styles.slideContent} ${styles.planningSlide}`}>
         <ul>

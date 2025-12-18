@@ -10,7 +10,13 @@ export default function FooterProjects({ projectsLinks }: FooterProjectsProps) {
       <p>
         <strong>Projets</strong>
       </p>
-      <NavLinks links={projectsLinks} className="navLinks" position="footer" />
+      <nav aria-label="Navigation des projets dans le pied de page">
+        <NavLinks
+          links={projectsLinks}
+          className="navLinks"
+          position="footer"
+        />
+      </nav>
     </div>
   );
 }

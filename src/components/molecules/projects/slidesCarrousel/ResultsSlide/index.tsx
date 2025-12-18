@@ -12,7 +12,7 @@ interface ResultsSlideProps {
 
 export default function ResultsSlide({ results }: ResultsSlideProps) {
   return (
-    <div className={styles.slides}>
+    <div className={styles.slides} aria-label="Diapositive des résultats du projet" role="region">
       <h2 className="project-h2">{projectTitleDesc["results"]}</h2>
       <div className={`${styles.slideContent} ${styles.resultsSlide}`}>
         {results &&

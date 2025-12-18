@@ -20,6 +20,7 @@
   }
 }
 
+// Mixin pour appliquer des styles de police en fonction du niveau (h1, h2, body, etc.)
 @mixin font-base($level) {
   @if $level == "h1" {
     @include fluid-type(6);
@@ -60,9 +61,9 @@
 @mixin button-style($type) {
   @if $type == "primary" {
     @extend %button-big;
-    background: $accent-color;
+    background: $accent-color-darker;
     color: $primary-color;
-    border-color: $accent-color;
+    border-color: $accent-color-darker;
     &:active {
       background: $tertiary-color;
       border-color: $tertiary-color;
@@ -75,8 +76,8 @@
     }
   } @else if $type == "secondary" {
     @extend %button-big;
-    color: $accent-color;
-    border-color: $accent-color;
+    color: $accent-color-darker;
+    border-color: $accent-color-darker;
     &:active {
       color: $tertiary-color;
       border-color: $tertiary-color;
@@ -89,7 +90,7 @@
     }
   } @else if $type == "tertiary" {
     @extend %button-base;
-    color: $accent-color;
+    color: $accent-color-darker;
     text-decoration: underline;
     &:active {
       color: $tertiary-color;
@@ -109,11 +110,11 @@
     border: $primary-color;
     color: $secondary-color;
     &:active {
-      color: $accent-color;
+      color: $accent-color-darker;
     }
     @include responsive($bp-desktop) {
       &:hover {
-        color: $accent-color;
+        color: $accent-color-darker;
       }
     }
   } @else if $position == "footer" {
