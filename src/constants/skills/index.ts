@@ -2,49 +2,83 @@ export const skills: {
   id: string;
   label: string;
   title: string;
-  list: string[];
   component: "hammer" | "brush" | "wrench" | "glass" | "talkie" | "lamp";
+  skillsDetails?: string[];
 }[] = [
   {
     id: "1",
     label: "Dév. web",
     title: "Développement web",
-    list: ["HTML", "CSS", "JavaScript"],
     component: "hammer",
+    skillsDetails: [
+      "Développer des composants modulables et réutilisables",
+      "Développer des sites à l’aide de frameworks",
+      "Intégrer une maquette sur le web avec une hiérarchie claire et correcte",
+      "Déployer des applications mobiles",
+      "Concevoir des applications sur mesure en fonction des besoins",
+      "Concevoir et refondre un site vitrine fonctionnel et optimisé",
+      "Garantir la qualité du code et la robustesse technique sur le long terme",
+      "Développer un thème de site sur mesure"
+    ]
   },
   {
     id: "2",
     label: "UX/UI",
     title: "UX/UI Design",
-    list: ["React", "Vue", "Angular"],
     component: "brush",
+    skillsDetails: [
+      "Concevoir une interface ergonomique et adaptée à tout type d’écran",
+      "Réaliser un audit de site",
+      "Analyser les besoins et les attentes des utilisateurs",
+      "Créer une arborescence avec une architecture claire et structurée"
+    ]
   },
   {
     id: "3",
     label: "Gestion projet",
     title: "Méthodologies et gestion de projet",
-    list: ["Node.js", "Express", "Django"],
     component: "wrench",
+    skillsDetails: [
+      "Exploiter les connaissances et les mettre en pratique dans un projet concret",
+      "Analyser un problème technique pour en comprendre les causes et les solutions",
+      "Gérer l'historique des versions à l’aide d’outils collaboratifs en cloud",
+      "Planifier et suivre l’avancement d’un projet à l’aide d’outils de gestion",
+      "Rédaction de documentations techniques et fonctionnelles",
+    ]
   },
   {
     id: "4",
     label: "Learn & grow",
     title: "Autonomie et apprentissage continu",
-    list: ["SQL", "NoSQL", "GraphQL"],
     component: "glass",
+    skillsDetails: [
+      "Apprendre en autonomie et mettre rapidement en pratique de nouvelles compétences techniques",
+      "S’adapter rapidement à de nouveaux environnements, outils et langages",
+      "Assurer une veille continue pour rester à jour sur les tendances et technologies du web"
+    ]
   },
   {
     id: "5",
     label: "Relation pro",
     title: "Relation client et travail en équipe",
-    list: ["Git", "Docker", "CI/CD"],
     component: "talkie",
+    skillsDetails: [
+      "Communiquer clairement les informations entre les différentes parties d’un projet",
+      "Présenter un résultat à travers une démonstration technique",
+      "Présenter le suivi de l’avancement d’un projet à l’aide de démonstrations vidéo",
+      "Présenter les démarches et les étapes d’un projet de manière claire et impactante"
+    ]
   },
   {
     id: "6",
     label: "Éthique & web",
     title: "Éthique et bonnes pratiques",
-    list: ["Agile", "Scrum", "Kanban"],
     component: "lamp",
+    skillsDetails: [
+      "Sensibiliser aux bonnes pratiques à adopter et à l’impact environnemental des compétences digitales",
+      "Intégrer les principes d’accessibilité dans le développement web",
+      "Optimiser les performances techniques des sites pour une expérience plus fluide et responsable",
+      "Communiquer sur l’importance d’un web inclusif et durable"
+    ]
   },
 ];
