@@ -11,12 +11,27 @@
   grid-template-rows: 48.2% 10.2% 10.9% 27.9% 2.8%;
   aspect-ratio: 442 / 215;
   height: 26rem;
+  transition: transform 0.5s ease, height 0.5s ease-in;
   h3 {
     @include font-base("h5");
     text-transform: uppercase;
     color: $secondary-color;
     text-align: center;
     width: 50%;
+    transition: opacity 0.3s ease;
+  }
+  &.languagesCentred,
+  &.frameworksCentred,
+  &.toolsCentred,
+  &.discussedCentred {
+    height: 43rem;
+    h3 {
+      opacity: 0;
+      pointer-events: none;
+    }
+    @include responsive {
+      height: 200%;
+    }
   }
   &.languagesCentred {
     transform: translate(31.05%, 20.8%);

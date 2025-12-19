@@ -2,36 +2,48 @@ import styles from "./TechnosMap.module.scss";
 
 import TechnoMapItem from "../TechnoMapItem";
 
+import { useState } from "react";
+
 export default function TechnosMap() {
+  const [selectedTechno, setSelectedTechno] = useState<string | null>(null);
   return (
-    <div className={styles.technoMaps}>
+    <div
+      className={
+        styles.technoMaps +
+        (selectedTechno ? ` ${styles[selectedTechno + "Centred"]}` : "")
+      }
+    >
       <TechnoMapItem
         techno={{
           name: "Langages maîtrisés",
-          svgName: "languagesMap",
+          slug: "languagesMap",
           className: "languagesMap",
         }}
+        setSelectedTechno={setSelectedTechno}
       />
       <TechnoMapItem
         techno={{
           name: "Frameworks & Libraries",
-          svgName: "frameworksMap",
+          slug: "frameworksMap",
           className: "frameworksMap",
         }}
+        setSelectedTechno={setSelectedTechno}
       />
       <TechnoMapItem
         techno={{
           name: "Outils & Logiciels",
-          svgName: "toolsMap",
+          slug: "toolsMap",
           className: "toolsMap",
         }}
+        setSelectedTechno={setSelectedTechno}
       />
       <TechnoMapItem
         techno={{
           name: "Abordés",
-          svgName: "discussedMap",
+          slug: "discussedMap",
           className: "discussedMap",
         }}
+        setSelectedTechno={setSelectedTechno}
       />
     </div>
   );
