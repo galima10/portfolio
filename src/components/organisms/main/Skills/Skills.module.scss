@@ -44,7 +44,15 @@
   flex-direction: column;
   padding: 2rem;
   h3 {
-    color: $secondary-color
+    color: $secondary-color;
+    margin-bottom: 2rem;
+  }
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
   }
   @include responsive {
     display: flex;

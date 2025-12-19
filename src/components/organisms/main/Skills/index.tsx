@@ -26,6 +26,14 @@ export default function Skills() {
             {selectedTool &&
               skills.find((skill) => skill.id === selectedTool)?.title}
           </h3>
+          <ul>
+            {selectedTool &&
+              skills
+                .find((skill) => skill.id === selectedTool)
+                ?.skillsDetails?.map((detail, index) => (
+                  <li key={detail + index}>{detail}</li>
+                ))}
+          </ul>
         </div>
       )}
 
