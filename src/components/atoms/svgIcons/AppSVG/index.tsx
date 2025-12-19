@@ -12,6 +12,7 @@ import Jest from "../tools/Jest";
 import Node from "../tools/Node";
 import PHP from "../tools/PHP";
 import Postman from "../tools/Postman";
+import Prisma from "../tools/Prisma";
 import ReactIcon from "../tools/ReactIcon";
 import Sass from "../tools/Sass";
 import SQLite from "../tools/SQLite";
@@ -60,6 +61,7 @@ const icons = {
   node: Node,
   php: PHP,
   postman: Postman,
+  prisma: Prisma,
   react: ReactIcon,
   sass: Sass,
   sqlite: SQLite,
