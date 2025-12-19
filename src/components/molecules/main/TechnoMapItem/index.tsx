@@ -2,7 +2,7 @@ import styles from "./TechnoMapItem.module.scss";
 import AppSVG from "@components/atoms/svgIcons/AppSVG";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { technosList } from "@constants/technos";
 
 interface TechnoMapItemProps {
@@ -12,20 +12,36 @@ interface TechnoMapItemProps {
     className: string;
   };
   setSelectedTechno: (techno: string | null) => void;
+  selectedTechno: string | null;
 }
 
-export default function TechnoMapItem({ techno, setSelectedTechno }: TechnoMapItemProps) {
+export default function TechnoMapItem({
+  techno,
+  setSelectedTechno,
+  selectedTechno,
+}: TechnoMapItemProps) {
   const [isFocused, setIsFocused] = useState(false);
   const category = techno.slug.replace("Map", "");
-  // console.log(technosList[category])
-  const mapRef = useRef<HTMLButtonElement>(null);
   return (
     <GenericButton
-      className={styles.technoItem + " " + styles[techno.className] + (isFocused ? ` ${styles.focused}` : "")}
-      onMouseEnter={() => setIsFocused(true)}
-      onMouseLeave={() => setIsFocused(false)}
-      action={() => setSelectedTechno(category)}
-      ref={mapRef}
+      className={
+        styles.technoItem +
+        " " +
+        styles[techno.className] +
+        (isFocused ? ` ${styles.focused}` : "") +
+        (selectedTechno === category ? ` ${styles.disabledBackgroud}` : "")
+      }
+      onMouseEnter={() => {
+        if (selectedTechno !== category) setIsFocused(true);
+        else setIsFocused(false);
+      }}
+      onMouseLeave={() => {
+        setIsFocused(false);
+      }}
+      action={() => {
+        setSelectedTechno(category);
+        setIsFocused(false);
+      }}
     >
       <AppSVG name={techno.slug} className={styles.map} />
       <h3>{techno.name}</h3>
