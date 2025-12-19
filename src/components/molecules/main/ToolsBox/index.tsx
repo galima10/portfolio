@@ -9,9 +9,10 @@ import { useToolsBox } from "@hooks/appElements/molecules/useToolsBox";
 
 interface ToolsBoxProps {
   setSelectedTool: (toolId: string | null) => void;
+  selectedTool: string | null;
 }
 
-export default function ToolsBox({ setSelectedTool }: ToolsBoxProps ) {
+export default function ToolsBox({ setSelectedTool, selectedTool }: ToolsBoxProps ) {
   const {
     selectedItemId,
     handleClick,
@@ -27,6 +28,7 @@ export default function ToolsBox({ setSelectedTool }: ToolsBoxProps ) {
               skill={skill}
               selectedItemId={selectedItemId === skill.id}
               handleClick={() => handleClick(skill.id)}
+              selectedTool={selectedTool}
             />
           );
         })}

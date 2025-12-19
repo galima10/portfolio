@@ -8,7 +8,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: aqua;
 
   @include responsive {
     flex-direction: row;
@@ -17,6 +16,7 @@
 
 .noSkillSelected {
   width: 100%;
+  padding: 2rem;
   strong {
     color: $secondary-color;
     text-align: center;
@@ -46,6 +46,7 @@
   h3 {
     color: $secondary-color;
     margin-bottom: 2rem;
+    
   }
   ul {
     list-style: disc;

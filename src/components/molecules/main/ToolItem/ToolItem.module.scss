@@ -4,10 +4,6 @@
 @use "@styles/partials/placeholders" as *;
 
 .toolItem {
-  display: flex;
-  align-items: center;
-  font-weight: $regular;
-  justify-content: space-between;
   width: 16rem;
   button {
     padding-right: 1rem;
@@ -25,6 +21,17 @@
     transition: color 0.3s ease, font-weight 0.3s ease;
   }
   @include responsive {
+    width: 5rem;
+  }
+}
+
+.toolButton {
+  display: flex;
+  align-items: center;
+  font-weight: $regular;
+  justify-content: space-between;
+  transform: translateX(-4.5rem);
+  @include responsive {
     flex-direction: column-reverse;
     height: 100%;
     width: 5rem;
@@ -41,6 +48,26 @@
       width: 5rem;
       height: 9.5rem;
     }
+    transform: none;
+  }
+}
+
+.toolDetails {
+  width: calc(100vw - ($padding-global * 2));
+  margin-bottom: 1.5rem;
+  h3 {
+    color: $secondary-color;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  @include responsive {
+    display: none;
   }
 }
 
@@ -74,21 +101,25 @@
 
 .hovered,
 .selected {
-  span {
-    color: $accent-color-darker;
-    font-weight: $bold;
-  }
-  path {
-    fill: $accent-color-darker !important;
+  .toolButton {
+    span {
+      color: $accent-color-darker;
+      font-weight: $bold;
+    }
+    path {
+      fill: $accent-color-darker !important;
+    }
   }
 }
 
 .selected {
-  button {
-    margin-left: 2rem;
-    @include responsive {
-      margin-left: 0;
-      margin-bottom: 2rem;
+  .toolButton {
+    button {
+      margin-left: 2rem;
+      @include responsive {
+        margin-left: 0;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

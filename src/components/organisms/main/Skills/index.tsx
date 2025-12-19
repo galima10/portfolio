@@ -37,7 +37,7 @@ export default function Skills() {
         </div>
       )}
 
-      <ToolsBox setSelectedTool={setSelectedTool} />
+      <ToolsBox setSelectedTool={setSelectedTool} selectedTool={selectedTool} />
     </SectionWrapper>
   );
 }

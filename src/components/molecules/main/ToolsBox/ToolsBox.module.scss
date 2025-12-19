@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  transform: translateX(-4.5rem);
+  // transform: translateX(-4.5rem);
   @include responsive {
     transform: none;
     flex-direction: row;
