@@ -66,6 +66,9 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+  li {
+    margin: 0 !important;
+  }
   @include responsive {
     display: none;
   }

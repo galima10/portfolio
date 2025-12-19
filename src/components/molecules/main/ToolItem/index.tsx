@@ -24,7 +24,7 @@ export default function ToolItem({
   handleClick,
   selectedTool,
 }: ToolItemProps) {
-  const { isFocused, setIsFocused, id, handleItemClick } = useToolItem(skill);
+  const { isFocused, setIsFocused, handleItemClick } = useToolItem(skill);
 
   return (
     <li
@@ -33,8 +33,8 @@ export default function ToolItem({
         styles.toolItem +
         (isFocused ? ` ${styles.hovered}` : "") +
         (selectedItemId ? ` ${styles.selected}` : "")
+
       }
-      id={id}
     >
       <div className={styles.toolButton}>
         <GenericButton

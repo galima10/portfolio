@@ -20,7 +20,7 @@ export default function ToolsBox({ setSelectedTool, selectedTool }: ToolsBoxProp
   return (
     <div className={styles.toolsContainer}>
       <Handle className={styles.handle} />
-      <ul className={styles.toolsList}>
+      <ul className={styles.toolsList + (selectedItemId ? ` ${styles.selected}` : "")}>
         {skills.map((skill) => {
           return (
             <ToolItem
