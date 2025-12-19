@@ -1,4 +1,4 @@
-export const technos: {
+export const technosList: {
     languages: { name: string }[];
     frameworks: { name: string }[];
     tools: { name: string }[];

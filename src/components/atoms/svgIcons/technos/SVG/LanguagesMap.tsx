@@ -4,7 +4,7 @@ interface ClassNameType {
   className?: string;
 }
 
-export default function LanguageMap({ className }: ClassNameType) {
+export default function LanguagesMap({ className }: ClassNameType) {
   return (
     <div className={`svgIcon ${className}`} aria-hidden="true">
       <svg

@@ -8,8 +8,8 @@ export default function TechnosMap() {
       <TechnoMapItem
         techno={{
           name: "Langages maîtrisés",
-          svgName: "languageMap",
-          className: "languageMap",
+          svgName: "languagesMap",
+          className: "languagesMap",
         }}
       />
       <TechnoMapItem

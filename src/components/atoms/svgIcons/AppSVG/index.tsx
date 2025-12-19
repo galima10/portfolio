@@ -34,7 +34,7 @@ const Wrench = React.lazy(() => import("../skills/Wrench"));
 const Glass = React.lazy(() => import("../skills/Glass"));
 const Lamp = React.lazy(() => import("../skills/Lamp"));
 
-const LanguageMap = React.lazy(() => import("../technos/SVG/LanguageMap"));
+const LanguagesMap = React.lazy(() => import("../technos/SVG/LanguagesMap"));
 const FrameworksMap = React.lazy(() => import("../technos/SVG/FrameworksMap"));
 const ToolsMap = React.lazy(() => import("../technos/SVG/ToolsMap"));
 const DiscussedMap = React.lazy(() => import("../technos/SVG/DiscussedMap"));
@@ -84,7 +84,7 @@ const icons = {
   glass: Glass,
   lamp: Lamp,
 
-  languageMap: LanguageMap,
+  languagesMap: LanguagesMap,
   frameworksMap: FrameworksMap,
   toolsMap: ToolsMap,
   discussedMap: DiscussedMap,
