@@ -8,22 +8,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h3 {
+  // background-color: aqua;
+
+  @include responsive {
+    flex-direction: row;
+  }
+}
+
+.noSkillSelected {
+  width: 100%;
+  strong {
     color: $secondary-color;
     text-align: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    display: block;
+    @include font-base("h3");
   }
   @include responsive {
-    h3 {
+    strong {
       position: relative;
       top: auto;
       left: auto;
     }
-    flex-direction: row;
   }
 }
 
-
+.skillDetails {
+  width: 100%;
+  height: 100%;
+  // background-color: red;
+  display: none;
+  flex-direction: column;
+  padding: 2rem;
+  h3 {
+    color: $secondary-color
+  }
+  @include responsive {
+    display: flex;
+  }
+}

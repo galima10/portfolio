@@ -7,11 +7,15 @@ import ToolItem from "../ToolItem";
 
 import { useToolsBox } from "@hooks/appElements/molecules/useToolsBox";
 
-export default function ToolsBox() {
+interface ToolsBoxProps {
+  setSelectedTool: (toolId: string | null) => void;
+}
+
+export default function ToolsBox({ setSelectedTool }: ToolsBoxProps ) {
   const {
     selectedItemId,
     handleClick,
-  } = useToolsBox();
+  } = useToolsBox(setSelectedTool);
   return (
     <div className={styles.toolsContainer}>
       <Handle className={styles.handle} />
