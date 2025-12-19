@@ -4,6 +4,7 @@
 @use "@styles/partials/placeholders" as *;
 
 .technoMaps {
+  // position: absolute;
   flex-shrink: 0;
   display: grid;
   grid-template-columns: 8.6% 29.3% 2.5% 5.7% 30.6% 5.7% 17.6%;
@@ -16,6 +17,18 @@
     color: $secondary-color;
     text-align: center;
     width: 50%;
+  }
+  &.languagesCentred {
+    transform: translate(31.05%, 20.8%);
+  }
+  &.frameworksCentred {
+    transform: translate(22.65%, -22.7%);
+  }
+  &.toolsCentred {
+    transform: translate(-11.4%, 15.35%);
+  }
+  &.discussedCentred {
+    transform: translate(-38.35%, -29.2%);
   }
   @include responsive {
     height: 100%;
@@ -38,7 +51,3 @@
   height: 100%;
   position: absolute;
 }
-
-
-
-

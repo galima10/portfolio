@@ -2,7 +2,7 @@ import styles from "./TechnoMapItem.module.scss";
 import AppSVG from "@components/atoms/svgIcons/AppSVG";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { technosList } from "@constants/technos";
 
 interface TechnoMapItemProps {
@@ -17,11 +17,13 @@ export default function TechnoMapItem({ techno }: TechnoMapItemProps) {
   const [isFocused, setIsFocused] = useState(false);
   const category = techno.svgName.replace("Map", "");
   // console.log(technosList[category])
+  const mapRef = useRef<HTMLButtonElement>(null);
   return (
     <GenericButton
       className={styles.technoItem + " " + styles[techno.className] + (isFocused ? ` ${styles.focused}` : "")}
       onMouseEnter={() => setIsFocused(true)}
       onMouseLeave={() => setIsFocused(false)}
+      ref={mapRef}
     >
       <AppSVG name={techno.svgName} className={styles.map} />
       <h3>{techno.name}</h3>
