@@ -19,6 +19,26 @@ export function useScrollPage() {
     document.body.style.overflow = ""; // Réactiver le défilement natif
   }
 
+  function findScrollableParent(element: HTMLElement | null): HTMLElement | null {
+    if (!element) return null;
+    const style = window.getComputedStyle(element);
+    const isScrollable =
+      style.overflowY === "auto" || style.overflowY === "scroll";
+    if (isScrollable && element.scrollHeight > element.clientHeight) {
+      return element; // Retourner l'élément défilable
+    }
+    return findScrollableParent(element.parentElement); // Remonter dans la hiérarchie
+  }
+
+  function isAtScrollBoundary(element: HTMLElement, direction: "up" | "down"): boolean {
+    if (direction === "up") {
+      return element.scrollTop === 0; // En haut de l'élément
+    } else if (direction === "down") {
+      return element.scrollTop + element.clientHeight >= element.scrollHeight; // En bas de l'élément
+    }
+    return false;
+  }
+
   function onScrollStart(direction: "up" | "down") {
     if (!isScrolling) {
       setIsScrolling(true);
@@ -53,6 +73,19 @@ export function useScrollPage() {
       if (now - lastScrollTime.current < 500) return; // Ignorer les événements trop rapprochés
       lastScrollTime.current = now;
 
+      const target = event.target as HTMLElement;
+      const scrollableParent = findScrollableParent(target);
+
+      // Vérifier si un parent défilable existe
+      if (scrollableParent) {
+        const direction = event.deltaY > 0 ? "down" : "up";
+
+        // Vérifier si l'utilisateur est au début ou à la fin
+        if (!isAtScrollBoundary(scrollableParent, direction)) {
+          return; // Bloquer le défilement global
+        }
+      }
+
       event.preventDefault();
 
       const direction = event.deltaY > 0 ? "down" : "up";
@@ -77,6 +110,19 @@ export function useScrollPage() {
       const touchEndY = event.touches[0].clientY;
       const deltaY = touchStartY.current - touchEndY;
 
+      const target = event.target as HTMLElement;
+      const scrollableParent = findScrollableParent(target);
+
+      // Vérifier si un parent défilable existe
+      if (scrollableParent) {
+        const direction = deltaY > 0 ? "down" : "up";
+
+        // Vérifier si l'utilisateur est au début ou à la fin
+        if (!isAtScrollBoundary(scrollableParent, direction)) {
+          return; // Bloquer le défilement global
+        }
+      }
+
       // Ignorer les petits mouvements
       if (Math.abs(deltaY) < 50) return;
 
@@ -97,41 +143,16 @@ export function useScrollPage() {
       touchStartY.current = null; // Réinitialiser la position initiale après le défilement
     }
 
-    // Gestion du défilement avec le clavier
-    function handleKeyDown(event: KeyboardEvent) {
-      const now = Date.now();
-      if (now - lastScrollTime.current < 500) return; // Ignorer les événements trop rapprochés
-      lastScrollTime.current = now;
-
-      if (event.key === "ArrowDown") {
-        event.preventDefault();
-        if (!isScrolling) {
-          onScrollStart("down");
-        }
-      } else if (event.key === "ArrowUp") {
-        event.preventDefault();
-        if (!isScrolling) {
-          onScrollStart("up");
-        }
-      }
-
-      setTimeout(() => {
-        onScrollEnd();
-      }, 200);
-    }
-
     // Ajouter les écouteurs d'événements
     window.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
-    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       // Nettoyer les écouteurs d'événements
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("keydown", handleKeyDown);
       enableScroll(); // Réactiver le défilement natif au démontage
     };
   }, [isScrolling]);
