@@ -33,7 +33,6 @@ export default function ToolItem({
         styles.toolItem +
         (isFocused ? ` ${styles.hovered}` : "") +
         (selectedItemId ? ` ${styles.selected}` : "")
-
       }
     >
       <div className={styles.toolButton}>
@@ -51,16 +50,19 @@ export default function ToolItem({
         </GenericButton>
         <span>{skill.label}</span>
       </div>
-      {selectedTool === skill.id && (
-        <div className={styles.toolDetails}>
-          <h3>{skill.title}</h3>
-          <ul>
-            {skill.skillsDetails?.map((detail, index) => (
-              <li key={detail + index}>{detail}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        className={
+          styles.toolDetails +
+          (selectedTool === skill.id ? ` ${styles.visible}` : "")
+        }
+      >
+        <h3>{skill.title}</h3>
+        <ul>
+          {skill.skillsDetails?.map((detail, index) => (
+            <li key={detail + index}>{detail}</li>
+          ))}
+        </ul>
+      </div>
     </li>
   );
 }

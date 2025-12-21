@@ -13,7 +13,6 @@ export const skills: {
     skillsDetails: [
       "Développer des composants modulables et réutilisables",
       "Intégrer une maquette sur le web avec une hiérarchie claire et correcte",
-      "Concevoir des applications sur mesure en fonction des besoins",
       "Concevoir et refondre un site vitrine fonctionnel et optimisé",
       "Garantir la qualité du code et la robustesse technique sur le long terme",
       "Développer un thème de site sur mesure",
@@ -37,7 +36,6 @@ export const skills: {
     title: "Méthodo. & Gestion de projet",
     component: "wrench",
     skillsDetails: [
-      "Exploiter les connaissances et les mettre en pratique dans un projet concret",
       "Analyser un problème technique pour en comprendre les causes et les solutions",
       "Gérer l'historique des versions à l’aide d’outils collaboratifs en cloud",
       "Planifier et suivre l’avancement d’un projet à l’aide d’outils de gestion",
