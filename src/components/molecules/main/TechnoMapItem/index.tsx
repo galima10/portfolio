@@ -4,6 +4,8 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 
 import { useState } from "react";
 import { technosList } from "@constants/technos";
+import { TechnoItem } from "@types";
+import TechnoButton from "@components/atoms/appElements/TechnoButton";
 
 interface TechnoMapItemProps {
   techno: {
@@ -21,6 +23,7 @@ export default function TechnoMapItem({
   selectedTechno,
 }: TechnoMapItemProps) {
   const [isFocused, setIsFocused] = useState(false);
+
   const category = techno.slug.replace("Map", "");
   return (
     <GenericButton
@@ -45,6 +48,13 @@ export default function TechnoMapItem({
     >
       <AppSVG name={techno.slug} className={styles.map} />
       <h3>{techno.name}</h3>
+      {selectedTechno === category && (
+        <div className={styles.technoDetails}>
+          {technosList[category].map((technoItem: TechnoItem) => (
+            <TechnoButton key={technoItem.name} technoItem={technoItem} />
+          ))}
+        </div>
+      )}
     </GenericButton>
   );
 }

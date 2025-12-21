@@ -8,7 +8,11 @@ import { useState } from "react";
 export default function TechnosMap() {
   const [selectedTechno, setSelectedTechno] = useState<string | null>(null);
   return (
-    <div className={styles.technosMapContainer}>
+    <div
+      className={
+        styles.technosMapContainer + (selectedTechno ? ` ${styles.active}` : "")
+      }
+    >
       <div
         className={
           styles.technoMaps +
@@ -52,12 +56,16 @@ export default function TechnosMap() {
           selectedTechno={selectedTechno}
         />
       </div>
-      <GenericButton
-        className={styles.backButton}
-        action={() => setSelectedTechno(null)}
-      >
-        ↩
-      </GenericButton>
+      {selectedTechno && (
+        <GenericButton
+          className={styles.backButton}
+          action={() => {
+            setSelectedTechno(null);
+          }}
+        >
+          ↩
+        </GenericButton>
+      )}
     </div>
   );
 }
