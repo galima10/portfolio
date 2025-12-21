@@ -32,7 +32,7 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, "src/styles"),
       "@types": path.resolve(__dirname, "src/types"),
       "@utils": path.resolve(__dirname, "src/utils"),
-      "@store": path.resolve(__dirname, "src/store"),
+      "@stores": path.resolve(__dirname, "src/stores"),
       "@constants": path.resolve(__dirname, "src/constants"),
     },
     extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".scss"],
