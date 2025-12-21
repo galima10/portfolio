@@ -1,0 +1,47 @@
+@use "@styles/partials/variables" as *;
+@use "@styles/partials/mixins" as *;
+@use "@styles/partials/functions" as *;
+@use "@styles/partials/placeholders" as *;
+
+.caption {
+  pointer-events: none;
+  padding: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  p {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: $bold;
+
+    color: $primary-color;
+    &.captionFrontend {
+      background-color: $blue-color;
+    }
+    &.captionBackend {
+      background-color: $red-color;
+    }
+    &.captionDatabase {
+      background-color: $green-color;
+    }
+    &.captionTools {
+      background-color: $grey-color;
+    }
+    &.captionFullstack {
+      background-color: $violet-color;
+    }
+  }
+  @include responsive {
+    background-color: $primary-color;
+    border: 0.2rem solid $light-color;
+    border-radius: 1rem;
+    flex-direction: column;
+    top: 0;
+    right: $padding-global;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    height: fit-content;
+  }
+}

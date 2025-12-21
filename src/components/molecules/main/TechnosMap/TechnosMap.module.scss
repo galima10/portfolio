@@ -27,7 +27,7 @@
   overflow: auto;
   height: 100%;
   width: 100%;
-  padding: 0 2rem;
+  padding: 6rem 2rem;
   transition: transform 1.5s ease, height 1.5s ease-in;
   transform: none;
   will-change: transform, height;
@@ -94,8 +94,8 @@
 
 .backButton {
   position: absolute;
-  left: 0;
-  bottom: 2rem;
+  left: .5rem;
+  bottom: 6rem;
   width: 3.5rem;
   height: 3.5rem;
   font-size: 3rem;
@@ -106,6 +106,7 @@
     color: $tertiary-color;
   }
   @include responsive {
+    bottom: 2rem;
     left: $padding-global;
   }
 }

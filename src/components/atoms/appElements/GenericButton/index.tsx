@@ -9,6 +9,7 @@ interface NavExternalButtonProps {
   onMouseLeave?: () => void;
   ariaLabel?: string;
   style?: React.CSSProperties;
+  id?: string;
 }
 
 export default function GenericButton({
@@ -19,7 +20,8 @@ export default function GenericButton({
   onMouseEnter,
   onMouseLeave,
   ariaLabel,
-  style
+  style,
+  id
 }: NavExternalButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
@@ -32,6 +34,7 @@ export default function GenericButton({
       onBlur={onMouseLeave}
       aria-label={ariaLabel}
       style={style}
+      id={id}
     >
       {children}
     </button>

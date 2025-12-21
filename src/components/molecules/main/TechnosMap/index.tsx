@@ -2,6 +2,7 @@ import styles from "./TechnosMap.module.scss";
 
 import TechnoMapItem from "../TechnoMapItem";
 import GenericButton from "@components/atoms/appElements/GenericButton";
+import TechnosCaption from "@components/atoms/appElements/TechnosCaption";
 
 import { useState } from "react";
 
@@ -57,14 +58,17 @@ export default function TechnosMap() {
         />
       </div>
       {selectedTechno && (
-        <GenericButton
-          className={styles.backButton}
-          action={() => {
-            setSelectedTechno(null);
-          }}
-        >
-          ↩
-        </GenericButton>
+        <>
+          <GenericButton
+            className={styles.backButton}
+            action={() => {
+              setSelectedTechno(null);
+            }}
+          >
+            ↩
+          </GenericButton>
+          <TechnosCaption />
+        </>
       )}
     </div>
   );

@@ -44,6 +44,7 @@ export default function TechnoMapItem({
       action={() => {
         if (!selectedTechno) setSelectedTechno(category);
         setIsFocused(false);
+        
       }}
     >
       <AppSVG name={techno.slug} className={styles.map} />
