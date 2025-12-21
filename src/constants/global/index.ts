@@ -1,3 +1,4 @@
+
 export const strokeWidth = {
   heavy: 4,
 };
@@ -7,7 +8,7 @@ export const headerNavLinks = [
   { label: "Compétences", link: "/#skills" },
   { label: "Outils & Technos", link: "/#technos" },
   { label: "Mes projets", link: "/#projects" },
-  { label: "Me contacter", link: "#contactForm", isCTA: true },
+  { label: "Me contacter", link: "/#contactForm", isCTA: true },
 ];
 
 export const footerNavLinks = [
