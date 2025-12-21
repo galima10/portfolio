@@ -2,11 +2,23 @@ import AppButton from "@components/atoms/appElements/AppButton";
 import AppSVG from "@components/atoms/svgIcons/AppSVG";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
+import { useCVDownload } from "@hooks/globals/CVDownload";
+
 export default function FooterInfos() {
+  const { handleDownload } = useCVDownload();
   return (
     <div className="footerInfos">
-      <AppSVG name="logo" className="logo" aria-label="Mon logo monogramme (deux lettres M se chevauchant)" />
-      <AppButton label="Téléchargez mon CV" type="secondary" className="footerBtnSecondary" />
+      <AppSVG
+        name="logo"
+        className="logo"
+        aria-label="Mon logo monogramme (deux lettres M se chevauchant)"
+      />
+      <AppButton
+        label="Téléchargez mon CV"
+        type="secondary"
+        className="footerBtnSecondary"
+        action={handleDownload}
+      />
       <div>
         <p>Retrouvez-moi au delà des océans</p>
         <ul className="socialMediaIcons">
