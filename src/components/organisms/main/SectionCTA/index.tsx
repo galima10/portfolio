@@ -10,7 +10,7 @@ interface SectionCTAProps {
 
 export default function SectionCTA({ text, to, id }: SectionCTAProps) {
   return (
-    <div className={styles.sectionCTA} id={id}>
+    <div className={`${styles.sectionCTA} snapping`} id={id}>
       <p className={styles.text}>
         <strong>{text}</strong>
       </p>

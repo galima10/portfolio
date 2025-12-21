@@ -5,23 +5,21 @@ import Technos from "@components/organisms/main/Technos";
 import Projects from "@components/organisms/main/Projects";
 import Contact from "@components/organisms/main/Contact";
 
+import Footer from "@components/organisms/general/Footer";
+import { footerNavLinks } from "@constants/global";
+import { projects } from "@constants/projects";
+
 import SectionCTA from "@components/organisms/main/SectionCTA";
 
 import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHashOnLoad";
-import { useScrollPage } from "@hooks/globals/navigation/useScrollPage";
-import { useAppDispatch } from "@hooks/redux";
-import { clearNavigationState } from "@stores/features/navigationSlice";
-import { useEffect } from "react";
+
+import { useScrollSnap } from "@hooks/globals/navigation/useScrollSnap";
 
 export default function MainPage() {
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(clearNavigationState());
-  }, [dispatch]);
 
   useScrollToHashOnLoad();
-  useScrollPage();
+  useScrollSnap("main");
+  // useScrollPage();
   return (
     <>
       <Hero />
@@ -45,6 +43,7 @@ export default function MainPage() {
         id="afterProjects"
       />
       <Contact />
+      <Footer links={footerNavLinks} projects={projects} />
     </>
   );
 }

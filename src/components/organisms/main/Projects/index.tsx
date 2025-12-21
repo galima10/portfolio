@@ -12,7 +12,7 @@ export default function Projects() {
       orientation="left"
       title="Mes quêtes"
       id="projects"
-      className={styles.projectsSection}
+      className={`${styles.projectsSection} snapping`}
     >
       <ul className={styles.projectsList}>
         {projects.map((project, index) => {

@@ -9,7 +9,7 @@ export default function Presentation() {
     <SectionWrapper
       title="Qui suis-je ?"
       orientation="right"
-      className={styles.presentation}
+      className={`${styles.presentation} snapping`}
       id="presentation"
     >
       <figure className={styles.infos}>

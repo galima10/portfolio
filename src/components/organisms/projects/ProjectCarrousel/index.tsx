@@ -34,7 +34,7 @@ export default function ProjectCarrousel({
   }, {});
 
   return (
-    <div className={styles.projectCarrousel} id="projectCarrousel">
+    <div className={`${styles.projectCarrousel} snapping`} id="projectCarrousel">
       <IndicatorRod />
       <div className={styles.sliderContainer}>
         <ul className={styles.slider}>

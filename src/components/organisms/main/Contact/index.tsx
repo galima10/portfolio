@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <SectionWrapper
       orientation="right"
-      className={styles.contactSection}
+      className={`${styles.contactSection} snapping`}
       title="Le prochain cap"
       id="contact"
     >

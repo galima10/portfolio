@@ -4,7 +4,7 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 
 export default function CTASection() {
   return (
-    <div className={styles.ctaSection} id="projectCTA">
+    <div className={`${styles.ctaSection} snapping`} id="projectCTA">
       <p>
         <strong>
           Et pourquoi ne pas écrire la prochaine ensemble ? Parlons-en !

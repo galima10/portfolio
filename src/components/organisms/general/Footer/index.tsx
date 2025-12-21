@@ -21,7 +21,7 @@ export default function Footer({ links, projects }: FooterProps) {
       link: "/projects/" + project.slug,
     })) || [];
   return (
-    <footer>
+    <footer id="footer">
       <div className="backToTop">
         <AppButton
           label="Remonter au camp de base"

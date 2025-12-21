@@ -66,24 +66,3 @@ export const translationsProjects = {
   tools: "Outils",
   skills: "Compétences",
 };
-
-export const sectionsIds = {
-  main: {
-    hero: "#hero",
-    presentation: "#presentation",
-    afterPresentation: "#afterPresentation",
-    skills: "#skills",
-    technos: "#technos",
-    afterSkills: "#afterSkills",
-    projects: "#projects",
-    afterProjects: "#afterProjects",
-    contact: "#contact",
-    contactForm: "#contactForm",
-  },
-  projects: {
-    hero: "#hero",
-    projectCarrousel: "#projectCarrousel",
-    projectCTA: "#projectCTA",
-    contactForm: "#contactForm",
-  },
-};

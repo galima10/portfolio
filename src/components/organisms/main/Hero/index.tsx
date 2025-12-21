@@ -11,7 +11,7 @@ export default function Hero() {
   const { handleDownload } = useCVDownload();
   
   return (
-    <section className={styles.hero} id="hero">
+    <section className={`${styles.hero} snapping`} id="hero">
       <AppMainH1 />
       <AppButton
         className={styles.ctaPrimary}

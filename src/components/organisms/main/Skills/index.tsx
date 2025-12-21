@@ -13,7 +13,7 @@ export default function Skills() {
     <SectionWrapper
       orientation="left"
       title="Mon équipement"
-      className={styles.skills}
+      className={`${styles.skills} snapping`}
       id="skills"
     >
       {!selectedTool ? (

@@ -7,11 +7,6 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 
 import AppSVG from "@components/atoms/svgIcons/AppSVG";
 
-import { useAppDispatch } from "@hooks/redux";
-import { stepUpdated } from "@stores/features/navigationSlice";
-
-import { sectionsIds } from "@constants/global";
-
 interface NavLinkProps {
   links: { label: string; link: string; isCTA?: boolean }[];
   ref?: React.Ref<HTMLUListElement> | null;
@@ -27,7 +22,6 @@ export default function NavLinks({
   className,
   position = "navbar",
 }: NavLinkProps) {
-  const dispatch = useAppDispatch();
   return (
     <ul
       className={`${
@@ -51,7 +45,6 @@ export default function NavLinks({
             <AppLogo
               className={styles.logo}
               to="/#hero"
-              action={() => dispatch(stepUpdated(0))}
             />
           </li>
         </>
@@ -63,26 +56,12 @@ export default function NavLinks({
               type="primary"
               to={link.link}
               label={link.label}
-              action={() =>
-                dispatch(
-                  stepUpdated(
-                    Object.values(sectionsIds.main).indexOf(link.link.slice(1))
-                  )
-                )
-              }
             />
           ) : (
             <NavButton
               position={position}
               to={link.link}
               label={link.label}
-              action={() =>
-                dispatch(
-                  stepUpdated(
-                    Object.values(sectionsIds.main).indexOf(link.link.slice(1))
-                  )
-                )
-              }
             />
           )}
         </li>

@@ -8,7 +8,7 @@ export default function Technos() {
     <SectionWrapper
       title="Mes territoires"
       orientation="right"
-      className={styles.technos}
+      className={`${styles.technos} snapping`}
       id="technos"
     >
       <TechnosMap />

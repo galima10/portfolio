@@ -6,20 +6,13 @@ import ProjectCarrousel from "@components/organisms/projects/ProjectCarrousel";
 import CTASection from "@components/organisms/projects/CTASection";
 import FormProject from "@components/organisms/projects/FormProject";
 
-import { useScrollPage } from "@hooks/globals/navigation/useScrollPage";
-import { useAppDispatch } from "@hooks/redux";
-import { clearNavigationState } from "@stores/features/navigationSlice";
-import { useEffect } from "react";
+import Footer from "@components/organisms/general/Footer";
+import { footerNavLinks } from "@constants/global";
+
+import { useScrollSnap } from "@hooks/globals/navigation/useScrollSnap";
 
 export default function ProjectPage() {
-  const dispatch = useAppDispatch();
-
-  // Réinitialiser `step` lors du montage
-  useEffect(() => {
-    dispatch(clearNavigationState());
-  }, [dispatch]);
-
-  useScrollPage();
+  useScrollSnap("main");
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((project) => project.slug === slug);
   const { name, stack, hook, preview, description, proofs } = project || {};
@@ -39,6 +32,7 @@ export default function ProjectPage() {
       <ProjectCarrousel description={description} proofs={proofs} />
       <CTASection />
       <FormProject />
+      <Footer links={footerNavLinks} projects={projects} />
     </>
   );
 }

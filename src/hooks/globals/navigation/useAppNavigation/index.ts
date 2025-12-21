@@ -1,23 +1,31 @@
 import { useNavigate, useLocation } from "react-router-dom";
-
 import { scrollToHash } from "@utils/scrollToHash";
+import { useEffect, useState } from "react";
 
 export function useAppNavigation(action?: () => void, to?: string) {
   const navigate = useNavigate();
   const location = useLocation();
+  const [main, setMain] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const mainElement = document.querySelector("main");
+    if (mainElement) {
+      setMain(mainElement); // Stocke la référence à <main> une fois que le DOM est prêt
+    }
+  }, []);
 
   const handleClick = () => {
     if (action) action();
 
-    if (!to) return;
+    if (!to || !main) return;
 
     // 🔹 1. Gestion des ancres internes ("#section")
     if (to.startsWith("#")) {
-      const el = document.querySelector(to);
+      const el = main.querySelector(to) as HTMLElement; // Recherche dans <main>
       if (el) {
         const navbarHeight = 4.5 * 16; // 4.5rem → 72px si 1rem = 16px
-        window.scrollTo({
-          top: el.getBoundingClientRect().top + window.scrollY - navbarHeight,
+        main.scrollTo({
+          top: el.offsetTop - navbarHeight, // Scroll relatif à <main>
           behavior: "smooth", // ou "auto" pour instantané
         });
       }
@@ -29,18 +37,12 @@ export function useAppNavigation(action?: () => void, to?: string) {
       const hash = to.slice(1); // "/#hero" -> "#hero"
 
       if (location.pathname !== "/") {
-        // On n'est pas sur la home
-        // 1️⃣ navigate vers "/#hero"
         navigate(to);
-
-        // 2️⃣ scroll instantanément en haut avant que Home fasse le smooth
-        window.scrollTo({ top: 0, behavior: "auto" });
-
+        main.scrollTo({ top: 0, behavior: "auto" });
         return;
       }
 
-      // Si on est déjà sur la home, scroll directement
-      scrollToHash(hash);
+      scrollToHash(hash, main);
       return;
     }
 
@@ -52,7 +54,7 @@ export function useAppNavigation(action?: () => void, to?: string) {
 
     // 🔹 4. Navigation interne SPA vers une page interne ("/page")
     navigate(to);
-    window.scrollTo({ top: 0 });
+    main.scrollTo({ top: 0 });
   };
 
   return { handleClick };
