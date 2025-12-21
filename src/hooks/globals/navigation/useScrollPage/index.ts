@@ -15,10 +15,6 @@ export function useScrollPage() {
   const mainIds = Object.values(sectionsIds.main);
   const projectsIds = Object.values(sectionsIds.projects);
 
-//   function disableScroll() {
-//     document.body.style.overflow = "hidden"; // Désactiver le défilement natif
-//   }
-
   function enableScroll() {
     document.body.style.overflow = ""; // Réactiver le défilement natif
   }
@@ -26,7 +22,6 @@ export function useScrollPage() {
   function onScrollStart(direction: "up" | "down") {
     if (!isScrolling) {
       setIsScrolling(true);
-    //   disableScroll(); // Désactiver le défilement natif pendant le défilement personnalisé
 
       const ids = location.pathname !== "/" ? projectsIds : mainIds;
 
@@ -102,16 +97,41 @@ export function useScrollPage() {
       touchStartY.current = null; // Réinitialiser la position initiale après le défilement
     }
 
+    // Gestion du défilement avec le clavier
+    function handleKeyDown(event: KeyboardEvent) {
+      const now = Date.now();
+      if (now - lastScrollTime.current < 500) return; // Ignorer les événements trop rapprochés
+      lastScrollTime.current = now;
+
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        if (!isScrolling) {
+          onScrollStart("down");
+        }
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        if (!isScrolling) {
+          onScrollStart("up");
+        }
+      }
+
+      setTimeout(() => {
+        onScrollEnd();
+      }, 200);
+    }
+
     // Ajouter les écouteurs d'événements
     window.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       // Nettoyer les écouteurs d'événements
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("keydown", handleKeyDown);
       enableScroll(); // Réactiver le défilement natif au démontage
     };
   }, [isScrolling]);
