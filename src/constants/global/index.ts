@@ -17,7 +17,7 @@ export const footerNavLinks = [
   { label: "Compétences", link: "/#skills" },
   { label: "Outils & Technos", link: "/#technos" },
   { label: "Mes projets", link: "/#projects" },
-  { label: "Me contacter", link: "#contactForm",},
+  { label: "Me contacter", link: "#contactForm" },
 ];
 
 export const projectTitleDesc = {
@@ -31,7 +31,7 @@ export const projectTitleDesc = {
   results: "Résultats",
   proofs: "Preuves",
   conclusion: "Retour réflexif",
-}
+};
 
 export const translationsProjects = {
   category: "Catégorie",
@@ -65,47 +65,25 @@ export const translationsProjects = {
   missions: "Missions",
   tools: "Outils",
   skills: "Compétences",
-}
+};
 
 export const sectionsIds = {
   main: {
-    hero: "hero",
-    presentation: "presentation",
-    afterPresentation: "afterPresentation",
-    skills: "skills",
-    technos: {
-      main: "technos",
-      languages: "languages",
-      frameworks: "frameworks",
-      tools: "tools",
-      discussed: "discussed",
-    },
-    afterSkills: "afterSkills",
-    projects: {
-      main: "projects",
-      project1: "project-1",
-      project2: "project-2",
-      project3: "project-3",
-    },
-    afterProjects: "afterProjects",
-    contactForm: "contactForm",
+    hero: "#hero",
+    presentation: "#presentation",
+    afterPresentation: "#afterPresentation",
+    skills: "#skills",
+    technos: "#technos",
+    afterSkills: "#afterSkills",
+    projects: "#projects",
+    afterProjects: "#afterProjects",
+    contact: "#contact",
+    contactForm: "#contactForm",
   },
   projects: {
-    hero: "hero",
-    projectCarrousel: {
-      main:"projectCarrousel",
-      context: "carrousel-context",
-      challenges: "carrousel-challenges",
-      objectives: "carrousel-objectives",
-      target: "carrousel-target",
-      deliverablesConstraintsResources: "carrousel-deliverablesConstraintsResources",
-      planning: "carrousel-planning",
-      actions: "carrousel-actions",
-      results: "carrousel-results",
-      proofs: "carrousel-proofs",
-      conclusion: "carrousel-conclusion",
-    },
-    projectCTA: "projectCTA",
-    contactForm: "contactForm",
-  }
-}
+    hero: "#hero",
+    projectCarrousel: "#projectCarrousel",
+    projectCTA: "#projectCTA",
+    contactForm: "#contactForm",
+  },
+};
