@@ -1,16 +1,20 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import { sectionsIds } from "@constants/global";
-
 import { scrollToHash } from "@utils/scrollToHash";
+
+import { useAppSelector, useAppDispatch } from "@hooks/redux";
+import { stepUpdated } from "@stores/features/navigationSlice";
 
 export function useScrollPage() {
   const location = useLocation();
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [step, setStep] = useState(0); // État pour suivre la position actuelle
+  const isScrolling = useRef(false); // Remplace l'état local pour éviter les re-rendus inutiles
   const touchStartY = useRef<number | null>(null); // Utilisation de useRef pour éviter les re-rendus inutiles
   const lastScrollTime = useRef<number>(0); // Ref pour limiter la fréquence des défilements
+
+  const step = useAppSelector((state) => state.navigation.step); // Lire l'état global
+  const dispatch = useAppDispatch(); // Permet de mettre à jour l'état global
 
   const mainIds = Object.values(sectionsIds.main);
   const projectsIds = Object.values(sectionsIds.projects);
@@ -40,29 +44,23 @@ export function useScrollPage() {
   }
 
   function onScrollStart(direction: "up" | "down") {
-    if (!isScrolling) {
-      setIsScrolling(true);
+    if (!isScrolling.current) {
+      isScrolling.current = true;
 
       const ids = location.pathname !== "/" ? projectsIds : mainIds;
 
-      setStep((prevStep) => {
-        let newStep;
-        if (direction === "down") {
-          // Défilement vers le bas : incrémenter le step
-          newStep = (prevStep + 1) % ids.length;
-        } else {
-          // Défilement vers le haut : décrémenter le step
-          newStep = (prevStep - 1 + ids.length) % ids.length; // Assurer un cycle positif
-        }
+      const newStep =
+        direction === "down"
+          ? (step + 1) % ids.length // Incrémenter le step
+          : (step - 1 + ids.length) % ids.length; // Décrémenter le step (en cycle positif)
 
-        scrollToHash(ids[newStep]); // Utiliser la nouvelle valeur immédiatement
-        return newStep; // Mettre à jour l'état avec la nouvelle valeur
-      });
+      dispatch(stepUpdated(newStep)); // Mettre à jour l'état global
+      scrollToHash(ids[newStep]); // Défilement vers la nouvelle section
     }
   }
 
   function onScrollEnd() {
-    setIsScrolling(false);
+    isScrolling.current = false;
     enableScroll(); // Réactiver le défilement natif après le défilement personnalisé
   }
 
@@ -90,7 +88,7 @@ export function useScrollPage() {
 
       const direction = event.deltaY > 0 ? "down" : "up";
 
-      if (!isScrolling) {
+      if (!isScrolling.current) {
         onScrollStart(direction);
       }
 
@@ -132,7 +130,7 @@ export function useScrollPage() {
       if (now - lastScrollTime.current < 500) return; // Ignorer les événements trop rapprochés
       lastScrollTime.current = now;
 
-      if (!isScrolling) {
+      if (!isScrolling.current) {
         onScrollStart(direction);
       }
 
@@ -155,7 +153,7 @@ export function useScrollPage() {
       window.removeEventListener("touchmove", handleTouchMove);
       enableScroll(); // Réactiver le défilement natif au démontage
     };
-  }, [isScrolling]);
+  }, [step, location.pathname]); // Ajouter `step` comme dépendance pour réagir aux changements
 
   return {};
 }
