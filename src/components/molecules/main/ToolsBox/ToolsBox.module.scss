@@ -45,6 +45,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  li {
+      margin: -.5rem 0;
+    }
   &.selected {
     li {
       margin: -1.25rem 0;
