@@ -29,17 +29,17 @@ export default function TechnoMapItem({
         " " +
         styles[techno.className] +
         (isFocused ? ` ${styles.focused}` : "") +
-        (selectedTechno === category ? ` ${styles.disabledBackgroud}` : "")
+        (selectedTechno ? ` ${styles.disabledBackgroud}` : "")
       }
       onMouseEnter={() => {
-        if (selectedTechno !== category) setIsFocused(true);
+        if (selectedTechno !== category && !selectedTechno) setIsFocused(true);
         else setIsFocused(false);
       }}
       onMouseLeave={() => {
         setIsFocused(false);
       }}
       action={() => {
-        setSelectedTechno(category);
+        if (!selectedTechno) setSelectedTechno(category);
         setIsFocused(false);
       }}
     >
