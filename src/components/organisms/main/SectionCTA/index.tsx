@@ -5,11 +5,12 @@ import AppButton from "@components/atoms/appElements/AppButton";
 interface SectionCTAProps {
   text: string;
   to?: string;
+  id?: string;
 }
 
-export default function SectionCTA({ text, to }: SectionCTAProps) {
+export default function SectionCTA({ text, to, id }: SectionCTAProps) {
   return (
-    <div className={styles.sectionCTA}>
+    <div className={styles.sectionCTA} id={id}>
       <p className={styles.text}>
         <strong>{text}</strong>
       </p>

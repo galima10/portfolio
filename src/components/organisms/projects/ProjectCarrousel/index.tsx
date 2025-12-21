@@ -34,13 +34,13 @@ export default function ProjectCarrousel({
   }, {});
 
   return (
-    <div className={styles.projectCarrousel}>
+    <div className={styles.projectCarrousel} id="projectCarrousel">
       <IndicatorRod />
       <div className={styles.sliderContainer}>
         <ul className={styles.slider}>
           {descAndProofs &&
             Object.entries(descAndProofs).map(([key, value]) => (
-              <li key={key}>
+              <li key={key} id={`carrousel-${key}`}>
                 {projectsSlides[key] &&
                   React.createElement(projectsSlides[key], { [key]: value })}
               </li>

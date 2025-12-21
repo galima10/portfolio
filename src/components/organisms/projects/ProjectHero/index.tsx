@@ -31,7 +31,7 @@ export default function ProjectHero({
   const { sectionRef } = useProjectHero<HTMLDivElement>(imageSrc);
 
   return (
-    <section className={styles.hero} ref={sectionRef}>
+    <section className={styles.hero} ref={sectionRef} id="hero">
       <div className={styles.content}>
         <hgroup>
           <h1>{name}</h1>
