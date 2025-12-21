@@ -11,11 +11,9 @@ export function useNavbar(filterClassActive: string, menuClassOpen: string) {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
       mobileMenuRef.current?.classList.add(menuClassOpen);
       darkFilterRef.current?.classList.add(filterClassActive);
     } else {
-      document.body.style.overflow = "auto";
       mobileMenuRef.current?.classList.remove(menuClassOpen);
       darkFilterRef.current?.classList.remove(filterClassActive);
     }

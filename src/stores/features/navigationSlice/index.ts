@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { clear } from "console";
 
 interface NavigationState {
   step: number;
@@ -15,9 +16,12 @@ export const navigationSlice = createSlice({
     stepUpdated(state, action: PayloadAction<number>) {
       state.step = action.payload;
     },
+    clearNavigationState(state) {
+      state.step = 0;
+    },
   },
 });
 
-export const { stepUpdated } = navigationSlice.actions;
+export const { stepUpdated, clearNavigationState } = navigationSlice.actions;
 
 export default navigationSlice.reducer;

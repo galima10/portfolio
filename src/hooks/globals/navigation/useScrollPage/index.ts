@@ -19,10 +19,6 @@ export function useScrollPage() {
   const mainIds = Object.values(sectionsIds.main);
   const projectsIds = Object.values(sectionsIds.projects);
 
-  function enableScroll() {
-    document.body.style.overflow = ""; // Réactiver le défilement natif
-  }
-
   function findScrollableParent(element: HTMLElement | null): HTMLElement | null {
     if (!element) return null;
     const style = window.getComputedStyle(element);
@@ -61,10 +57,10 @@ export function useScrollPage() {
 
   function onScrollEnd() {
     isScrolling.current = false;
-    enableScroll(); // Réactiver le défilement natif après le défilement personnalisé
   }
 
   useEffect(() => {
+    console.log("useScrollPage initialized", step);
     // Gestion du défilement avec la molette
     function handleWheel(event: WheelEvent) {
       const now = Date.now();
@@ -151,7 +147,6 @@ export function useScrollPage() {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
-      enableScroll(); // Réactiver le défilement natif au démontage
     };
   }, [step, location.pathname]); // Ajouter `step` comme dépendance pour réagir aux changements
 

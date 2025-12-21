@@ -9,8 +9,17 @@ import SectionCTA from "@components/organisms/main/SectionCTA";
 
 import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHashOnLoad";
 import { useScrollPage } from "@hooks/globals/navigation/useScrollPage";
+import { useAppDispatch } from "@hooks/redux";
+import { clearNavigationState } from "@stores/features/navigationSlice";
+import { useEffect } from "react";
 
 export default function MainPage() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(clearNavigationState());
+  }, [dispatch]);
+
   useScrollToHashOnLoad();
   useScrollPage();
   return (
