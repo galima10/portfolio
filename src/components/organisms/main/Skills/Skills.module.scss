@@ -16,8 +16,8 @@
 
 .noSkillSelected {
   width: 100%;
-  padding: 2rem 0 1rem;
   background-color: $primary-color;
+  padding: 2rem 0 1rem;
   position: absolute;
   top: 0;
   z-index: 1;
@@ -32,6 +32,8 @@
     @include font-base("h3");
   }
   @include responsive {
+    position: relative;
+    padding: 0;
     strong {
       position: relative;
       top: auto;
