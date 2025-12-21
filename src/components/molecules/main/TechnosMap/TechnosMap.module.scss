@@ -3,15 +3,35 @@
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
 
-.technoMaps {
+.technosMapContainer {
+  padding: $section-padding;
+  height: $section-height;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.technoMaps {
   flex-shrink: 0;
+  position: relative;
   display: grid;
   grid-template-columns: 8.6% 29.3% 2.5% 5.7% 30.6% 5.7% 17.6%;
   grid-template-rows: 48.2% 10.2% 10.9% 27.9% 2.8%;
   aspect-ratio: 442 / 215;
   height: 26rem;
-  transition: transform 0.5s ease, height 0.5s ease-in;
+  transition: transform 1.5s ease, height 1.5s ease-in;
+  transform: none;
+  will-change: transform, height;
+  & > * {
+    transition: transform .005s ease-in-out;
+  }
   h3 {
     @include font-base("h5");
     text-transform: uppercase;
@@ -65,4 +85,15 @@
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  // background-color: aqua;
+  width: 3.5rem;
+  height: 3.5rem;
+  @include font-base("h3");
+  color: $accent-color-darker;
 }
