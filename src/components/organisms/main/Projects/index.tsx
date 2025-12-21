@@ -21,7 +21,6 @@ export default function Projects() {
               <ProjectItem
                 project={project}
                 orientation={index % 2 === 0 ? "left" : "right"}
-                
               />
             </li>
           );

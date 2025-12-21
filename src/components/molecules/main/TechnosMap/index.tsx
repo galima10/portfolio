@@ -28,6 +28,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
+          id="languages"
         />
         <TechnoMapItem
           techno={{
@@ -37,6 +38,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
+          id="frameworks"
         />
         <TechnoMapItem
           techno={{
@@ -46,6 +48,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
+          id="tools"
         />
         <TechnoMapItem
           techno={{
@@ -55,6 +58,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
+          id="discussed"
         />
       </div>
       {selectedTechno && (

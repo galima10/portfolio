@@ -4,6 +4,7 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 import ProjectBadge from "../ProjectBadge";
 
 import { ProjectDescriptionType } from "@types";
+import { slugify } from "@utils/slugify";
 
 import { useState } from "react";
 
@@ -40,7 +41,10 @@ export default function ProjectItem({
   const { id, name, hook, label, stack, island, slug } = project;
   const [isFocused, setIsFocused] = useState(false);
   return (
-    <section className={styles.projectItem + " " + styles[orientation]}>
+    <section
+      className={styles.projectItem + " " + styles[orientation]}
+      id={slugify(id)}
+    >
       <hgroup className={styles.projectInfo}>
         <h3>{id}</h3>
         <p>{hook}</p>

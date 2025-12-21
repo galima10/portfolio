@@ -8,9 +8,11 @@ import Contact from "@components/organisms/main/Contact";
 import SectionCTA from "@components/organisms/main/SectionCTA";
 
 import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHashOnLoad";
+import { useScrollPage } from "@hooks/globals/navigation/useScrollPage";
 
 export default function MainPage() {
   useScrollToHashOnLoad();
+  useScrollPage();
   return (
     <>
       <Hero />

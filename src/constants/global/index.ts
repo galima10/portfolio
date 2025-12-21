@@ -1,3 +1,4 @@
+import { skills } from "@constants/skills";
 
 export const strokeWidth = {
   heavy: 4,
@@ -66,3 +67,45 @@ export const translationsProjects = {
   skills: "Compétences",
 }
 
+export const sectionsIds = {
+  main: {
+    hero: "hero",
+    presentation: "presentation",
+    afterPresentation: "afterPresentation",
+    skills: "skills",
+    technos: {
+      main: "technos",
+      languages: "languages",
+      frameworks: "frameworks",
+      tools: "tools",
+      discussed: "discussed",
+    },
+    afterSkills: "afterSkills",
+    projects: {
+      main: "projects",
+      project1: "project-1",
+      project2: "project-2",
+      project3: "project-3",
+    },
+    afterProjects: "afterProjects",
+    contactForm: "contactForm",
+  },
+  projects: {
+    hero: "hero",
+    projectCarrousel: {
+      main:"projectCarrousel",
+      context: "carrousel-context",
+      challenges: "carrousel-challenges",
+      objectives: "carrousel-objectives",
+      target: "carrousel-target",
+      deliverablesConstraintsResources: "carrousel-deliverablesConstraintsResources",
+      planning: "carrousel-planning",
+      actions: "carrousel-actions",
+      results: "carrousel-results",
+      proofs: "carrousel-proofs",
+      conclusion: "carrousel-conclusion",
+    },
+    projectCTA: "projectCTA",
+    contactForm: "contactForm",
+  }
+}

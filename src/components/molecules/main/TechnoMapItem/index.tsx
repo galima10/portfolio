@@ -15,12 +15,14 @@ interface TechnoMapItemProps {
   };
   setSelectedTechno: (techno: string | null) => void;
   selectedTechno: string | null;
+  id?: string;
 }
 
 export default function TechnoMapItem({
   techno,
   setSelectedTechno,
   selectedTechno,
+  id,
 }: TechnoMapItemProps) {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -46,6 +48,7 @@ export default function TechnoMapItem({
         setIsFocused(false);
         
       }}
+      id={id}
     >
       <AppSVG name={techno.slug} className={styles.map} />
       <h3>{techno.name}</h3>
