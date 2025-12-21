@@ -46,8 +46,8 @@
   flex-direction: column;
   width: 100%;
   li {
-      margin: -.5rem 0;
-    }
+    margin: -0.5rem 0;
+  }
   &.selected {
     li {
       margin: -1.25rem 0;
@@ -59,10 +59,13 @@
     flex-direction: row;
     width: fit-content;
     padding-bottom: 5rem;
-    &.selected {
     li {
       margin: 0;
     }
-  }
+    &.selected {
+      li {
+        margin: 0;
+      }
+    }
   }
 }
