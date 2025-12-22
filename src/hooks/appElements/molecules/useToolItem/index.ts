@@ -11,9 +11,5 @@ export function useToolItem(skill: {
   skillsDetails?: string[];
 }) {
   const [isFocused, setIsFocused] = useState(false);
-
-  function handleItemClick() {
-    scrollToHash("#skills")
-  }
-  return { isFocused, setIsFocused, handleItemClick };
+  return { isFocused, setIsFocused };
 }

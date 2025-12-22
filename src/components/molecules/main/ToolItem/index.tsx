@@ -24,7 +24,7 @@ export default function ToolItem({
   handleClick,
   selectedTool,
 }: ToolItemProps) {
-  const { isFocused, setIsFocused, handleItemClick } = useToolItem(skill);
+  const { isFocused, setIsFocused } = useToolItem(skill);
 
   return (
     <li
@@ -41,7 +41,6 @@ export default function ToolItem({
           onMouseLeave={() => setIsFocused(false)}
           action={() => {
             handleClick(skill.id);
-            handleItemClick();
           }}
         >
           <div className={styles.toolIcon}>
