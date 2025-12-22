@@ -8,27 +8,30 @@
   flex-direction: row;
   margin-bottom: calc($section-height * 9);
   overflow: visible;
-  gap: 1.5rem;
   padding-right: 0;
-  @include responsive {
-    gap: 15rem;
-  }
 }
 
 .sliderContainer {
   width: 100%;
   height: fit-content;
   position: relative;
-  padding-right: $padding-global;
+  // padding-right: $padding-global;
+  
+  
 }
 
 .slider {
   width: 100%;
   position: relative;
+  padding-left: 2rem;
+  margin-top: calc($section-height * -1);
   li {
     height: $section-height;
-    padding: 5rem 0 2rem;
+    padding: 0;
     position: relative;
+  }
+  @include responsive {
+    padding-left: 15rem;
   }
 }
 

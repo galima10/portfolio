@@ -3,11 +3,20 @@
 @use "@styles/partials/functions" as *;
 @use "@styles/partials/placeholders" as *;
 
+
+.indicatorsContainer {
+  height: $section-height;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  top: 0;
+  position: sticky;
+}
 .indicators {
   width: 0.75rem;
-  height: 140%;
+  height: calc((140 * $section-height) / 100);
   background-color: $nuance-color;
-  position: relative;
+  position: absolute;
   border-radius: 2rem;
   ul {
     display: flex;

@@ -34,9 +34,12 @@ export default function ProjectCarrousel({
   }, {});
 
   return (
-    <div className={`${styles.projectCarrousel} snapping`} id="projectCarrousel">
-      <IndicatorRod />
+    <div
+      className={`${styles.projectCarrousel} snapping`}
+      id="projectCarrousel"
+    >
       <div className={styles.sliderContainer}>
+        <IndicatorRod />
         <ul className={styles.slider}>
           {descAndProofs &&
             Object.entries(descAndProofs).map(([key, value]) => (
