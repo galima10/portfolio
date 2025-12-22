@@ -137,7 +137,35 @@
 }
 
 .proofsSlide {
+  padding-right: 0;
+  margin-right: $padding-global;
+  text-align: center;
+  strong {
+    display: block;
+  }
   img {
+    width: 90%;
+    height: 20rem;
+  }
+  ul {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+  }
+  div {
+    height: 100%;
     width: 100%;
+  }
+  li {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100% !important;
+    padding-bottom: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
   }
 }
