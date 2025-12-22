@@ -4,22 +4,11 @@ import TechnoMapItem from "../TechnoMapItem";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 import TechnosCaption from "@components/atoms/appElements/TechnosCaption";
 
-import { useState, useEffect } from "react";
+import { useTechnosMap } from "@hooks/appElements/molecules/useTechnosMap";
 
 export default function TechnosMap() {
-  const [selectedTechno, setSelectedTechno] = useState<string | null>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-    return () => {
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, []);
+  
+  const { selectedTechno, setSelectedTechno, isMobile } = useTechnosMap();
 
   return (
     <div

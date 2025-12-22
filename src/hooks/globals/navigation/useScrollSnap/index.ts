@@ -3,7 +3,6 @@ import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { setCurrentIDSection } from "@stores/features/navigationSlice";
 
 export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
-  // const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
   const dispatch = useAppDispatch();
   const currentSectionId = useAppSelector(
     (state) => state.navigation.currentIDSection

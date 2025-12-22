@@ -29,13 +29,6 @@
   transform: none;
   will-change: transform, height;
   overflow: visible;
-  // overflow: scroll;
-  // scroll-snap-type: y mandatory;
-  // scrollbar-width: none; /* Pour Firefox */
-  // -ms-overflow-style: none; /* Pour Internet Explorer */
-  // &::-webkit-scrollbar {
-  //   display: none; /* Pour Chrome, Safari et Edge */
-  // }
   & > * {
     transition: transform 0.005s ease-in-out;
   }
@@ -100,6 +93,7 @@
 
 .backButton {
   position: absolute;
+  pointer-events: auto;
   left: 0.5rem;
   bottom: 6rem;
   width: 3.5rem;
@@ -126,6 +120,10 @@
   bottom: 0;
   &.visible {
     opacity: 1;
-    pointer-events: auto;
+  }
+  @include responsive {
+    position: absolute;
+    width: 100%;
+    height: $section-height;
   }
 }
