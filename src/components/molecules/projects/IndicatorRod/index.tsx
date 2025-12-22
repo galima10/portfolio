@@ -3,6 +3,8 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 import { keysOrder } from "@constants/projects";
 import CarrouselButton from "../CarrouselButton";
 
+
+
 export default function IndicatorRod() {
   return (
     <div
@@ -27,7 +29,7 @@ export default function IndicatorRod() {
           </li>
           {keysOrder.map((key) => (
             <li key={key}>
-              <CarrouselButton keyProp={key} />
+              <CarrouselButton keyProp={key} keysOrder={keysOrder} />
             </li>
           ))}
         </ul>
