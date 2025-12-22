@@ -5,8 +5,12 @@ export function useNavbar(filterClassActive: string, menuClassOpen: string) {
   const mobileMenuRef = useRef<HTMLUListElement>(null);
   const darkFilterRef = useRef<HTMLDivElement>(null);
 
-  function handleMenuToggle() {
-    setIsMobileMenuOpen((prev) => !prev);
+  function handleOpenMenu() {
+    setIsMobileMenuOpen(true);
+  }
+
+  function handleCloseMenu() {
+    setIsMobileMenuOpen(false);
   }
 
   useEffect(() => {
@@ -17,7 +21,6 @@ export function useNavbar(filterClassActive: string, menuClassOpen: string) {
       mobileMenuRef.current?.classList.remove(menuClassOpen);
       darkFilterRef.current?.classList.remove(filterClassActive);
     }
-    console.log("isMobileMenuOpen", isMobileMenuOpen);
   }, [isMobileMenuOpen]);
 
   return {
@@ -25,6 +28,7 @@ export function useNavbar(filterClassActive: string, menuClassOpen: string) {
     setIsMobileMenuOpen,
     mobileMenuRef,
     darkFilterRef,
-    handleMenuToggle,
+    handleOpenMenu,
+    handleCloseMenu,
   };
 }

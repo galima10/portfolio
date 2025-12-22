@@ -8,19 +8,19 @@ interface NavbarProps {
 }
 
 export default function Navbar({ links }: NavbarProps) {
-  const { mobileMenuRef, darkFilterRef, handleMenuToggle } = useNavbar(
+  const { mobileMenuRef, darkFilterRef, handleOpenMenu, handleCloseMenu } = useNavbar(
     "active",
     "open"
   );
   return (
     <header id="main-navbar">
       <nav aria-label="Navigation principale">
-        <MobileNavbar handleMenuToggle={handleMenuToggle} />
+        <MobileNavbar handleOpenMenu={handleOpenMenu} />
         <div className="filterDark" ref={darkFilterRef}></div>
         <NavLinks
           links={links}
           ref={mobileMenuRef}
-          handleMenuToggle={handleMenuToggle}
+          handleCloseMenu={handleCloseMenu}
           className="navLinks"
         />
       </nav>

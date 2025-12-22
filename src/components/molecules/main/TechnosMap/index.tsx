@@ -4,10 +4,22 @@ import TechnoMapItem from "../TechnoMapItem";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 import TechnosCaption from "@components/atoms/appElements/TechnosCaption";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function TechnosMap() {
   const [selectedTechno, setSelectedTechno] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
 
   return (
     <div
@@ -30,7 +42,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="languages"
-          className="snapping childSnape"
+          className={isMobile ? "snapping" : ""}
         />
         <TechnoMapItem
           techno={{
@@ -41,7 +53,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="frameworks"
-          className="snapping childSnape"
+          className={isMobile ? "snapping" : ""}
         />
         <TechnoMapItem
           techno={{
@@ -52,7 +64,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="tools"
-          className="snapping childSnape"
+          className={isMobile ? "snapping" : ""}
         />
         <TechnoMapItem
           techno={{
@@ -63,10 +75,14 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="discussed"
-          className="snapping childSnape"
+          className={isMobile ? "snapping" : ""}
         />
       </div>
-      <div className={styles.backAndCaption + (selectedTechno ? ` ${styles.visible}` : "")}>
+      <div
+        className={
+          styles.backAndCaption + (selectedTechno ? ` ${styles.visible}` : "")
+        }
+      >
         <GenericButton
           className={styles.backButton}
           action={() => {

@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react";
 export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
   const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
   const observer = useRef<IntersectionObserver | null>(null);
+  const mutationObserver = useRef<MutationObserver | null>(null);
 
   useEffect(() => {
     const rootElement = document.querySelector(rootSelector);
@@ -12,36 +13,60 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
       return;
     }
 
-    // Récupérer tous les descendants ayant la classe .snapping, peu importe leur profondeur
-    const snaps: HTMLElement[] = Array.from(
-      rootElement.querySelectorAll(":scope > * .snapping")
-    );
-    console.log("Snapping elements found:", snaps);
+    const setupIntersectionObserver = () => {
+      // Récupérer tous les descendants ayant la classe .snapping, peu importe leur profondeur
+      const snaps: HTMLElement[] = Array.from(
+        rootElement.querySelectorAll(".snapping")
+      );
+      console.log("Snapping elements found:", snaps);
 
-    if (snaps.length === 0) {
-      console.error("No snap elements found inside the root.");
-      return;
-    }
-
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id; // Récupère l'id de l'élément visible
-            setCurrentSectionId(id || null); // Met à jour l'état avec l'id ou null si pas d'id
-          }
-        });
-      },
-      {
-        root: rootElement,
-        threshold,
+      if (snaps.length === 0) {
+        console.error("No snap elements found inside the root.");
+        return;
       }
-    );
 
-    snaps.forEach((el) => observer.current?.observe(el));
+      // Déconnecter l'ancien observateur avant d'en créer un nouveau
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+
+      // Créer un nouvel observateur
+      observer.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id; // Récupère l'id de l'élément visible
+              setCurrentSectionId(id || null); // Met à jour l'état avec l'id ou null si pas d'id
+            }
+          });
+        },
+        {
+          root: rootElement,
+          threshold,
+        }
+      );
+
+      // Observer chaque élément
+      snaps.forEach((el) => observer.current?.observe(el));
+    };
+
+    // Configurer le MutationObserver pour surveiller les changements dans le DOM
+    mutationObserver.current = new MutationObserver(() => {
+      setupIntersectionObserver(); // Réinitialiser l'observateur lorsque le DOM change
+    });
+
+    mutationObserver.current.observe(rootElement, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Initialiser l'observateur d'intersection
+    setupIntersectionObserver();
 
     return () => {
+      // Nettoyer les observateurs lors du démontage
       observer.current?.disconnect();
+      mutationObserver.current?.disconnect();
     };
   }, [rootSelector, threshold]);
 

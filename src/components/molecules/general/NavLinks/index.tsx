@@ -10,7 +10,7 @@ import AppSVG from "@components/atoms/svgIcons/AppSVG";
 interface NavLinkProps {
   links: { label: string; link: string; isCTA?: boolean }[];
   ref?: React.Ref<HTMLUListElement> | null;
-  handleMenuToggle?: () => void;
+  handleCloseMenu?: () => void;
   className?: string;
   position?: "navbar" | "footer";
 }
@@ -18,7 +18,7 @@ interface NavLinkProps {
 export default function NavLinks({
   links,
   ref,
-  handleMenuToggle,
+  handleCloseMenu,
   className,
   position = "navbar",
 }: NavLinkProps) {
@@ -35,7 +35,7 @@ export default function NavLinks({
             <button
               className={styles.closeButton}
               aria-label="Close Menu"
-              onClick={handleMenuToggle}
+              onClick={handleCloseMenu}
             >
               <span className={styles.closeLine}></span>
               <span className={styles.closeLine}></span>
@@ -55,6 +55,7 @@ export default function NavLinks({
             <AppButton
               type="primary"
               to={link.link}
+              action={handleCloseMenu}
               label={link.label}
             />
           ) : (
@@ -62,6 +63,7 @@ export default function NavLinks({
               position={position}
               to={link.link}
               label={link.label}
+              action={handleCloseMenu}
             />
           )}
         </li>
