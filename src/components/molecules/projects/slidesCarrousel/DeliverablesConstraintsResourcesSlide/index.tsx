@@ -4,6 +4,8 @@ import { translationsProjects, projectTitleDesc } from "@constants/global";
 
 import GenericButton from "@components/atoms/appElements/GenericButton";
 
+import { useState } from "react";
+
 interface DeliverablesConstraintsResourcesSlideProps {
   deliverablesConstraintsResources: {
     deliverables: {
@@ -30,16 +32,33 @@ interface DeliverablesConstraintsResourcesSlideProps {
 export default function DeliverablesConstraintsResources({
   deliverablesConstraintsResources,
 }: DeliverablesConstraintsResourcesSlideProps) {
+  const [selectedButton, setSelectedButton] = useState<string | null>(null);
   return (
-    <div className={styles.slides} aria-label="Diapositive des livrables, contraintes et ressources du projet" role="region">
+    <div
+      className={styles.slides}
+      aria-label="Diapositive des livrables, contraintes et ressources du projet"
+      role="region"
+    >
       <h2 className="project-h2">
         {projectTitleDesc.deliverablesConstraintsResources}
       </h2>
       <div
         className={`${styles.slideContent} ${styles.deliverablesConstraintsResourcesSlideContent}`}
       >
-        <div className={styles.buttonItem}>
-          <GenericButton className={styles.button}>
+        <div
+          className={
+            styles.buttonItem +
+            (selectedButton === "deliverables" ? ` ${styles.selected}` : "")
+          }
+        >
+          <GenericButton
+            className={styles.button}
+            action={() =>
+              selectedButton !== "deliverables"
+                ? setSelectedButton("deliverables")
+                : setSelectedButton(null)
+            }
+          >
             <span>{translationsProjects["deliverables"]}</span>
             <span>▶</span>
           </GenericButton>
@@ -58,8 +77,20 @@ export default function DeliverablesConstraintsResources({
             )}
           </ul>
         </div>
-        <div className={styles.buttonItem}>
-          <GenericButton className={styles.button}>
+        <div
+          className={
+            styles.buttonItem +
+            (selectedButton === "constraints" ? ` ${styles.selected}` : "")
+          }
+        >
+          <GenericButton
+            className={styles.button}
+            action={() =>
+              selectedButton !== "constraints"
+                ? setSelectedButton("constraints")
+                : setSelectedButton(null)
+            }
+          >
             <span>{translationsProjects["constraints"]}</span>
             <span>▶</span>
           </GenericButton>
@@ -77,14 +108,28 @@ export default function DeliverablesConstraintsResources({
             )}
           </ul>
         </div>
-        <div className={styles.buttonItem}>
-          <GenericButton className={styles.button}>
+        <div
+          className={
+            styles.buttonItem +
+            (selectedButton === "resources" ? ` ${styles.selected}` : "")
+          }
+        >
+          <GenericButton
+            className={styles.button}
+            action={() =>
+              selectedButton !== "resources"
+                ? setSelectedButton("resources")
+                : setSelectedButton(null)
+            }
+          >
             <span>{translationsProjects["resources"]}</span>
             <span>▶</span>
           </GenericButton>
           <ul>
             <li>
-              <span className={styles.name}>{translationsProjects["available"]}:</span>{" "}
+              <span className={styles.name}>
+                {translationsProjects["available"]}:
+              </span>{" "}
               <span>
                 {deliverablesConstraintsResources.resources.available.join(
                   ", "
@@ -92,7 +137,9 @@ export default function DeliverablesConstraintsResources({
               </span>
             </li>
             <li>
-              <span className={styles.name}>{translationsProjects["missing"]}:</span>{" "}
+              <span className={styles.name}>
+                {translationsProjects["missing"]}:
+              </span>{" "}
               <span>
                 {deliverablesConstraintsResources.resources.missing.join(", ")}
               </span>
