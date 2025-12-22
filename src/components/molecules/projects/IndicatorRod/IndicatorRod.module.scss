@@ -100,7 +100,7 @@
     span {
       display: block;
     }
-    &:active {
+    &.active {
       div {
         background-color: $accent-color-darker;
       }
@@ -159,9 +159,14 @@
   right: -0.75rem;
   div {
     border-radius: 50%;
-    background-color: $accent-color-darker;
     width: 1.5rem;
     height: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  &.active {
+    div {
+      background-color: $accent-color-darker;
+    }
   }
 }
 

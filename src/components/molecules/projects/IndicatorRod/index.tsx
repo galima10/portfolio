@@ -3,9 +3,12 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 import { keysOrder } from "@constants/projects";
 import CarrouselButton from "../CarrouselButton";
 
-
+import { useAppSelector } from "@hooks/redux";
 
 export default function IndicatorRod() {
+  const currentSectionId = useAppSelector(
+    (state) => state.navigation.currentIDSection
+  );
   return (
     <div
       className={styles.indicatorsContainer}
@@ -29,14 +32,20 @@ export default function IndicatorRod() {
           </li>
           {keysOrder.map((key) => (
             <li key={key}>
-              <CarrouselButton keyProp={key} keysOrder={keysOrder} />
+              <CarrouselButton
+                keyProp={key}
+                keysOrder={keysOrder}
+                currentSectionId={currentSectionId}
+              />
             </li>
           ))}
         </ul>
         <div className={styles.progress1} aria-hidden="true"></div>
         <div className={styles.endRod}>
           <GenericButton
-            className={styles.endPoint}
+            className={`${styles.endPoint} ${
+              currentSectionId === "projectCTA" && styles.active
+            }`}
             ariaLabel="Point d'arrivée"
           >
             <div></div>
