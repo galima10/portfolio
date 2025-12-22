@@ -7,11 +7,14 @@ export default function Contact() {
   return (
     <SectionWrapper
       orientation="right"
-      className={`${styles.contactSection} snapping`}
+      className={styles.contactSection}
       title="Le prochain cap"
-      id="contact"
     >
-      <ul aria-label="Pourquoi me contacter ?" className={styles.list}>
+      <ul
+        aria-label="Pourquoi me contacter ?"
+        className={`${styles.list} snapping`}
+        id="contact"
+      >
         <li>
           <p>
             <strong>Chaque projet raconte une histoire…</strong>
@@ -28,7 +31,10 @@ export default function Contact() {
           </p>
         </li>
       </ul>
-      <ContactForm className={styles.contactForm} id="contactForm" />
+      <ContactForm
+        className={`${styles.contactForm} snapping`}
+        id="contactForm"
+      />
     </SectionWrapper>
   );
 }

@@ -3,6 +3,7 @@ import styles from "./Projects.module.scss";
 import SectionWrapper from "@components/wrappers/SectionWrapper";
 
 import { projects } from "@constants/projects";
+import { slugify } from "@utils/slugify";
 
 import ProjectItem from "@components/molecules/main/ProjectItem";
 
@@ -12,12 +13,12 @@ export default function Projects() {
       orientation="left"
       title="Mes quêtes"
       id="projects"
-      className={`${styles.projectsSection} snapping`}
+      className={styles.projectsSection}
     >
       <ul className={styles.projectsList}>
         {projects.map((project, index) => {
           return (
-            <li key={project.id} className={styles.projectItem}>
+            <li key={project.id} className={`${styles.projectItem} snapping`} id={slugify(project.id)}>
               <ProjectItem
                 project={project}
                 orientation={index % 2 === 0 ? "left" : "right"}
