@@ -3,12 +3,12 @@ import GenericButton from "@components/atoms/appElements/GenericButton";
 import { keysOrder } from "@constants/projects";
 import CarrouselButton from "../CarrouselButton";
 
-import { useAppSelector } from "@hooks/redux";
+import { useIndicatorRod } from "@hooks/appElements/molecules/useIndicatorRod";
 
 export default function IndicatorRod() {
-  const currentSectionId = useAppSelector(
-    (state) => state.navigation.currentIDSection
-  );
+  const { progressBar1, progressBar2, endPoint, currentSectionId } =
+    useIndicatorRod(keysOrder);
+
   return (
     <div
       className={styles.indicatorsContainer}
@@ -21,7 +21,7 @@ export default function IndicatorRod() {
           <span>➧</span>
         </GenericButton>
         <ul>
-          <li className={styles.startPoint}>
+          <li className={styles.startPoint + " buttonIndicator"}>
             <GenericButton
               className={styles.indicator}
               ariaLabel="Point de départ"
@@ -31,7 +31,7 @@ export default function IndicatorRod() {
             </GenericButton>
           </li>
           {keysOrder.map((key) => (
-            <li key={key}>
+            <li key={key} id={`indicator-${key}`} className="buttonIndicator">
               <CarrouselButton
                 keyProp={key}
                 keysOrder={keysOrder}
@@ -40,20 +40,27 @@ export default function IndicatorRod() {
             </li>
           ))}
         </ul>
-        <div className={styles.progress1} aria-hidden="true"></div>
+        <div
+          className={styles.progress1}
+          aria-hidden="true"
+          ref={progressBar1}
+        ></div>
         <div className={styles.endRod}>
           <GenericButton
-            className={`${styles.endPoint} ${
-              currentSectionId === "projectCTA" && styles.active
-            }`}
+            className={styles.endPoint + " " + styles.indicator}
             ariaLabel="Point d'arrivée"
+            ref={endPoint}
           >
             <div></div>
           </GenericButton>
           <p className={styles.endLabel}>
             <strong>Ces expériences sont mon histoire.</strong>
           </p>
-          <div className={styles.progress2} aria-hidden="true"></div>
+          <div
+            className={styles.progress2}
+            aria-hidden="true"
+            ref={progressBar2}
+          ></div>
         </div>
       </div>
     </div>

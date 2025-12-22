@@ -10,6 +10,7 @@ interface NavExternalButtonProps {
   ariaLabel?: string;
   style?: React.CSSProperties;
   id?: string;
+  ref?: React.Ref<HTMLButtonElement>;
 }
 
 export default function GenericButton({
@@ -21,7 +22,8 @@ export default function GenericButton({
   onMouseLeave,
   ariaLabel,
   style,
-  id
+  id,
+  ref,
 }: NavExternalButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
@@ -35,6 +37,7 @@ export default function GenericButton({
       aria-label={ariaLabel}
       style={style}
       id={id}
+      ref={ref}
     >
       {children}
     </button>

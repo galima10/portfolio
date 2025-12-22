@@ -64,6 +64,7 @@
   height: 1.5rem;
   display: flex;
   align-items: center;
+  z-index: 1;
   div {
     flex-shrink: 0;
     border-radius: 50%;
@@ -116,20 +117,23 @@
 .startPoint {
   position: absolute;
   top: -0.75rem;
+  z-index: 1;
 }
 
 .progress1 {
   width: 100%;
-  height: 50%;
+  height: 0%;
   background-color: $accent-color-darker;
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: none;
   border-radius: 2rem;
+  transition: height 0.3s ease;
+  z-index: 0;
 }
 .progress2 {
-  width: 50%;
+  width: 0%;
   height: 100%;
   background-color: $accent-color-darker;
   position: absolute;
@@ -137,6 +141,8 @@
   left: 0;
   pointer-events: none;
   border-radius: 2rem;
+  transition: width 0.3s ease;
+  z-index: 0;
 }
 
 .endRod {
