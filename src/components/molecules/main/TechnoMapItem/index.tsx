@@ -46,7 +46,6 @@ export default function TechnoMapItem({
       action={() => {
         if (!selectedTechno) setSelectedTechno(category);
         setIsFocused(false);
-        
       }}
       id={id}
     >

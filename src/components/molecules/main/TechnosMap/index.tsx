@@ -8,6 +8,7 @@ import { useState } from "react";
 
 export default function TechnosMap() {
   const [selectedTechno, setSelectedTechno] = useState<string | null>(null);
+
   return (
     <div
       className={

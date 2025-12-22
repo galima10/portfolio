@@ -7,6 +7,12 @@
   @extend %section-base;
   margin-top: $section-margin;
   padding: 0;
+  // overflow: visible;
+  // margin-bottom: calc($section-height * 3);
+  @include responsive {
+    margin-bottom: 0;
+    // overflow: hidden;
+  }
 }
 
 
