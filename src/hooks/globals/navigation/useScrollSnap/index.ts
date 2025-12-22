@@ -1,7 +1,13 @@
 import { useEffect, useState, useRef } from "react";
+import { useAppDispatch, useAppSelector } from "@hooks/redux";
+import { setCurrentIDSection } from "@stores/features/navigationSlice";
 
 export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
-  const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
+  // const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
+  const dispatch = useAppDispatch();
+  const currentSectionId = useAppSelector(
+    (state) => state.navigation.currentIDSection
+  );
   const observer = useRef<IntersectionObserver | null>(null);
   const mutationObserver = useRef<MutationObserver | null>(null);
 
@@ -36,7 +42,7 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const id = entry.target.id; // Récupère l'id de l'élément visible
-              setCurrentSectionId(id || null); // Met à jour l'état avec l'id ou null si pas d'id
+              dispatch(setCurrentIDSection(id || ""));
             }
           });
         },
