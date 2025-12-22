@@ -7,7 +7,7 @@
   @extend %section-base;
   margin-top: $section-margin;
   padding: 0;
-  margin-bottom: calc($section-height * 2);
+  margin-bottom: calc($section-height * 3);
   overflow: visible;
   @include responsive {
     margin-bottom: 0;
