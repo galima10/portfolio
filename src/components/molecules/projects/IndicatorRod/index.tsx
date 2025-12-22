@@ -1,7 +1,6 @@
 import styles from "./IndicatorRod.module.scss";
 import GenericButton from "@components/atoms/appElements/GenericButton";
 import { keysOrder } from "@constants/projects";
-import { projectTitleDesc } from "@constants/global";
 import CarrouselButton from "../CarrouselButton";
 
 export default function IndicatorRod() {
