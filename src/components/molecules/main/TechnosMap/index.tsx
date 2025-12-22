@@ -30,6 +30,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="languages"
+          className="snapping childSnape"
         />
         <TechnoMapItem
           techno={{
@@ -40,6 +41,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="frameworks"
+          className="snapping childSnape"
         />
         <TechnoMapItem
           techno={{
@@ -50,6 +52,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="tools"
+          className="snapping childSnape"
         />
         <TechnoMapItem
           techno={{
@@ -60,21 +63,20 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="discussed"
+          className="snapping childSnape"
         />
       </div>
-      {selectedTechno && (
-        <>
-          <GenericButton
-            className={styles.backButton}
-            action={() => {
-              setSelectedTechno(null);
-            }}
-          >
-            ↩
-          </GenericButton>
-          <TechnosCaption />
-        </>
-      )}
+      <div className={styles.backAndCaption + (selectedTechno ? ` ${styles.visible}` : "")}>
+        <GenericButton
+          className={styles.backButton}
+          action={() => {
+            setSelectedTechno(null);
+          }}
+        >
+          ↩
+        </GenericButton>
+        <TechnosCaption />
+      </div>
     </div>
   );
 }

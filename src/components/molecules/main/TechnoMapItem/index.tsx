@@ -16,6 +16,7 @@ interface TechnoMapItemProps {
   setSelectedTechno: (techno: string | null) => void;
   selectedTechno: string | null;
   id?: string;
+  className?: string;
 }
 
 export default function TechnoMapItem({
@@ -23,6 +24,7 @@ export default function TechnoMapItem({
   setSelectedTechno,
   selectedTechno,
   id,
+  className
 }: TechnoMapItemProps) {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -34,7 +36,7 @@ export default function TechnoMapItem({
         " " +
         styles[techno.className] +
         (isFocused ? ` ${styles.focused}` : "") +
-        (selectedTechno ? ` ${styles.disabledBackgroud}` : "")
+        (selectedTechno ? ` ${styles.disabledBackgroud}` : "") + " " + (className ? className : "")
       }
       onMouseEnter={() => {
         if (selectedTechno !== category && !selectedTechno) setIsFocused(true);

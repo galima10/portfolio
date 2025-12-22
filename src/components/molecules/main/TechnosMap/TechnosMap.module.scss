@@ -4,20 +4,17 @@
 @use "@styles/partials/placeholders" as *;
 
 .technosMapContainer {
-  padding: $section-padding;
-  height: $section-height;
+  height: calc($section-height * 4);
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-
   justify-content: center;
   align-items: center;
   @include responsive {
+    height: $section-height;
     overflow: hidden;
-    padding-left: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem $padding-global 1rem 4rem;
     align-items: center;
   }
 }
@@ -27,12 +24,18 @@
   position: relative;
   height: 100%;
   width: 100%;
-  padding: 6rem 2rem;
+  padding: 6rem $padding-global;
   transition: transform 1.5s ease, height 1.5s ease-in;
   transform: none;
   will-change: transform, height;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
+  overflow: visible;
+  // overflow: scroll;
+  // scroll-snap-type: y mandatory;
+  // scrollbar-width: none; /* Pour Firefox */
+  // -ms-overflow-style: none; /* Pour Internet Explorer */
+  // &::-webkit-scrollbar {
+  //   display: none; /* Pour Chrome, Safari et Edge */
+  // }
   & > * {
     transition: transform 0.005s ease-in-out;
   }
@@ -111,5 +114,18 @@
   @include responsive {
     bottom: 2rem;
     left: $padding-global;
+  }
+}
+
+.backAndCaption {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

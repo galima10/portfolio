@@ -12,10 +12,10 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
       return;
     }
 
-    // Récupérer tous les descendants ayant un point de snap
-    const snaps = Array.from(
-      rootElement.querySelectorAll(".snapping")
-    ) as HTMLElement[];
+    // Récupérer tous les descendants ayant la classe .snapping, peu importe leur profondeur
+    const snaps: HTMLElement[] = Array.from(
+      rootElement.querySelectorAll(":scope > * .snapping")
+    );
     console.log("Snapping elements found:", snaps);
 
     if (snaps.length === 0) {
