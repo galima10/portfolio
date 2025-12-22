@@ -21,6 +21,7 @@ export default function IndicatorRod() {
             <GenericButton
               className={styles.indicator}
               ariaLabel="Point de départ"
+              to={`#carrousel-context`}
             >
               <div></div>
             </GenericButton>

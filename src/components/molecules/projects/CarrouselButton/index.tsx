@@ -12,6 +12,7 @@ export default function CarrouselButton({ keyProp }: { keyProp: string }) {
       onMouseEnter={() => setIsFocused(true)}
       onMouseLeave={() => setIsFocused(false)}
       ariaLabel={`Bouton carrousel pour ${keyProp && projectTitleDesc[keyProp]}`}
+      to={`#carrousel-${keyProp}`}
     >
       <div></div>
       <span>
