@@ -40,7 +40,7 @@ export default function ProjectCarrousel({
         <ul className={styles.slider}>
           {descAndProofs &&
             Object.entries(descAndProofs).map(([key, value]) => (
-              <li key={key} id={`carrousel-${key}`}>
+              <li key={key} id={`carrousel-${key}`} className="snapping">
                 {projectsSlides[key] &&
                   React.createElement(projectsSlides[key], { [key]: value })}
               </li>

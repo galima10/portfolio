@@ -1,7 +1,7 @@
 import styles from "../Carrousel.module.scss";
 
 import GenericButton from "@components/atoms/appElements/GenericButton";
-import { translationsProjects } from "@constants/global";
+import { projectTitleDesc } from "@constants/global";
 
 interface PlanningSlideProps {
   planning: {
@@ -15,7 +15,7 @@ interface PlanningSlideProps {
 export default function PlanningSlide({ planning }: PlanningSlideProps) {
   return (
     <div className={styles.slides} aria-label="Diapositive de planification du projet" role="region">
-      <h2 className="project-h2">{translationsProjects["planning"]}</h2>
+      <h2 className="project-h2">{projectTitleDesc["planning"]}</h2>
       <div className={`${styles.slideContent} ${styles.planningSlide}`}>
         <ul>
           {planning.map((plan, index) => (
