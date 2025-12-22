@@ -12,7 +12,7 @@ export default function IndicatorRod() {
       role="region"
     >
       <div className={styles.indicators}>
-        <GenericButton className={styles.startButton}>
+        <GenericButton className={styles.startButton} to="#carrousel-context">
           Plongez dans l’aventure
           <span>➧</span>
         </GenericButton>
@@ -21,7 +21,7 @@ export default function IndicatorRod() {
             <GenericButton
               className={styles.indicator}
               ariaLabel="Point de départ"
-              to={`#carrousel-context`}
+              to="#carrousel-context"
             >
               <div></div>
             </GenericButton>
