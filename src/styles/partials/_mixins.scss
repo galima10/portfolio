@@ -138,13 +138,17 @@
     @if $side == "left" {
       transform-origin: top left;
       transform: rotate(-90deg) translate(-10rem, 0);
-      left: $h2-offset;
-      transform: rotate(-90deg) translate(-50%, 0);
+      left: calc($h2-offset - 10rem);
+      transition: left 0.2s ease-out;
+      transform: rotate(-90deg) translate(calc(-50% - ($navbar-height / 2)), 0);
+      
     } @else if $side == "right" {
       transform-origin: top right;
       transform: rotate(90deg) translate(10rem, 0);
-      right: $h2-offset;
-      transform: rotate(90deg) translate(50%, 0);
+      right: calc($h2-offset - 10rem);
+      transition: right 0.2s ease-out;
+      transform: rotate(90deg) translate(calc(50% + ($navbar-height / 2)), 0);
+      
     }
   }
 }

@@ -12,13 +12,17 @@ export default function Projects() {
     <SectionWrapper
       orientation="left"
       title="Mes quêtes"
-      id="projects"
+      id="group3-projects"
       className={styles.projectsSection}
     >
       <ul className={styles.projectsList}>
         {projects.map((project, index) => {
           return (
-            <li key={project.id} className={`${styles.projectItem} snapping`} id={slugify(project.id)}>
+            <li
+              key={project.id}
+              className={`${styles.projectItem} snapping`}
+              id={`group3-${slugify(project.id)}`}
+            >
               <ProjectItem
                 project={project}
                 orientation={index % 2 === 0 ? "left" : "right"}

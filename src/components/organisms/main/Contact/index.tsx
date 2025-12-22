@@ -9,11 +9,12 @@ export default function Contact() {
       orientation="right"
       className={styles.contactSection}
       title="Le prochain cap"
+      id="group4-contactSection"
     >
       <ul
         aria-label="Pourquoi me contacter ?"
         className={`${styles.list} snapping`}
-        id="contact"
+        id="group4-contact"
       >
         <li>
           <p>
@@ -33,7 +34,7 @@ export default function Contact() {
       </ul>
       <ContactForm
         className={`${styles.contactForm} snapping`}
-        id="contactForm"
+        id="group4-contactForm"
       />
     </SectionWrapper>
   );

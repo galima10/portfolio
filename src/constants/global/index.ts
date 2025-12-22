@@ -5,19 +5,19 @@ export const strokeWidth = {
 };
 
 export const headerNavLinks = [
-  { label: "Présentation", link: "/#presentation" },
+  { label: "Présentation", link: "/#group1-presentation" },
   { label: "Compétences", link: "/#skills" },
-  { label: "Outils & Technos", link: "/#technos" },
-  { label: "Mes projets", link: "/#projects" },
-  { label: "Me contacter", link: "#contactForm", isCTA: true },
+  { label: "Outils & Technos", link: "/#group2-technos" },
+  { label: "Mes projets", link: "/#group3-projects" },
+  { label: "Me contacter", link: "#group4-contactForm", isCTA: true },
 ];
 
 export const footerNavLinks = [
-  { label: "Présentation", link: "/#presentation" },
+  { label: "Présentation", link: "/#group1-presentation" },
   { label: "Compétences", link: "/#skills" },
-  { label: "Outils & Technos", link: "/#technos" },
-  { label: "Mes projets", link: "/#projects" },
-  { label: "Me contacter", link: "#contactForm" },
+  { label: "Outils & Technos", link: "/#group2-technos" },
+  { label: "Mes projets", link: "/#group3-projects" },
+  { label: "Me contacter", link: "#group4-contactForm" },
 ];
 
 export const projectTitleDesc = {

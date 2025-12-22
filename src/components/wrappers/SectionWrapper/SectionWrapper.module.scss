@@ -16,10 +16,20 @@
 .left {
   h2 {
     @include h2-position("left");
+    @include responsive {
+      &.visible {
+        left: $h2-offset !important;
+      }
+    }
   }
 }
 .right {
   h2 {
     @include h2-position("right");
+    @include responsive {
+      &.visible {
+        right: $h2-offset !important;
+      }
+    }
   }
 }

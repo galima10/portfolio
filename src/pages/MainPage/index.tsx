@@ -19,7 +19,7 @@ export default function MainPage() {
 
   useScrollToHashOnLoad();
   useScrollSnap("main");
-  // useScrollPage();
+
   return (
     <>
       <Hero />

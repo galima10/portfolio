@@ -12,7 +12,7 @@ export default function Technos() {
       title="Mes territoires"
       orientation="right"
       className={`${styles.technos} ${!isMobile ? "snapping" : ""}`}
-      id="technos"
+      id="group2-technos"
     >
       <TechnosMap />
     </SectionWrapper>

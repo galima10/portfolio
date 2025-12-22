@@ -39,6 +39,7 @@ main {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  
   @include responsive {
     padding: 0;
     background: none;
@@ -46,7 +47,7 @@ main {
     color: $primary-color;
     background: $gradient;
     width: $section-height;
-    position: absolute;
+    // position: absolute;
     border-radius: 0 0 2.75rem 2.75rem;
   }
 }

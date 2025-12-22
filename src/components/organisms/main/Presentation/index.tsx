@@ -12,7 +12,7 @@ export default function Presentation() {
     return (
       <li
         key={index}
-        id={`description-item-${index + 1}`}
+        id={`group1-description-item-${index + 1}`}
         className={`${styles.descriptionItem} snapping`}
       >
           {parts.map((part, partIndex) => {
@@ -40,7 +40,7 @@ export default function Presentation() {
       title="Qui suis-je ?"
       orientation="right"
       className={`${styles.presentation} snapping`}
-      id="presentation"
+      id="group1-presentation"
     >
       <div className={styles.description}>
         <figure className={styles.infos}>
