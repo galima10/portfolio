@@ -33,8 +33,10 @@ export default function ProofsSlide({ proofs }: ProofsSlideProps) {
                 <ul>
                   {proof.list.map((item, itemIndex) => (
                     <li key={`proof-item-${itemIndex}`}>
-                      <img src={item.imgSrc} alt={item.name} />
-                      <strong>{item.name} - {item.type}</strong>
+                      <img src={item.imgSrc} alt={item.name} loading="lazy" />
+                      <strong>
+                        {item.name} - {item.type}
+                      </strong>
                     </li>
                   ))}
                 </ul>
