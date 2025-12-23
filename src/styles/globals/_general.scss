@@ -12,7 +12,12 @@ main {
   height: $section-height;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  -webkit-scroll-snap-type: y mandatory;
   position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  will-change: scroll-position;
+  overscroll-behavior: contain;
 }
 
 .snapping {
@@ -36,7 +41,7 @@ main {
   -webkit-text-fill-color: $primary-color;
   color: $primary-color;
   background: $gradient;
-  padding: .5rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
