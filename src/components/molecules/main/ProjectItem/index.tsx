@@ -45,13 +45,13 @@ export default function ProjectItem({
       className={styles.projectItem + " " + styles[orientation]}
       id={slugify(id)}
     >
-      <hgroup className={styles.projectInfo}>
+      <hgroup className={`${styles.projectInfo} timeline-point`}>
         <h3>{id}</h3>
         <p>{hook}</p>
       </hgroup>
       <GenericButton
         ariaLabel={`En savoir plus sur le projet ${name}`}
-        className={styles.projectButton}
+        className={`${styles.projectButton} timeline-point`}
         onMouseEnter={() => setIsFocused(true)}
         onMouseLeave={() => setIsFocused(false)}
         to={`/projects/${slug}`}

@@ -20,7 +20,7 @@ export default function Projects() {
           return (
             <li
               key={project.id}
-              className={`${styles.projectItem} snapping timeline-point`}
+              className={`${styles.projectItem} snapping`}
               id={`group3-${slugify(project.id)}`}
             >
               <ProjectItem
