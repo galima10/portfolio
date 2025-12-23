@@ -45,6 +45,7 @@ export default function NavLinks({
             <AppLogo
               className={styles.logo}
               to="/#hero"
+              action={handleCloseMenu}
             />
           </li>
         </>
