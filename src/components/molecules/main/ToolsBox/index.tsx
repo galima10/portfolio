@@ -12,15 +12,22 @@ interface ToolsBoxProps {
   selectedTool: string | null;
 }
 
-export default function ToolsBox({ setSelectedTool, selectedTool }: ToolsBoxProps ) {
-  const {
-    selectedItemId,
-    handleClick,
-  } = useToolsBox(setSelectedTool);
+export default function ToolsBox({
+  setSelectedTool,
+  selectedTool,
+}: ToolsBoxProps) {
+  const { selectedItemId, handleClick } = useToolsBox(setSelectedTool);
   return (
-    <div className={styles.toolsContainer}>
+    <div
+      className={`${styles.toolsContainer} timeline-point`}
+      data-timeline-index={8}
+    >
       <Handle className={styles.handle} />
-      <ul className={styles.toolsList + (selectedItemId ? ` ${styles.selected}` : "")}>
+      <ul
+        className={
+          styles.toolsList + (selectedItemId ? ` ${styles.selected}` : "")
+        }
+      >
         {skills.map((skill) => {
           return (
             <ToolItem
