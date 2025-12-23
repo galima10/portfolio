@@ -8,6 +8,14 @@ import MeamiProof6 from "@assets/images/projects/meami/frame-vue-liste.webp";
 import MeamiProof7 from "@assets/images/projects/meami/frame-vue-modifier.webp";
 
 import TeleconsultationPreview from "@assets/images/projects/teleconsultation/preview-teleconsultation.webp";
+import TeleconsultationProof1 from "@assets/images/projects/teleconsultation/moodboard-piste-1.webp";
+import TeleconsultationProof2 from "@assets/images/projects/teleconsultation/moodboard-piste-2.webp";
+import TeleconsultationProof3 from "@assets/images/projects/teleconsultation/planche-inspirations-ui.webp";
+import TeleconsultationProof4 from "@assets/images/projects/teleconsultation/frame-interface-panneau.webp";
+import TeleconsultationProof5 from "@assets/images/projects/teleconsultation/frame-interface-salle-patient.webp";
+import TeleconsultationProof6 from "@assets/images/projects/teleconsultation/frame-interface-salle-praticien.webp";
+import TeleconsultationProof7 from "@assets/images/projects/teleconsultation/frame-selection-salle.webp";
+
 import AremacsPreview from "@assets/images/projects/aremacs/preview-aremacs.webp";
 
 import { ProjectType } from "@types";
@@ -130,14 +138,39 @@ export const projects: ProjectType[] = [
       {
         list: [
           {
-            name: "App Store",
-            type: "application/mobile",
-            imgSrc: fallbackImg,
+            name: "Moodboard : Piste 1",
+            type: "design/graphic",
+            imgSrc: TeleconsultationProof1,
           },
           {
-            name: "Google Play",
-            type: "application/mobile",
-            imgSrc: fallbackImg,
+            name: "Moodboard : Piste 2",
+            type: "design/graphic",
+            imgSrc: TeleconsultationProof2,
+          },
+          {
+            name: "Planche d’inspirations UI",
+            type: "design/ui-ux",
+            imgSrc: TeleconsultationProof3,
+          },
+          {
+            name: "Maquette : Interface Panneau de contrôle",
+            type: "design/ui-ux",
+            imgSrc: TeleconsultationProof4,
+          },
+          {
+            name: "Maquette : Interface Salle côté Patient",
+            type: "design/ui-ux",
+            imgSrc: TeleconsultationProof5,
+          },
+          {
+            name: "Maquette : Interface Salle côté Patient",
+            type: "design/ui-ux",
+            imgSrc: TeleconsultationProof6,
+          },
+          {
+            name: "Maquette : Sélection de salle",
+            type: "design/ui-ux",
+            imgSrc: TeleconsultationProof7,
           },
         ],
       },
@@ -210,4 +243,3 @@ export const keysOrder = [
   "proofs",
   "conclusion",
 ];
-
