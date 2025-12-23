@@ -93,12 +93,11 @@
 
 .backButton {
   position: absolute;
-  pointer-events: auto;
   left: 0.5rem;
-  bottom: 6rem;
+  bottom: 10rem;
   width: 3.5rem;
   height: 3.5rem;
-  font-size: 3rem;
+  font-size: 5rem;
   color: $accent-color-darker;
   transition: color 0.3s ease-in-out;
   font-weight: $bold;
@@ -106,6 +105,7 @@
     color: $tertiary-color;
   }
   @include responsive {
+    font-size: 3rem;
     bottom: 2rem;
     left: $padding-global;
   }
@@ -120,6 +120,9 @@
   bottom: 0;
   &.visible {
     opacity: 1;
+    button {
+      pointer-events: auto;
+    }
   }
   @include responsive {
     position: absolute;

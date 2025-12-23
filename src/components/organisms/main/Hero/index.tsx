@@ -25,7 +25,7 @@ export default function Hero() {
         type="secondary"
         action={handleDownload}
       />
-      <GenericButton className={styles.ctaLink} to="#presentation">
+      <GenericButton className={styles.ctaLink} to="#group1-presentation">
         Une aventure humaine et pleine de sens
         <span>➧</span>
       </GenericButton>

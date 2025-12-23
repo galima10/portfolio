@@ -26,20 +26,20 @@ export default function MainPage() {
       <Presentation />
       <SectionCTA
         text="Mon histoire commence ici, et peut-être que la suite s’écrit avec vous."
-        to="#contactForm"
+        to="#group4-contactForm"
         id="afterPresentation"
       />
       <Skills />
       <Technos />
       <SectionCTA
         text="Voici ce qui m’accompagne au quotidien, mais avec les bonnes personnes, tout prend un vrai sens."
-        to="#contactForm"
+        to="#group4-contactForm"
         id="afterSkills"
       />
       <Projects />
       <SectionCTA
         text="Chaque aventure m’a fait avancer. Et si la prochaine était la vôtre ?"
-        to="#contactForm"
+        to="#group4-contactForm"
         id="afterProjects"
       />
       <Contact />

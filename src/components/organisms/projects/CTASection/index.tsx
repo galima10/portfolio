@@ -10,7 +10,7 @@ export default function CTASection() {
           Et pourquoi ne pas écrire la prochaine ensemble ? Parlons-en !
         </strong>
       </p>
-      <GenericButton className={styles.ctaButton} to="#contactForm">
+      <GenericButton className={styles.ctaButton} to="#group4-contactForm">
         ▶
       </GenericButton>
     </div>

@@ -22,8 +22,8 @@ export function useSectionWrapper(id?: string) {
     if (isMobile && isVisible) {
       setShowTitle(true); // Affiche le titre
       timer = setTimeout(() => {
-        setShowTitle(false); // Cache le titre après 1.5 secondes
-      }, 1500);
+        setShowTitle(false); // Cache le titre après 2 secondes
+      }, 2 * 1000);
     } else {
       setShowTitle(false); // Cache immédiatement si on quitte le groupe
     }

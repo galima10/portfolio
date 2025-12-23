@@ -1,4 +1,3 @@
-import { skills } from "@constants/skills";
 
 export const strokeWidth = {
   heavy: 4,
