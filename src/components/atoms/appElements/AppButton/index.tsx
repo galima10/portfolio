@@ -8,6 +8,7 @@ interface AppButtonProps {
   className?: string;
   action?: () => void;
   to?: string;
+  timeStep?: number;
 }
 
 export default function AppButton({
@@ -16,11 +17,16 @@ export default function AppButton({
   className = "",
   action,
   to,
+  timeStep,
 }: AppButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
 
   return (
-    <button className={`${styles[type]} ${className}`} onClick={handleClick}>
+    <button
+      className={`${styles[type]} ${className}`}
+      onClick={handleClick}
+      data-timeline-index={timeStep || null}
+    >
       {label}
     </button>
   );

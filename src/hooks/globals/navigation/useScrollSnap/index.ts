@@ -12,7 +12,6 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
 
   useEffect(() => {
     const rootElement = document.querySelector(rootSelector);
-    console.log("Root element:", rootElement);
     if (!rootElement) {
       console.error(`Element with selector "${rootSelector}" not found.`);
       return;
@@ -23,7 +22,7 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
       const snaps: HTMLElement[] = Array.from(
         rootElement.querySelectorAll(".snapping")
       );
-      console.log("Snapping elements found:", snaps);
+      // console.log("Snapping elements found:", snaps);
 
       if (snaps.length === 0) {
         console.error("No snap elements found inside the root.");
@@ -75,9 +74,9 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
     };
   }, [rootSelector, threshold]);
 
-  useEffect(() => {
-    console.log("Current Section ID:", currentSectionId);
-  }, [currentSectionId]);
+  // useEffect(() => {
+  //   console.log("Current Section ID:", currentSectionId);
+  // }, [currentSectionId]);
 
   return currentSectionId;
 }

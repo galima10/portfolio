@@ -15,10 +15,12 @@ import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHash
 
 import { useScrollSnap } from "@hooks/globals/navigation/useScrollSnap";
 
-export default function MainPage() {
+import { useGetTimeLinePoint } from "@hooks/globals/useGetTimeLinePoint";
 
+export default function MainPage() {
   useScrollToHashOnLoad();
   useScrollSnap("main");
+  useGetTimeLinePoint();
 
   return (
     <>

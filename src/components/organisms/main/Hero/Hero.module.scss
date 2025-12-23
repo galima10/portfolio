@@ -5,7 +5,7 @@
 @use "@styles/partials/keyframes" as *;
 
 .hero {
-  padding: 2rem $padding-global 8rem;
+  padding: 2rem $padding-global 10rem;
   width: 100%;
   height: calc(100svh - $navbar-height);
   display: flex;
@@ -14,14 +14,13 @@
   justify-content: center;
   position: relative;
   gap: 16%;
-  
+
   @include responsive {
     padding: 4rem $padding-global 6rem;
     display: grid;
     grid-template-columns: 50% 10% 1fr auto auto auto;
     grid-template-rows: auto auto auto;
     gap: 5rem 0;
-    
   }
 }
 
@@ -63,5 +62,14 @@
     position: relative;
     grid-column: 1 / span 6;
     grid-row: 3;
+  }
+}
+
+.timeLinePoint {
+  position: absolute;
+  top: 15rem;
+  @include responsive {
+    position: unset;
+    margin-left: 2rem;
   }
 }
