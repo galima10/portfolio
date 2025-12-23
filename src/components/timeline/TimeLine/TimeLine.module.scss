@@ -8,7 +8,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-  //   z-index: 3;
 }
 
 .timelineSvg {
@@ -17,6 +16,13 @@
   width: 100%; /* Assurez-vous que la largeur est correcte */
   height: 100%; /* Assurez-vous que la hauteur est correcte */
   pointer-events: none;
-  z-index: 3;
   overflow: visible; /* Permet d'afficher les chemins qui dépassent */
+  z-index: -2;
+  path {
+    stroke: $timeline-color;
+    stroke-width: 12;
+    fill: none;
+    stroke-linejoin: round; // Coins arrondis
+    stroke-linecap: round;
+  }
 }
