@@ -9,6 +9,7 @@
   padding: 0;
   margin-bottom: calc($section-height * 3);
   overflow: visible;
+  background-color: $primary-color;
   @include responsive {
     margin-bottom: 0;
     overflow: hidden;

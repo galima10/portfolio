@@ -36,6 +36,7 @@
 
 .ctaSecondary {
   align-self: flex-end;
+  background-color: $primary-color;
   @include responsive {
     grid-column: 5 / span 2;
     grid-row: 2;
@@ -44,6 +45,8 @@
 }
 
 .ctaLink {
+  background-color: $primary-color;
+  border: 1rem solid $primary-color;
   text-align: center;
   color: $secondary-color;
   width: 12rem;

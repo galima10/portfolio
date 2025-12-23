@@ -7,6 +7,7 @@ import photo from "@images/photo_de_profil.webp";
 import { biographyList } from "@constants/biography";
 
 import TimeLinePoint from "@components/atoms/appElements/TimeLinePoint";
+import { useCheckIsMobile } from "@hooks/globals/useCheckIsMobile";
 
 export default function Presentation() {
   const formattedBiography = biographyList.map((section, index) => {
@@ -43,6 +44,8 @@ export default function Presentation() {
       </li>
     );
   });
+
+  const { isMobile } = useCheckIsMobile();
   return (
     <SectionWrapper
       title="Qui suis-je ?"
@@ -51,7 +54,7 @@ export default function Presentation() {
       id="group1-presentation"
     >
       <div className={styles.description}>
-        <figure className={styles.infos}>
+        <figure className={`${styles.infos} ${isMobile ? "timeline-point" : ""}`}>
           <img src={photo} alt="Photo de profil" loading="lazy" />
           <figcaption>
             <p className={styles.name}>

@@ -51,6 +51,9 @@
 }
 
 .projectInfo {
+  background-color: $primary-color;
+  border-top: 1rem solid $primary-color;
+  border-bottom: 1rem solid $primary-color;
   width: 17rem;
   display: flex;
   flex-direction: column;
