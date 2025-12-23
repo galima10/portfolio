@@ -58,14 +58,8 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
 
       const next = coords[i + 1];
 
-      if (i === 0 && !isMobile) {
-        const path = `M ${p.x} ${p.y} L ${next.x} ${next.y}`;
-        newPaths.push(path);
-        return;
-      }
-
       // Si les points sont entre 0, 1 et 2, créer une ligne droite
-      if (i === 1 || i === 2) {
+      if (i === 0 || i === 1 || i === 2) {
         const path = `M ${p.x} ${p.y} L ${next.x} ${next.y}`;
         newPaths.push(path);
         return;
