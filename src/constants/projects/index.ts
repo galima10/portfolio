@@ -1,6 +1,6 @@
 import MeamiPreview from "@assets/images/projects/meami/preview-meami.jpg";
-import Teleconsultation from "@assets/images/projects/canard_laque.webp";
-import Aremacs from "@assets/images/projects/st_jacques.webp";
+import TeleconsultationPreview from "@assets/images/projects/teleconsultation/preview-teleconsultation.jpg";
+import AremacsPreview from "@assets/images/projects/aremacs/preview-aremacs.jpg";
 
 import { ProjectType } from "@types";
 
@@ -91,7 +91,7 @@ export const projects: ProjectType[] = [
         icon: "bootstrap",
       },
     ],
-    preview: Teleconsultation,
+    preview: TeleconsultationPreview,
     description: teleconsultationData,
     proofs: [
       {
@@ -131,7 +131,7 @@ export const projects: ProjectType[] = [
         icon: "javascript",
       },
     ],
-    preview: Aremacs,
+    preview: AremacsPreview,
     description: aremacsData,
     proofs: [
       {
