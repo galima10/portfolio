@@ -1,11 +1,24 @@
 import { useEffect, useState } from "react";
 import { useCheckIsMobile } from "../useCheckIsMobile";
-// import { useAppSelector } from "@hooks/redux";
 
 export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
-  const { isMobile } = useCheckIsMobile();
-  const [timelinePoints, setTimelinePoints] = useState({});
+  const { isMobile, updateIsMobile } = useCheckIsMobile();
+  const [timelinePoints, setTimelinePoints] = useState<Record<number, Element>>({});
   const [paths, setPaths] = useState<string[]>([]);
+  const [resizeTrigger, setResizeTrigger] = useState(0); // État pour forcer la mise à jour au resize
+
+  useEffect(() => {
+    // Fonction pour gérer le redimensionnement de l'écran
+    const handleResize = () => {
+      updateIsMobile(); // Met à jour l'état `isMobile`
+      setResizeTrigger((prev) => prev + 1); // Force une mise à jour
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [updateIsMobile]);
 
   useEffect(() => {
     if (isMobile === null) return;
@@ -20,7 +33,6 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
   useEffect(() => {
     if (!ref || Object.keys(timelinePoints).length === 0) return;
 
-    // Récupérer la balise <main> avec querySelector
     const mainElement = document.querySelector("main");
     if (!mainElement) {
       console.error("Main element not found in the DOM.");
@@ -29,11 +41,11 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
 
     const coords = Object.values(timelinePoints).map((p: Element) => {
       const r = p.getBoundingClientRect();
-      const mainRect = mainElement.getBoundingClientRect(); // Coordonnées de <main>
+      const mainRect = mainElement.getBoundingClientRect();
 
       return {
-        x: r.left + r.width / 2 - mainRect.left, // Ajuster par rapport à <main>
-        y: r.top + r.height / 2 - mainRect.top + mainElement.scrollTop, // Ajuster avec le scroll de <main>
+        x: r.left + r.width / 2 - mainRect.left,
+        y: r.top + r.height / 2 - mainRect.top + mainElement.scrollTop,
       };
     });
 
@@ -42,12 +54,38 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
       if (!coords[i + 1]) return;
 
       const next = coords[i + 1];
-      const path = `M ${p.x} ${p.y} L ${next.x} ${next.y}`;
+
+      if (i === 0 && !isMobile) {
+        const path = `M ${p.x} ${p.y} L ${next.x} ${next.y}`;
+        newPaths.push(path);
+        return;
+      }
+
+      // Si les points sont entre 0, 1 et 2, créer une ligne droite
+      if (i === 1 || i === 2) {
+        const path = `M ${p.x} ${p.y} L ${next.x} ${next.y}`;
+        newPaths.push(path);
+        return;
+      }
+
+      // Calculer les points de contrôle pour une tangence verticale
+      const controlPoint1 = {
+        x: p.x, // Aligné verticalement avec le point actuel
+        y: p.y + 150, // Décalage vers le bas
+      };
+
+      const controlPoint2 = {
+        x: next.x, // Aligné verticalement avec le point suivant
+        y: next.y - 150, // Décalage vers le haut
+      };
+
+      // Utiliser une courbe de Bézier cubique
+      const path = `M ${p.x} ${p.y} C ${controlPoint1.x} ${controlPoint1.y}, ${controlPoint2.x} ${controlPoint2.y}, ${next.x} ${next.y}`;
       newPaths.push(path);
     });
 
     setPaths(newPaths);
-  }, [timelinePoints]);
+  }, [timelinePoints, isMobile, resizeTrigger]); // Ajout de `resizeTrigger` comme dépendance
 
   return { paths };
 }

@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export function useCheckIsMobile() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
+  // Fonction pour vérifier si l'écran est mobile
+  const checkIsMobile = useCallback(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, []);
+
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkIsMobile();
+    checkIsMobile(); // Vérification initiale
     window.addEventListener("resize", checkIsMobile);
     return () => {
       window.removeEventListener("resize", checkIsMobile);
     };
-  }, []);
-  return { isMobile };
+  }, [checkIsMobile]);
+
+  return { isMobile, updateIsMobile: checkIsMobile };
 }

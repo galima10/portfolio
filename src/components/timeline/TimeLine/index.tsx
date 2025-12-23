@@ -12,9 +12,6 @@ export default function TimeLine() {
           <path
             key={index}
             d={path}
-            // stroke="black"
-            // strokeWidth="2"
-            // fill="none"
           />
         ))}
       </svg>
