@@ -3,12 +3,14 @@ import { useCheckIsMobile } from "../useCheckIsMobile";
 
 export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
   const { isMobile, updateIsMobile } = useCheckIsMobile();
-  const [timelinePoints, setTimelinePoints] = useState<Record<number, Element>>({});
+  const [timelinePoints, setTimelinePoints] = useState<Record<number, Element>>(
+    {}
+  );
   const [paths, setPaths] = useState<string[]>([]);
   const [resizeTrigger, setResizeTrigger] = useState(0); // État pour forcer la mise à jour au resize
 
   // Variable pour contrôler l'intensité de la courbe
-  const curveIntensity = 200; // Ajustez cette valeur pour changer l'intensité
+  const curveIntensity = 250; // Ajustez cette valeur pour changer l'intensité
 
   useEffect(() => {
     // Fonction pour gérer le redimensionnement de l'écran
@@ -58,9 +60,14 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
 
       const next = coords[i + 1];
 
-      // Si les points sont entre 0, 1 et 2, créer une ligne droite
       if (i === 0 || i === 1 || i === 2) {
-        const path = `M ${p.x} ${p.y} L ${next.x} ${next.y}`;
+        const verticalOffset = i === 2 ? 50 : -50; // Décalage positif pour l'index 2, négatif pour 0 et 1
+        const controlPoint = {
+          x: (p.x + next.x) / 2, // Point de contrôle au milieu horizontalement
+          y: (p.y + next.y) / 2 + verticalOffset, // Décalage vertical pour la courbure
+        };
+
+        const path = `M ${p.x} ${p.y} Q ${controlPoint.x} ${controlPoint.y} ${next.x} ${next.y}`;
         newPaths.push(path);
         return;
       }
