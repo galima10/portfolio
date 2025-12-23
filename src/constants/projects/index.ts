@@ -1,4 +1,4 @@
-import Meami from "@assets/images/projects/boeuf_citronnelle.webp";
+import MeamiPreview from "@assets/images/projects/meami/preview-meami.jpg";
 import Teleconsultation from "@assets/images/projects/canard_laque.webp";
 import Aremacs from "@assets/images/projects/st_jacques.webp";
 
@@ -47,7 +47,7 @@ export const projects: ProjectType[] = [
         icon: "jest",
       },
     ],
-    preview: Meami,
+    preview: MeamiPreview,
     description: meamiData,
     proofs: [
       {
