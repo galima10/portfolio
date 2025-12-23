@@ -13,7 +13,11 @@ export default function ContactForm({ className, id }: ContactFormProps) {
     event.preventDefault();
   }
   return (
-    <div className={`${styles.contactForm} ${className}`} id={id}>
+    <div
+      className={`${styles.contactForm} ${className} timeline-point`}
+      id={id}
+      data-timeline-index={21}
+    >
       <h3>Écrivons la suite, dès maintenant</h3>
       <form action="" onSubmit={handleSubmit}>
         <AppInput

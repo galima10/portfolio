@@ -17,7 +17,6 @@ interface TechnoMapItemProps {
   selectedTechno: string | null;
   id?: string;
   className?: string;
-  timeStep?: number;
 }
 
 export default function TechnoMapItem({
@@ -26,7 +25,6 @@ export default function TechnoMapItem({
   selectedTechno,
   id,
   className,
-  timeStep
 }: TechnoMapItemProps) {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -52,7 +50,6 @@ export default function TechnoMapItem({
         setIsFocused(false);
       }}
       id={id}
-      timeStep={timeStep}
     >
       <AppSVG name={techno.slug} className={styles.map} />
       <h3>{techno.name}</h3>

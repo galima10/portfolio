@@ -6,20 +6,17 @@ interface SectionCTAProps {
   text: string;
   to?: string;
   id?: string;
-  timeStep?: number;
 }
 
 export default function SectionCTA({
   text,
   to,
   id,
-  timeStep,
 }: SectionCTAProps) {
   return (
     <div
       className={`${styles.sectionCTA} snapping timeline-point`}
       id={id}
-      data-timeline-index={timeStep || null}
     >
       <p className={styles.text}>
         <strong>{text}</strong>

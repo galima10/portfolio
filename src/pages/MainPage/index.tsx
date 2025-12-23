@@ -30,7 +30,6 @@ export default function MainPage() {
         text="Mon histoire commence ici, et peut-être que la suite s’écrit avec vous."
         to="#group4-contactForm"
         id="afterPresentation"
-        timeStep={7}
       />
       <Skills />
       <Technos />

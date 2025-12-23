@@ -22,7 +22,6 @@ export default function Projects() {
               key={project.id}
               className={`${styles.projectItem} snapping timeline-point`}
               id={`group3-${slugify(project.id)}`}
-              data-timeline-index={index + 11}
             >
               <ProjectItem
                 project={project}

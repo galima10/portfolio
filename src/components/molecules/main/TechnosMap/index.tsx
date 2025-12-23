@@ -31,7 +31,6 @@ export default function TechnosMap() {
           selectedTechno={selectedTechno}
           id="group2-languages"
           className={isMobile ? "snapping timeline-point" : ""}
-          // timeStep={9}
         />
         <TechnoMapItem
           techno={{

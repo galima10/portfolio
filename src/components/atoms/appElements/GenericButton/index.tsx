@@ -11,7 +11,6 @@ interface NavExternalButtonProps {
   style?: React.CSSProperties;
   id?: string;
   ref?: React.Ref<HTMLButtonElement>;
-  timeStep?: number;
 }
 
 export default function GenericButton({
@@ -25,7 +24,6 @@ export default function GenericButton({
   style,
   id,
   ref,
-  timeStep
 }: NavExternalButtonProps) {
   const { handleClick } = useAppNavigation(action, to);
   return (
@@ -40,7 +38,6 @@ export default function GenericButton({
       style={style}
       id={id}
       ref={ref}
-      data-timeline-index={timeStep || null}
     >
       {children}
     </button>

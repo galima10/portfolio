@@ -17,13 +17,12 @@ export default function Hero() {
   return (
     <section className={`${styles.hero} snapping`} id="hero">
       <AppMainH1 />
-      <TimeLinePoint className={styles.timeLinePoint} timeStep={0} />
+      <TimeLinePoint className={styles.timeLinePoint}/>
       <AppButton
         className={`${styles.ctaPrimary} timeline-point`}
         label="Envoyez moi un message !"
         type="primary"
         to="#group4-contactForm"
-        timeStep={1}
       />
 
       <AppButton
@@ -31,12 +30,11 @@ export default function Hero() {
         label="Téléchargez mon CV"
         type="secondary"
         action={handleDownload}
-        timeStep={2}
+
       />
       <GenericButton
         className={`${styles.ctaLink} timeline-point`}
         to="#group1-presentation"
-        timeStep={3}
       >
         Une aventure humaine et pleine de sens
         <span>➧</span>
