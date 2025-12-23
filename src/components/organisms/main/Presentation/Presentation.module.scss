@@ -69,6 +69,7 @@
 }
 
 .descriptionItem {
+  position: relative;
   flex-shrink: 0;
   height: $section-height;
   display: flex;
@@ -85,4 +86,26 @@
     margin-top: 0;
     overflow: visible;
   }
+}
+
+.timeLinePoint {
+  position: absolute;
+}
+
+.timeLinePoint-1 {
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.timeLinePoint-2 {
+  top: 20%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.timeLinePoint-3 {
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
 }
