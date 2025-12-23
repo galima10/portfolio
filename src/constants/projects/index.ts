@@ -17,10 +17,16 @@ import TeleconsultationProof6 from "@assets/images/projects/teleconsultation/fra
 import TeleconsultationProof7 from "@assets/images/projects/teleconsultation/frame-selection-salle.webp";
 
 import AremacsPreview from "@assets/images/projects/aremacs/preview-aremacs.webp";
+import AremacsProof1 from "@assets/images/projects/aremacs/frame-page-accueil.webp";
+import AremacsProof2 from "@assets/images/projects/aremacs/frame-a-propos.webp";
+import AremacsProof3 from "@assets/images/projects/aremacs/frame-benevolat.webp";
+import AremacsProof4 from "@assets/images/projects/aremacs/frame-contact.webp";
+import AremacsProof5 from "@assets/images/projects/aremacs/frame-deroule.webp";
+import AremacsProof6 from "@assets/images/projects/aremacs/frame-evenement.webp";
+import AremacsProof7 from "@assets/images/projects/aremacs/frame-notre-equipe.webp";
+import AremacsProof8 from "@assets/images/projects/aremacs/frame-nous-soutenir.webp";
 
 import { ProjectType } from "@types";
-
-import fallbackImg from "@assets/images/fallback.webp";
 
 import meamiData from "@constants/projectSheets/meami.json";
 import teleconsultationData from "@constants/projectSheets/teleconsultation.json";
@@ -203,14 +209,44 @@ export const projects: ProjectType[] = [
       {
         list: [
           {
-            name: "App Store",
-            type: "application/mobile",
-            imgSrc: fallbackImg,
+            name: "Maquette : Page d’accueil",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof1,
           },
           {
-            name: "Google Play",
-            type: "application/mobile",
-            imgSrc: fallbackImg,
+            name: "Maquette : Page À propos",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof2,
+          },
+          {
+            name: "Maquette : Page Bénévolat",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof3,
+          },
+          {
+            name: "Maquette : Page Contact",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof4,
+          },
+          {
+            name: "Maquette : Page Déroulé",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof5,
+          },
+          {
+            name: "Maquette : Page Événement",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof6,
+          },
+          {
+            name: "Maquette : Page Notre équipe",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof7,
+          },
+          {
+            name: "Maquette : Page Nous soutenir",
+            type: "design/ui-ux",
+            imgSrc: AremacsProof8,
           },
         ],
       },
