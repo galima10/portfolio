@@ -7,6 +7,9 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
   const [paths, setPaths] = useState<string[]>([]);
   const [resizeTrigger, setResizeTrigger] = useState(0); // État pour forcer la mise à jour au resize
 
+  // Variable pour contrôler l'intensité de la courbe
+  const curveIntensity = 200; // Ajustez cette valeur pour changer l'intensité
+
   useEffect(() => {
     // Fonction pour gérer le redimensionnement de l'écran
     const handleResize = () => {
@@ -71,12 +74,12 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
       // Calculer les points de contrôle pour une tangence verticale
       const controlPoint1 = {
         x: p.x, // Aligné verticalement avec le point actuel
-        y: p.y + 150, // Décalage vers le bas
+        y: p.y + curveIntensity, // Décalage vers le bas (intensité contrôlée)
       };
 
       const controlPoint2 = {
         x: next.x, // Aligné verticalement avec le point suivant
-        y: next.y - 150, // Décalage vers le haut
+        y: next.y - curveIntensity, // Décalage vers le haut (intensité contrôlée)
       };
 
       // Utiliser une courbe de Bézier cubique
@@ -85,7 +88,7 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
     });
 
     setPaths(newPaths);
-  }, [timelinePoints, isMobile, resizeTrigger]); // Ajout de `resizeTrigger` comme dépendance
+  }, [timelinePoints, isMobile, resizeTrigger, curveIntensity]); // Ajout de `curveIntensity` comme dépendance
 
   return { paths };
 }
