@@ -2,6 +2,8 @@ import styles from "../Carrousel.module.scss";
 
 import { projectTitleDesc } from "@constants/global";
 
+import { useProofsSlide } from "@hooks/appElements/molecules/useProofsSlide";
+
 interface ProofsSlideProps {
   proofs: {
     list?: {
@@ -18,6 +20,8 @@ interface ProofsSlideProps {
 }
 
 export default function ProofsSlide({ proofs }: ProofsSlideProps) {
+  const { selectedImage, handleImageClick, closeFullscreen } = useProofsSlide();
+
   return (
     <div
       className={styles.slides}
@@ -33,7 +37,13 @@ export default function ProofsSlide({ proofs }: ProofsSlideProps) {
                 <ul>
                   {proof.list.map((item, itemIndex) => (
                     <li key={`proof-item-${itemIndex}`}>
-                      <img src={item.imgSrc} alt={item.name} loading="lazy" />
+                      <img
+                        src={item.imgSrc}
+                        alt={item.name}
+                        loading="lazy"
+                        onClick={() => handleImageClick(item.imgSrc)}
+                        style={{ cursor: "pointer" }}
+                      />
                       <strong>
                         {item.name} - {item.type}
                       </strong>
@@ -57,6 +67,13 @@ export default function ProofsSlide({ proofs }: ProofsSlideProps) {
             </div>
           ))}
       </div>
+
+      {/* Fullscreen Image */}
+      {selectedImage && (
+        <div className={styles.fullscreenOverlay} onClick={closeFullscreen}>
+          <img src={selectedImage} alt="Fullscreen" />
+        </div>
+      )}
     </div>
   );
 }
