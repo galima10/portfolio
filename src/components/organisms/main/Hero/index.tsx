@@ -17,7 +17,7 @@ export default function Hero() {
         className={styles.ctaPrimary}
         label="Envoyez moi un message !"
         type="primary"
-        to="#contactForm"
+        to="#group4-contactForm"
       />
       <AppButton
         className={styles.ctaSecondary}
