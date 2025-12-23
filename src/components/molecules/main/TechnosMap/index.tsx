@@ -7,14 +7,13 @@ import TechnosCaption from "@components/atoms/appElements/TechnosCaption";
 import { useTechnosMap } from "@hooks/appElements/molecules/useTechnosMap";
 
 export default function TechnosMap() {
-  
   const { selectedTechno, setSelectedTechno, isMobile } = useTechnosMap();
 
   return (
     <div
-      className={
-        styles.technosMapContainer + (selectedTechno ? ` ${styles.active}` : "")
-      }
+      className={`${styles.technosMapContainer} ${
+        selectedTechno ? ` ${styles.active}` : ""
+      } ${isMobile ? "" : "timeline-point"}`}
     >
       <div
         className={
@@ -31,7 +30,8 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="group2-languages"
-          className={isMobile ? "snapping" : ""}
+          className={isMobile ? "snapping timeline-point" : ""}
+          // timeStep={9}
         />
         <TechnoMapItem
           techno={{
@@ -42,7 +42,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="group2-frameworks"
-          className={isMobile ? "snapping" : ""}
+          className={isMobile ? "snapping timeline-point" : ""}
         />
         <TechnoMapItem
           techno={{
@@ -53,7 +53,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="group2-tools"
-          className={isMobile ? "snapping" : ""}
+          className={isMobile ? "snapping timeline-point" : ""}
         />
         <TechnoMapItem
           techno={{
@@ -64,7 +64,7 @@ export default function TechnosMap() {
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
           id="group2-discussed"
-          className={isMobile ? "snapping" : ""}
+          className={isMobile ? "snapping timeline-point" : ""}
         />
       </div>
       <div
