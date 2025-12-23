@@ -12,6 +12,7 @@ main {
   height: $section-height;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  position: relative;
 }
 
 .snapping {

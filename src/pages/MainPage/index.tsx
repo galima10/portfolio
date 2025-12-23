@@ -16,14 +16,16 @@ import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHash
 import { useScrollSnap } from "@hooks/globals/navigation/useScrollSnap";
 
 import { useGetTimeLinePoint } from "@hooks/globals/useGetTimeLinePoint";
+import TimeLine from "@components/timeline/TimeLine";
 
 export default function MainPage() {
   useScrollToHashOnLoad();
   useScrollSnap("main");
-  useGetTimeLinePoint();
+  // useGetTimeLinePoint();
 
   return (
     <>
+      <TimeLine />
       <Hero />
       <Presentation />
       <SectionCTA
