@@ -1,6 +1,14 @@
-import MeamiPreview from "@assets/images/projects/meami/preview-meami.jpg";
-import TeleconsultationPreview from "@assets/images/projects/teleconsultation/preview-teleconsultation.jpg";
-import AremacsPreview from "@assets/images/projects/aremacs/preview-aremacs.jpg";
+import MeamiPreview from "@assets/images/projects/meami/preview-meami.webp";
+import MeamiProof1 from "@assets/images/projects/meami/charte-graphique.webp";
+import MeamiProof2 from "@assets/images/projects/meami/planche-images.webp";
+import MeamiProof3 from "@assets/images/projects/meami/frame-liste-ingredients.webp";
+import MeamiProof4 from "@assets/images/projects/meami/frame-liste-recettes.webp";
+import MeamiProof5 from "@assets/images/projects/meami/frame-vue-calendrier.webp";
+import MeamiProof6 from "@assets/images/projects/meami/frame-vue-liste.webp";
+import MeamiProof7 from "@assets/images/projects/meami/frame-vue-modifier.webp";
+
+import TeleconsultationPreview from "@assets/images/projects/teleconsultation/preview-teleconsultation.webp";
+import AremacsPreview from "@assets/images/projects/aremacs/preview-aremacs.webp";
 
 import { ProjectType } from "@types";
 
@@ -53,14 +61,39 @@ export const projects: ProjectType[] = [
       {
         list: [
           {
-            name: "App Store",
-            type: "application/mobile",
-            imgSrc: fallbackImg,
+            name: "Charte graphique",
+            type: "design/graphic",
+            imgSrc: MeamiProof1,
           },
           {
-            name: "Google Play",
-            type: "application/mobile",
-            imgSrc: fallbackImg,
+            name: "Planche d’images",
+            type: "design/graphic",
+            imgSrc: MeamiProof2,
+          },
+          {
+            name: "Maquette : Frame Liste des ingrédients",
+            type: "design/ui-ux",
+            imgSrc: MeamiProof3,
+          },
+          {
+            name: "Maquette : Frame Liste des recettes",
+            type: "design/ui-ux",
+            imgSrc: MeamiProof4,
+          },
+          {
+            name: "Maquette : Frame Vue Calendrier",
+            type: "design/ui-ux",
+            imgSrc: MeamiProof5,
+          },
+          {
+            name: "Maquette : Vue Liste",
+            type: "design/ui-ux",
+            imgSrc: MeamiProof6,
+          },
+          {
+            name: "Maquette : Vue Modifier",
+            type: "design/ui-ux",
+            imgSrc: MeamiProof7,
           },
         ],
       },
