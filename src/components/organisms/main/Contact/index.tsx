@@ -26,7 +26,7 @@ export default function Contact() {
           <p>
             <strong>Chaque projet raconte une histoire…</strong>
           </p>
-          {isMobile ? null : <TimeLinePoint />}
+          {isMobile ? null : <TimeLinePoint className={styles[`timeLinePoint-1`]} />}
         </li>
         <li
           className={isMobile ? "timeline-point" : ""}
@@ -34,7 +34,7 @@ export default function Contact() {
           <p>
             <strong>Et pourquoi pas le nôtre ?</strong>
           </p>
-          {isMobile ? null : <TimeLinePoint />}
+          {isMobile ? null : <TimeLinePoint className={styles[`timeLinePoint-2`]} />}
         </li>
         <li
           className={isMobile ? "timeline-point" : ""}
@@ -42,7 +42,7 @@ export default function Contact() {
           <p>
             <strong>Discutons-en !</strong>
           </p>
-          {isMobile ? null : <TimeLinePoint />}
+          {isMobile ? null : <TimeLinePoint className={styles[`timeLinePoint-3`]} />}
         </li>
       </ul>
       <ContactForm

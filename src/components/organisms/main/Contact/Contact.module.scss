@@ -25,6 +25,7 @@
     color: $secondary-color;
   }
   li {
+    position: relative;
     width: fit-content;
     max-width: 14rem;
     &:nth-of-type(1) {
@@ -68,9 +69,18 @@
   }
 }
 
-// .timeLinePoint {
-//   display: none;
-//   @include responsive {
-//     display: block;
-//   }
-// }
+.timeLinePoint-1 {
+  position: absolute;
+  margin: 2rem 0 0 -3rem;
+}
+
+.timeLinePoint-2 {
+  position: absolute;
+  right: 0;
+  margin: -7rem 3rem 0 0;
+}
+
+.timeLinePoint-3 {
+  position: absolute;
+  margin: -3rem 0 0 -4rem;
+}
