@@ -26,7 +26,7 @@ export const projectTitleDesc = {
   target: "Public cible",
   deliverablesConstraintsResources: "Éléments clés",
   planning: "Déroulement",
-  actions: "Mes actions",
+  actions: "Réalisations",
   results: "Résultats",
   proofs: "Preuves",
   conclusion: "Retour réflexif",
