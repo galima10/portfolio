@@ -30,24 +30,24 @@ main {
 .main-h2 {
   position: fixed;
   bottom: -8rem;
+  width: 100%;
+  left: 0;
+  -webkit-text-fill-color: $primary-color;
+  color: $primary-color;
   background: $gradient;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding: 0 0 1.5rem;
+  padding: .5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  
+  transition: bottom 0.2s ease-out;
+  border-radius: 2rem 2rem 0 0;
+
   @include responsive {
+    width: unset;
+    left: unset;
     padding: 0;
-    background: none;
-    -webkit-text-fill-color: $primary-color;
-    color: $primary-color;
-    background: $gradient;
     width: $section-height;
-    // position: absolute;
     border-radius: 0 0 2.75rem 2.75rem;
   }
 }

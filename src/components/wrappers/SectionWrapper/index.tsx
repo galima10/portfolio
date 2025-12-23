@@ -1,8 +1,6 @@
 import styles from "./SectionWrapper.module.scss";
 
-import { useAppSelector } from "@hooks/redux";
-import { useEffect } from "react";
-import { useCheckIsMobile } from "@hooks/globals/useCheckIsMobile";
+import { useSectionWrapper } from "@hooks/appElements/organisms/useSectionWrapper";
 
 interface SectionWrapperProps {
   children?: React.ReactNode;
@@ -19,23 +17,19 @@ export default function SectionWrapper({
   orientation,
   id,
 }: SectionWrapperProps) {
-  const currentIDSection = useAppSelector(
-    (state) => state.navigation.currentIDSection
-  );
-  const { isMobile } = useCheckIsMobile();
-
-  // Vérifie si currentIDSection appartient au même groupe que l'ID de la section
-  const isVisible =
-    currentIDSection &&
-    id &&
-    currentIDSection.split("-")[0] === id.split("-")[0];
+  const { titleRef, isVisible, showTitle, isMobile } = useSectionWrapper(id);
 
   return (
     <section
       id={id}
       className={styles.wrapper + " " + styles[orientation] + " " + className}
     >
-      <h2 className={`main-h2 ${isVisible && !isMobile ? styles.visible : ""}`}>
+      <h2
+        ref={titleRef}
+        className={`main-h2 ${
+          (isVisible && !isMobile) || showTitle ? styles.visible : ""
+        }`}
+      >
         {title}
       </h2>
       {children}

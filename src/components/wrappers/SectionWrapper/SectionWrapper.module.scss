@@ -16,6 +16,9 @@
 .left {
   h2 {
     @include h2-position("left");
+    &.visible {
+      bottom: 0 !important;
+    }
     @include responsive {
       &.visible {
         left: $h2-offset !important;
@@ -26,6 +29,9 @@
 .right {
   h2 {
     @include h2-position("right");
+    &.visible {
+      bottom: 0 !important;
+    }
     @include responsive {
       &.visible {
         right: $h2-offset !important;
