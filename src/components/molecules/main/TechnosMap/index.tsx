@@ -29,7 +29,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
-          id="group2-languages"
+          id="group2-technos-1"
           className={isMobile ? "snapping timeline-point" : ""}
         />
         <TechnoMapItem
@@ -40,7 +40,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
-          id="group2-frameworks"
+          id="group2-technos-2"
           className={isMobile ? "snapping timeline-point" : ""}
         />
         <TechnoMapItem
@@ -51,7 +51,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
-          id="group2-tools"
+          id="group2-technos-3"
           className={isMobile ? "snapping timeline-point" : ""}
         />
         <TechnoMapItem
@@ -62,7 +62,7 @@ export default function TechnosMap() {
           }}
           setSelectedTechno={setSelectedTechno}
           selectedTechno={selectedTechno}
-          id="group2-discussed"
+          id="group2-technos-4"
           className={isMobile ? "snapping timeline-point" : ""}
         />
       </div>

@@ -15,7 +15,7 @@ export default function Presentation() {
     return (
       <li
         key={index}
-        id={`group1-description-item-${index + 1}`}
+        id={`group1-presentation-${index + 1}`}
         className={`${styles.descriptionItem} snapping`}
       >
         <TimeLinePoint

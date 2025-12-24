@@ -35,7 +35,6 @@ export function useAppNavigation(action?: () => void, to?: string) {
 
       // Si l'élément est trouvé, scroller vers lui
       if (el) {
-        console.log("Scrolling to element:", el);
 
         const navbarHeight = 4.5 * 16; // 4.5rem → 72px si 1rem = 16px
         const scrollContainer = main || window; // Utiliser <main> si défini, sinon window

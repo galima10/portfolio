@@ -12,7 +12,7 @@ export default function Projects() {
     <SectionWrapper
       orientation="left"
       title="Mes quêtes"
-      id="group3-projects"
+      id="group3-project"
       className={styles.projectsSection}
     >
       <ul className={styles.projectsList}>

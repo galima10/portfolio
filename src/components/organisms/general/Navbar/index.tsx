@@ -8,10 +8,8 @@ interface NavbarProps {
 }
 
 export default function Navbar({ links }: NavbarProps) {
-  const { mobileMenuRef, darkFilterRef, handleOpenMenu, handleCloseMenu } = useNavbar(
-    "active",
-    "open"
-  );
+  const { mobileMenuRef, darkFilterRef, handleOpenMenu, handleCloseMenu } =
+    useNavbar("active", "open");
   return (
     <header id="main-navbar">
       <nav aria-label="Navigation principale">

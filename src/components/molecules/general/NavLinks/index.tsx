@@ -13,6 +13,7 @@ interface NavLinkProps {
   handleCloseMenu?: () => void;
   className?: string;
   position?: "navbar" | "footer";
+  currentIDSection?: string;
 }
 
 export default function NavLinks({

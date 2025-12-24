@@ -45,7 +45,7 @@ import ConclusionSlide from "@components/molecules/projects/slidesCarrousel/Conc
 
 export const projects: ProjectType[] = [
   {
-    id: "Projet 1",
+    id: "Project 1",
     slug: "meami",
     name: "Meam¡",
     island: "island1",
@@ -114,7 +114,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    id: "Projet 2",
+    id: "Project 2",
     slug: "teleconsultation",
     name: "Téléconsultation",
     island: "island2",
@@ -183,7 +183,7 @@ export const projects: ProjectType[] = [
     ],
   },
   {
-    id: "Projet 3",
+    id: "Project 3",
     slug: "aremacs",
     name: "Aremacs",
     island: "island3",

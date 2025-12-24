@@ -7,7 +7,7 @@ export const headerNavLinks = [
   { label: "Présentation", link: "/#group1-presentation" },
   { label: "Compétences", link: "/#skills" },
   { label: "Outils & Technos", link: "/#group2-technos" },
-  { label: "Mes projets", link: "/#group3-projects" },
+  { label: "Mes projets", link: "/#group3-project" },
   { label: "Me contacter", link: "#group4-contactForm", isCTA: true },
 ];
 
@@ -15,7 +15,7 @@ export const footerNavLinks = [
   { label: "Présentation", link: "/#group1-presentation" },
   { label: "Compétences", link: "/#skills" },
   { label: "Outils & Technos", link: "/#group2-technos" },
-  { label: "Mes projets", link: "/#group3-projects" },
+  { label: "Mes projets", link: "/#group3-project" },
   { label: "Me contacter", link: "#group4-contactForm" },
 ];
 

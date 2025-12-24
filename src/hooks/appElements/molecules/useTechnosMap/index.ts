@@ -15,9 +15,6 @@ export function useTechnosMap() {
   useEffect(() => {
     // Réinitialiser selectedTechno uniquement si ce n'est pas une sélection manuelle
     if (!isManualSelection.current && selectedTechno !== null && isMobile) {
-      console.log(
-        `Resetting selectedTechno because currentSectionId changed to ${currentSectionId}`
-      );
       setSelectedTechno(null);
     }
 

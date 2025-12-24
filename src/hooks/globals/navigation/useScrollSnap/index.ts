@@ -22,7 +22,6 @@ export function useScrollSnap(rootSelector: string, threshold: number = 0.6) {
       const snaps: HTMLElement[] = Array.from(
         rootElement.querySelectorAll(".snapping")
       );
-      // console.log("Snapping elements found:", snaps);
 
       if (snaps.length === 0) {
         console.error("No snap elements found inside the root.");
