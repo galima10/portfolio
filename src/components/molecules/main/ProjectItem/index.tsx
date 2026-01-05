@@ -46,7 +46,7 @@ export default function ProjectItem({
       id={slugify(id)}
     >
       <hgroup className={`${styles.projectInfo} timeline-point`}>
-        <h3>{id}</h3>
+        <h3>Projet {id.slice(8)}</h3>
         <p>{hook}</p>
       </hgroup>
       <GenericButton
