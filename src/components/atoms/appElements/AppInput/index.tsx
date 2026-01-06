@@ -8,6 +8,12 @@ interface AppInputProps {
   className?: string;
   index?: number;
   name?: string;
+  value?: string;
+  onChange?: (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void;
 }
 
 export default function AppInput({
@@ -18,6 +24,8 @@ export default function AppInput({
   className = "",
   index,
   name,
+  value,
+  onChange,
 }: AppInputProps) {
   return (
     <div className={`${styles.container} ${className}`}>
@@ -31,6 +39,8 @@ export default function AppInput({
           className={styles.input}
           placeholder={placeholder}
           name={name}
+          value={value}
+          onChange={onChange}
         ></textarea>
       ) : (
         <input
@@ -39,6 +49,8 @@ export default function AppInput({
           className={styles.input}
           placeholder={placeholder}
           name={name}
+          value={value}
+          onChange={onChange}
         />
       )}
     </div>

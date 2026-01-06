@@ -15,4 +15,8 @@
   &:not(:focus-visible) {
     outline: none;
   }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
