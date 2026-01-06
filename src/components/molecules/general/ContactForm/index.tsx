@@ -4,6 +4,7 @@ import AppInput from "@components/atoms/appElements/AppInput";
 import AppSubmitButton from "@components/atoms/appElements/AppSubmitButton";
 
 import { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface ContactFormProps {
   className?: string;
@@ -11,6 +12,8 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ className, id }: ContactFormProps) {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,12 +41,12 @@ export default function ContactForm({ className, id }: ContactFormProps) {
 
   async function submitForm() {
     try {
-      // Récupérer le jeton reCAPTCHA
-      const recaptchaToken = (window as any).grecaptcha.getResponse();
-
-      if (!recaptchaToken) {
-        throw new Error("Veuillez compléter le reCAPTCHA.");
+      if (!executeRecaptcha) {
+        throw new Error("reCAPTCHA n'est pas encore prêt.");
       }
+
+      // Obtenir le jeton reCAPTCHA
+      const recaptchaToken = await executeRecaptcha("submit_form");
 
       const response = await fetch("https://formspree.io/f/xgovjqpq", {
         method: "POST",
@@ -65,9 +68,6 @@ export default function ContactForm({ className, id }: ContactFormProps) {
       console.log("Formulaire soumis avec succès !");
       setFormData({ name: "", email: "", message: "" });
       setIsEmailValid(false);
-
-      // Réinitialiser le reCAPTCHA après soumission
-      (window as any).grecaptcha.reset();
     } catch (error) {
       console.error(error.message);
     }
