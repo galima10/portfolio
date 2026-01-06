@@ -121,10 +121,6 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           value={formData.message}
           onChange={handleInputChange}
         />
-        <div
-          className="g-recaptcha"
-          data-sitekey="6LfN2kEsAAAAAOqJ24k0n4VPuX2qepdzY6AEh8zT"
-        ></div>
         <AppSubmitButton
           className={styles.submitButton}
           disabled={
