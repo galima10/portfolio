@@ -38,22 +38,36 @@ export default function ContactForm({ className, id }: ContactFormProps) {
 
   async function submitForm() {
     try {
+      // Récupérer le jeton reCAPTCHA
+      const recaptchaToken = (window as any).grecaptcha.getResponse();
+
+      if (!recaptchaToken) {
+        throw new Error("Veuillez compléter le reCAPTCHA.");
+      }
+
       const response = await fetch("https://formspree.io/f/xgovjqpq", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          "g-recaptcha-response": recaptchaToken, // Inclure le jeton reCAPTCHA
+        }),
       });
 
       if (!response.ok) {
-        throw new Error("Une erreur est survenue lors de l'envoi du formulaire.");
+        throw new Error(
+          "Une erreur est survenue lors de l'envoi du formulaire."
+        );
       }
 
       console.log("Formulaire soumis avec succès !");
-      // Réinitialiser le formulaire après soumission
       setFormData({ name: "", email: "", message: "" });
       setIsEmailValid(false);
+
+      // Réinitialiser le reCAPTCHA après soumission
+      (window as any).grecaptcha.reset();
     } catch (error) {
       console.error(error.message);
     }
@@ -107,10 +121,17 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           value={formData.message}
           onChange={handleInputChange}
         />
+        <div
+          className="g-recaptcha"
+          data-sitekey="6LfN2kEsAAAAAOqJ24k0n4VPuX2qepdzY6AEh8zT"
+        ></div>
         <AppSubmitButton
           className={styles.submitButton}
           disabled={
-            !formData.name || !formData.email || !formData.message || !isEmailValid
+            !formData.name ||
+            !formData.email ||
+            !formData.message ||
+            !isEmailValid
           }
         />
       </form>
