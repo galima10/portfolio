@@ -7,6 +7,7 @@ interface AppInputProps {
   label: string;
   className?: string;
   index?: number;
+  name?: string;
 }
 
 export default function AppInput({
@@ -16,6 +17,7 @@ export default function AppInput({
   label,
   className = "",
   index,
+  name,
 }: AppInputProps) {
   return (
     <div className={`${styles.container} ${className}`}>
@@ -28,6 +30,7 @@ export default function AppInput({
           id={`app-input-${index}`}
           className={styles.input}
           placeholder={placeholder}
+          name={name}
         ></textarea>
       ) : (
         <input
@@ -35,6 +38,7 @@ export default function AppInput({
           type={type}
           className={styles.input}
           placeholder={placeholder}
+          name={name}
         />
       )}
     </div>

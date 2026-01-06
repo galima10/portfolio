@@ -25,6 +25,8 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           placeholder="Ex : Jean Dupont"
           className={styles.input}
           index={0}
+          name="name"
+
         />
         <AppInput
           label="Votre email"
@@ -32,6 +34,7 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           placeholder="Ex : jean.dupont@example.com"
           className={styles.input}
           index={1}
+          name="email"
         />
         <AppInput
           label="Votre message"
@@ -39,6 +42,7 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           isTextarea
           className={styles.input}
           index={2}
+          name="message"
         />
         <AppSubmitButton className={styles.submitButton} />
       </form>
