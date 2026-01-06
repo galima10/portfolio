@@ -36,6 +36,29 @@ export default function ContactForm({ className, id }: ContactFormProps) {
     setFormData({ ...formData, [name]: value });
   }
 
+  async function submitForm() {
+    try {
+      const response = await fetch("https://formspree.io/f/xgovjqpq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Une erreur est survenue lors de l'envoi du formulaire.");
+      }
+
+      console.log("Formulaire soumis avec succès !");
+      // Réinitialiser le formulaire après soumission
+      setFormData({ name: "", email: "", message: "" });
+      setIsEmailValid(false);
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
 
@@ -44,12 +67,7 @@ export default function ContactForm({ className, id }: ContactFormProps) {
       return;
     }
 
-    // Logique pour soumettre le formulaire
-    console.log("Formulaire soumis avec succès :", formData);
-    
-    // Réinitialiser le formulaire après soumission
-    setFormData({ name: "", email: "", message: "" });
-    setIsEmailValid(false);
+    submitForm(); // Appeler la fonction pour soumettre le formulaire
   }
 
   return (
@@ -59,7 +77,7 @@ export default function ContactForm({ className, id }: ContactFormProps) {
       data-timeline-index={21}
     >
       <h3>Écrivons la suite, dès maintenant</h3>
-      <form action="" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <AppInput
           label="Votre nom"
           placeholder="Ex : Jean Dupont"
