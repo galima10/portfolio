@@ -169,6 +169,35 @@
     justify-content: space-around;
     flex-direction: column;
   }
+  .proofItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .indicationNav {
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 spaceCalc(0.5rem, 5rem, 5rem);
+    p {
+      margin-bottom: 1rem;
+      @include font-base("small");
+      opacity: 0.5;
+    }
+  }
+  .indicationLeft {
+    margin-right: auto;
+  }
+  .indicationRight {
+    margin-left: auto;
+  }
+  .githubIcon {
+    margin: 1.5rem 0 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .fullscreenOverlay {

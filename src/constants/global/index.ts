@@ -28,7 +28,7 @@ export const projectTitleDesc = {
   planning: "Déroulement",
   actions: "Réalisations",
   results: "Résultats",
-  proofs: "Preuves",
+  proofs: "Rendus finaux",
   conclusion: "Retour réflexif",
 };
 

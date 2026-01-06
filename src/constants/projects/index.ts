@@ -110,6 +110,11 @@ export const projects: ProjectType[] = [
             imgSrc: MeamiProof7,
           },
         ],
+        demonstrationLinks: {
+          name: "Lien vers le dépôt GitHub du projet Meam¡",
+          type: "code source",
+          url: "https://github.com/galima10/project-meami-v1",
+        },
       },
     ],
   },
