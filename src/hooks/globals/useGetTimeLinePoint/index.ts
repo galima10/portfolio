@@ -27,15 +27,16 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
 
   useEffect(() => {
     if (isMobile === null) return;
+    generatePaths();
+  }, [isMobile]);
 
+  function generatePaths() {
     const timelinePoints = document.querySelectorAll(".timeline-point");
     timelinePoints.forEach((point, index) => {
       point.setAttribute("data-timeline-index", index.toString());
       setTimelinePoints((prev) => ({ ...prev, [index]: point }));
     });
-  }, [isMobile]);
-
-  useEffect(() => {
+    
     if (!ref || Object.keys(timelinePoints).length === 0) return;
 
     const mainElement = document.querySelector("main");
@@ -89,7 +90,11 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
     });
 
     setPaths(newPaths);
-  }, [timelinePoints, isMobile, resizeTrigger, curveIntensity]); // Ajout de `curveIntensity` comme dépendance
+  }
+
+  useEffect(() => {
+    generatePaths();
+  }, [isMobile, resizeTrigger, curveIntensity]); // Ajout de `curveIntensity` comme dépendance
 
   return { paths };
 }
