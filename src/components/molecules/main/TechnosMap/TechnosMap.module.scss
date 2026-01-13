@@ -25,7 +25,7 @@
   height: 100%;
   width: 100%;
   padding: 6rem $padding-global;
-  transition: transform 1.5s ease, height 1.5s ease-in;
+  transition: transform 1.5s ease, height 1.5s ease-in, max-width 1.5s ease-in;
   transform: none;
   will-change: transform, height;
   overflow: visible;
@@ -50,6 +50,7 @@
     }
     @include responsive {
       height: 200%;
+      max-width: 200%;
     }
   }
 
@@ -58,6 +59,7 @@
     padding: 0;
     height: 100%;
     width: unset;
+    max-width: calc(100% - $padding-global);
     max-height: 45rem;
     display: grid;
     overflow: visible;
