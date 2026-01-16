@@ -15,7 +15,7 @@ import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHash
 
 import { useScrollSnap } from "@hooks/globals/navigation/useScrollSnap";
 
-import React from "react";
+import React, { Suspense } from "react";
 const TimeLine = React.lazy(() => import("@components/timeline/TimeLine"));
 
 export default function MainPage() {
@@ -24,7 +24,9 @@ export default function MainPage() {
 
   return (
     <>
-      <TimeLine />
+      <Suspense fallback={null}>
+        <TimeLine />
+      </Suspense>
       <Hero />
       <Presentation />
       <SectionCTA
@@ -41,7 +43,7 @@ export default function MainPage() {
       />
       <Projects />
       <SectionCTA
-        text="Chaque aventure m’a fait avancer. Et si la prochaine était la vôtre ?"
+        text="Ces aventures m’ont fait avancer. Et si la prochaine était la vôtre ?"
         to="#group4-contactForm"
         id="afterProjects"
       />

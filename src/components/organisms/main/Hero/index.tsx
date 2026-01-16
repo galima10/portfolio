@@ -2,7 +2,7 @@ import styles from "./Hero.module.scss";
 
 import AppButton from "@components/atoms/appElements/AppButton";
 import GenericButton from "@components/atoms/appElements/GenericButton";
-import React from "react";
+import React, { Suspense } from "react";
 const AppMainH1 = React.lazy(
   () => import("@components/atoms/appElements/AppMainH1")
 );
@@ -16,7 +16,9 @@ export default function Hero() {
 
   return (
     <section className={`${styles.hero} snapping`} id="hero">
-      <AppMainH1 />
+      <Suspense fallback={null}>
+        <AppMainH1 />
+      </Suspense>
       <TimeLinePoint className={styles.timeLinePoint}/>
       <AppButton
         className={`${styles.ctaPrimary} timeline-point`}

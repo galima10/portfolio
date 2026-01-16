@@ -32,7 +32,7 @@ export default function Contact() {
           className={isMobile ? "timeline-point" : ""}
         >
           <p>
-            <strong>Et pourquoi pas le nôtre ?</strong>
+            <strong>Pourquoi pas le nôtre ?</strong>
           </p>
           {isMobile ? null : <TimeLinePoint className={styles[`timeLinePoint-2`]} />}
         </li>
