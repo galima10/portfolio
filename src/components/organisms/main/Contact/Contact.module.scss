@@ -27,7 +27,7 @@
   li {
     position: relative;
     width: fit-content;
-    max-width: 14rem;
+    max-width: 15rem;
     &:nth-of-type(1) {
       text-align: center;
       @include responsive {

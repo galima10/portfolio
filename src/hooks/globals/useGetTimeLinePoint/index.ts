@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useCheckIsMobile } from "../useCheckIsMobile";
 
 export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
@@ -12,16 +12,35 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
   // Variable pour contrôler l'intensité de la courbe
   const curveIntensity = 250; // Ajustez cette valeur pour changer l'intensité
 
+  // Ref pour éviter les recalculs multiples
+  const hasComputedResize = useRef(false);
+  const idleCallbackId = useRef<number | null>(null);
+
   useEffect(() => {
     // Fonction pour gérer le redimensionnement de l'écran
     const handleResize = () => {
-      updateIsMobile(); // Met à jour l'état `isMobile`
-      setResizeTrigger((prev) => prev + 1); // Force une mise à jour
+      if (hasComputedResize.current) return; // Évite les recalculs multiples
+      hasComputedResize.current = true;
+
+      if (idleCallbackId.current !== null) {
+        cancelIdleCallback(idleCallbackId.current); // Annule les callbacks en attente
+      }
+
+      idleCallbackId.current = requestIdleCallback(() => {
+        updateIsMobile(); // Met à jour l'état `isMobile`
+        setResizeTrigger((prev) => prev + 1); // Force une mise à jour
+
+        // Réinitialise le flag après le traitement
+        hasComputedResize.current = false;
+      });
     };
 
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
+      if (idleCallbackId.current !== null) {
+        cancelIdleCallback(idleCallbackId.current); // Nettoie les callbacks en attente
+      }
     };
   }, [updateIsMobile]);
 
@@ -31,12 +50,13 @@ export function useGetTimeLinePoint(ref?: React.RefObject<SVGSVGElement>) {
   }, [isMobile]);
 
   function generatePaths() {
+    console.log("Generating paths...");
     const timelinePoints = document.querySelectorAll(".timeline-point");
     timelinePoints.forEach((point, index) => {
       point.setAttribute("data-timeline-index", index.toString());
       setTimelinePoints((prev) => ({ ...prev, [index]: point }));
     });
-    
+
     if (!ref || Object.keys(timelinePoints).length === 0) return;
 
     const mainElement = document.querySelector("main");
