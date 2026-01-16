@@ -63,29 +63,29 @@
     @extend %button-big;
     background: $accent-color-darker;
     color: $primary-color;
-    border-color: $accent-color-darker;
+    box-shadow: inset 0 0 0 .15rem $accent-color-darker;
     &:active {
       background: $tertiary-color;
-      border-color: $tertiary-color;
+      box-shadow: inset 0 0 0 .15rem $tertiary-color;
     }
     @include responsive($bp-desktop) {
       &:hover {
         background: $tertiary-color;
-        border-color: $tertiary-color;
+        box-shadow: inset 0 0 0 .15rem $tertiary-color;
       }
     }
   } @else if $type == "secondary" {
     @extend %button-big;
     color: $accent-color-darker;
-    border-color: $accent-color-darker;
+    box-shadow: inset 0 0 0 .15rem $accent-color-darker;
     &:active {
       color: $tertiary-color;
-      border-color: $tertiary-color;
+      box-shadow: inset 0 0 0 .15rem $tertiary-color;
     }
     @include responsive($bp-desktop) {
       &:hover {
         color: $tertiary-color;
-        border-color: $tertiary-color;
+        box-shadow: inset 0 0 0 .15rem $tertiary-color;
       }
     }
   } @else if $type == "tertiary" {
@@ -107,7 +107,7 @@
 @mixin nav-link-style($position) {
   @if $position == "header" {
     @extend %button-big;
-    border: $primary-color;
+    box-shadow: inset 0 0 0 .15rem $primary-color;
     color: $secondary-color;
     &:active {
       color: $accent-color-darker;

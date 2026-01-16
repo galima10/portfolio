@@ -5,7 +5,7 @@
 
 // Titres
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Fira-Sans";
   src: url("@fonts/Fira_Sans/FiraSans-ExtraBold.woff2")
     format("woff2");
   font-weight: $extra-bold;
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Fira-Sans";
   src: url("@fonts/Fira_Sans/FiraSans-Bold.woff2") format("woff2");
   font-weight: $bold;
   font-style: normal;
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-  font-family: "Fira Sans";
+  font-family: "Fira-Sans";
   src: url("@fonts/Fira_Sans/FiraSans-SemiBold.woff2")
     format("woff2");
   font-weight: $semi-bold;
@@ -32,7 +32,7 @@
 
 // Corps de texte
 @font-face {
-  font-family: "Signika Negative";
+  font-family: "Signika-Negative";
   src: url("@fonts/Signika_Negative/SignikaNegative-SemiBold.woff2")
     format("woff2");
   font-weight: $semi-bold;
@@ -41,7 +41,7 @@
 }
 
 @font-face {
-  font-family: "Signika Negative";
+  font-family: "Signika-Negative";
   src: url("@fonts/Signika_Negative/SignikaNegative-Regular.woff2")
     format("woff2");
   font-weight: $regular;
@@ -50,7 +50,7 @@
 }
 
 @font-face {
-  font-family: "Signika Negative";
+  font-family: "Signika-Negative";
   src: url("@fonts/Signika_Negative/SignikaNegative-Bold.woff2")
     format("woff2");
   font-weight: $bold;
