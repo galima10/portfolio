@@ -31,7 +31,7 @@ export default function AppInput({
     <div className={`${styles.container} ${className}`}>
       <label htmlFor={`app-input-${index}`} className={styles.label}>
         {label}
-        <span>*</span>
+        <span aria-hidden="true">*</span>
       </label>
       {isTextarea ? (
         <textarea
@@ -41,6 +41,8 @@ export default function AppInput({
           name={name}
           value={value}
           onChange={onChange}
+          required
+          aria-required="true"
         ></textarea>
       ) : (
         <input
@@ -51,6 +53,8 @@ export default function AppInput({
           name={name}
           value={value}
           onChange={onChange}
+          required
+          aria-required="true"
         />
       )}
     </div>

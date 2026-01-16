@@ -17,6 +17,10 @@
   }
   &:disabled {
     opacity: 0.5;
-    pointer-events: none;
+    cursor: not-allowed;
+    &:hover {
+      background-color: $accent-color-darker;
+      border-color: $accent-color-darker;
+    }
   }
 }

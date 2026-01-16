@@ -14,6 +14,9 @@ import { headerNavLinks } from "@constants/global";
 function App() {
   return (
     <BrowserRouter>
+      <a href="#main-content" className="skip-link" tabIndex={0}>
+        Aller au contenu principal
+      </a>
       <Navbar links={headerNavLinks} />
       <main id="main-content">
         <Routes>

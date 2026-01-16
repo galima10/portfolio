@@ -31,16 +31,23 @@ export default function ContactForm({ className, id }: ContactFormProps) {
           value={formData.name}
           onChange={handleInputChange}
         />
-        <AppInput
-          label="Votre email"
-          type="email"
-          placeholder="Ex : jean.dupont@example.com"
-          className={styles.input}
-          index={1}
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-        />
+        <div className={styles.emailWrapper}>
+          <AppInput
+            label="Votre email"
+            type="email"
+            placeholder="Ex : jean.dupont@example.com"
+            className={styles.input}
+            index={1}
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+          {!isEmailValid && formData.email.length > 0 && (
+            <p className={styles.errorMessage}>
+              L'adresse email semble invalide. Veuillez vérifier.
+            </p>
+          )}
+        </div>
         <AppInput
           label="Votre message"
           placeholder="Écrivez votre message ici..."
@@ -60,6 +67,14 @@ export default function ContactForm({ className, id }: ContactFormProps) {
             !isEmailValid
           }
         />
+        <p className={styles.formNote}>
+          <small>
+            <strong>
+              * Tous les champs sont obligatoires. Votre adresse email ne sera
+              jamais partagée.
+            </strong>
+          </small>
+        </p>
       </form>
     </div>
   );
