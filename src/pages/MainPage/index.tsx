@@ -15,13 +15,12 @@ import { useScrollToHashOnLoad } from "@hooks/globals/navigation/useScrollToHash
 
 import { useScrollSnap } from "@hooks/globals/navigation/useScrollSnap";
 
-import { useGetTimeLinePoint } from "@hooks/globals/useGetTimeLinePoint";
-import TimeLine from "@components/timeline/TimeLine";
+import React from "react";
+const TimeLine = React.lazy(() => import("@components/timeline/TimeLine"));
 
 export default function MainPage() {
   useScrollToHashOnLoad();
   useScrollSnap("main");
-  // useGetTimeLinePoint();
 
   return (
     <>
