@@ -22,6 +22,10 @@ import TypeScript from "../tools/TypeScript";
 import Vite from "../tools/Vite";
 import WampServer from "../tools/WampServer";
 import Wordpress from "../tools/Wordpress";
+import SQL from "../tools/SQL";
+import MySQL from "../tools/MySQL";
+import Symfony from "../tools/Symfony";
+import Railway from "../tools/Railway";
 
 import LinkedIn from "../socialMedias/LinkedIn";
 import Logo from "../logo/Logo";
@@ -71,6 +75,10 @@ const icons = {
   vite: Vite,
   wampserver: WampServer,
   wordpress: Wordpress,
+  sql: SQL,
+  mysql: MySQL,
+  symfony: Symfony,
+  railway: Railway,
 
   linkedin: LinkedIn,
 

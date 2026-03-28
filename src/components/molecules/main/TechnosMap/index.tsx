@@ -34,7 +34,7 @@ export default function TechnosMap() {
         />
         <TechnoMapItem
           techno={{
-            name: "Frameworks & Libraries",
+            name: "Technologies (frameworks, librairies, bases de données...)",
             slug: "frameworksMap",
             className: "frameworksMap",
           }}

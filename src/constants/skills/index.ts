@@ -12,10 +12,11 @@ export const skills: {
     component: "hammer",
     skillsDetails: [
       "Développer des composants modulables et réutilisables",
-      "Intégrer une maquette sur le web avec une hiérarchie claire et correcte",
+      "Intégrer une maquette web avec une hiérarchie claire et structurée",
       "Concevoir et refondre un site vitrine fonctionnel et optimisé",
-      "Garantir la qualité du code et la robustesse technique sur le long terme",
-      "Développer un thème de site sur mesure",
+      "Concevoir une API backend structurée en architecture MVC",
+      "Développer une interface sur mesure connectée à un CMS headless",
+      "Modéliser une base de données relationnelle",
     ],
   },
   {

@@ -19,6 +19,25 @@ interface TechnoMapItemProps {
   className?: string;
 }
 
+function splitTitle(str: string): {
+  title: string;
+  parentheses: string | null;
+} {
+  if (!str.includes("(")) {
+    return {
+      title: str.trim(),
+      parentheses: null,
+    };
+  }
+
+  const match = str.match(/^([^(]+)\s*(\(.*\))$/);
+
+  return {
+    title: match?.[1]?.trim() || str.trim(),
+    parentheses: match?.[2] || null,
+  };
+}
+
 export default function TechnoMapItem({
   techno,
   setSelectedTechno,
@@ -29,6 +48,7 @@ export default function TechnoMapItem({
   const [isFocused, setIsFocused] = useState(false);
 
   const category = techno.slug.replace("Map", "");
+
   return (
     <GenericButton
       className={
@@ -36,7 +56,9 @@ export default function TechnoMapItem({
         " " +
         styles[techno.className] +
         (isFocused ? ` ${styles.focused}` : "") +
-        (selectedTechno ? ` ${styles.disabledBackgroud}` : "") + " " + (className ? className : "")
+        (selectedTechno ? ` ${styles.disabledBackgroud}` : "") +
+        " " +
+        (className ? className : "")
       }
       onMouseEnter={() => {
         if (selectedTechno !== category && !selectedTechno) setIsFocused(true);
@@ -52,7 +74,12 @@ export default function TechnoMapItem({
       id={id}
     >
       <AppSVG name={techno.slug} className={styles.map} />
-      <h3>{techno.name}</h3>
+      <h3>
+        {splitTitle(techno.name).title}{" "}
+        {splitTitle(techno.name).parentheses && (
+          <span>{splitTitle(techno.name).parentheses}</span>
+        )}
+      </h3>
       {selectedTechno === category && (
         <div className={styles.technoDetails}>
           {technosList[category].map((technoItem: TechnoItem) => (

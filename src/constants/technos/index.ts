@@ -27,16 +27,32 @@ export const technosList: {
       name: "JavaScript",
       type: "fullstack",
       cell: {
-        row: 9,
-        col: 18,
+        row: 11,
+        col: 20,
       },
     },
     {
       name: "TypeScript",
       type: "fullstack",
       cell: {
-        row: 12,
+        row: 13,
         col: 12,
+      },
+    },
+    {
+      name: "PHP",
+      type: "backend",
+      cell: {
+        row: 10,
+        col: 6,
+      },
+    },
+    {
+      name: "SQL",
+      type: "database",
+      cell: {
+        row: 7,
+        col: 15,
       },
     },
   ],
@@ -57,6 +73,22 @@ export const technosList: {
         col: 6,
       },
     },
+    {
+      name: "SQLite",
+      type: "database",
+      cell: {
+        row: 5,
+        col: 15,
+      },
+    },
+    {
+      name: "MySQL",
+      type: "database",
+      cell: {
+        row: 18,
+        col: 3,
+      },
+    },
   ],
   tools: [
     {
@@ -71,15 +103,15 @@ export const technosList: {
       name: "Expo",
       type: "tool",
       cell: {
-        row: 8,
-        col: 6,
+        row: 7,
+        col: 9,
       },
     },
     {
       name: "Github",
       type: "tool",
       cell: {
-        row: 14,
+        row: 12,
         col: 11,
       },
     },
@@ -87,7 +119,7 @@ export const technosList: {
       name: "Node",
       type: "backend",
       cell: {
-        row: 16,
+        row: 12,
         col: 16,
       },
     },
@@ -96,7 +128,7 @@ export const technosList: {
       type: "tool",
       cell: {
         row: 7,
-        col: 13,
+        col: 14,
       },
     },
     {
@@ -107,14 +139,38 @@ export const technosList: {
         col: 18,
       },
     },
+    {
+      name: "Vite",
+      type: "frontend",
+      cell: {
+        row: 9,
+        col: 19,
+      },
+    },
+    {
+      name: "WampServer",
+      type: "tool",
+      cell: {
+        row: 12,
+        col: 5,
+      },
+    },
+    {
+      name: "Railway",
+      type: "tool",
+      cell: {
+        row: 18,
+        col: 12,
+      },
+    },
   ],
   discussed: [
     {
       name: "Bootstrap",
       type: "frontend",
       cell: {
-        row: 17,
-        col: 6,
+        row: 20,
+        col: 2,
       },
     },
     {
@@ -134,27 +190,11 @@ export const technosList: {
       },
     },
     {
-      name: "PHP",
-      type: "backend",
-      cell: {
-        row: 21,
-        col: 1,
-      },
-    },
-    {
       name: "Prisma",
       type: "database",
       cell: {
-        row: 10,
-        col: 11,
-      },
-    },
-    {
-      name: "SQLite",
-      type: "database",
-      cell: {
-        row: 7,
-        col: 7,
+        row: 8,
+        col: 8,
       },
     },
     {
@@ -162,7 +202,7 @@ export const technosList: {
       type: "database",
       cell: {
         row: 16,
-        col: 18,
+        col: 21,
       },
     },
     {
@@ -174,19 +214,11 @@ export const technosList: {
       },
     },
     {
-      name: "Vite",
-      type: "frontend",
-      cell: {
-        row: 18,
-        col: 23,
-      },
-    },
-    {
-      name: "WampServer",
-      type: "tool",
+      name: "Symfony",
+      type: "backend",
       cell: {
         row: 1,
-        col: 14,
+        col: 16,
       },
     },
   ],

@@ -155,10 +155,10 @@ footer {
 
 .footerBtnSecondary {
   color: $accent-color-lighter !important;
-  border-color: $accent-color-lighter !important;
+  box-shadow: inset 0 0 0 .15rem $accent-color-lighter!important;
   &:hover {
     color: $nuance-color !important;
-    border-color: $nuance-color !important;
+    box-shadow: inset 0 0 0 .15rem $nuance-color!important;
   }
 }
 
